@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0f14;
+      --surface:  #161b27;
+      --border:   #252d3e;
+      --accent:   #6c8ef7;
+      --accent2:  #a78bfa;
+      --text:     #e2e8f0;
+      --muted:    #8892a4;
+      --radius:   12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(13, 15, 20, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 8rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(108,142,247,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 60%, rgba(167,139,250,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .badge span { color: var(--accent); font-weight: 600; }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Features ── */
+    #features {
+      padding: 6rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+    .card-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .card p  { font-size: 0.88rem; color: var(--muted); }
+
+    /* ── CTA ── */
+    #cta {
+      padding: 6rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(108,142,247,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-box h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 0.75rem; }
+    .cta-box p  { color: var(--muted); margin-bottom: 2rem; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      .nav-links { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">YourBrand</div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#cta">Get started</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="badge"><span>✦</span> Now live on GitHub Pages</div>
+    <h1>
+      Build something<br />
+      <span class="gradient-text">people love.</span>
+    </h1>
+    <p>A clean, fast starting point for your next project. Swap in your content and ship.</p>
+    <div class="btn-group">
+      <a href="#features" class="btn btn-primary">Explore features</a>
+      <a href="https://github.com" class="btn btn-secondary">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- ── Features ── -->
+  <section id="features">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything you need to start</h2>
+    <p class="section-sub">Replace these cards with your project's key selling points.</p>
+
+    <div class="features-grid">
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Blazing fast</h3>
+        <p>Zero dependencies, pure HTML and CSS. Loads instantly on any connection.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Easy to customize</h3>
+        <p>Change colors, copy, and layout with simple CSS variables at the top of the file.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>Fully responsive</h3>
+        <p>Looks great on phones, tablets, and desktops — no media-query headaches.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>No tracking</h3>
+        <p>Ships with zero analytics, trackers, or third-party scripts out of the box.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌙</div>
+        <h3>Dark mode</h3>
+        <p>Designed dark-first so it's easy on the eyes and looks premium right away.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Deploy in seconds</h3>
+        <p>Push to <code>main</code> and GitHub Pages serves it automatically. No build step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section id="cta">
+    <div class="cta-box">
+      <h2>Ready to make it yours?</h2>
+      <p>Open <code>index.html</code>, swap the placeholder text, and push your changes.</p>
+      <a href="https://github.com" class="btn btn-primary">Get started on GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Built with GitHub Pages &mdash; update this footer with your info.</span>
+  </footer>
+
+</body>
+</html>
