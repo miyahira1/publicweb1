@@ -96,7 +96,7 @@
           <div class="tool-card-desc">${tool.description}</div>
           <div class="tool-card-footer">
             <span class=${`badge badge-${tool.category}`}>${tool.category}</span>
-            <span style="font-size: 0.83rem; color: var(--accent); font-weight: 600;">
+            <span style=${{ fontSize: '0.83rem', color: 'var(--accent)', fontWeight: 600 }}>
               ${tool.category === 'game' ? 'Play →' : 'Open →'}
             </span>
           </div>
@@ -111,7 +111,7 @@
       return html`
         <nav class="pg-nav">
           <span class="pg-nav-logo">Playground</span>
-          <div class="filter-bar" style="margin-bottom: 0;">
+          <div class="filter-bar" style=${{ marginBottom: 0 }}>
             ${categories.map(cat => html`
               <button
                 key=${cat}
