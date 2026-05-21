@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tinsagu-nu-hana",
+    "title": "Tinsagu nu Hana",
+    "original_title": "ティンサグぬ花",
+    "artist": "Traditional Okinawan",
+    "origin": "okinawan",
+    "category": "folk",
+    "difficulty": "beginner",
+    "tags": ["traditional", "okinawa", "folk", "pentatonic"]
+  },
+  {
+    "id": "nada-so-so",
+    "title": "Nada So So",
+    "original_title": "涙そうそう",
+    "artist": "BEGIN (arr. for sanshin)",
+    "origin": "okinawan",
+    "category": "pop",
+    "difficulty": "intermediate",
+    "tags": ["modern", "okinawa", "popular", "natsukawa-rimi"]
+  },
+  {
+    "id": "let-it-be",
+    "title": "Let It Be",
+    "original_title": "Let It Be",
+    "artist": "The Beatles (arr. for sanshin)",
+    "origin": "western",
+    "category": "rock",
+    "difficulty": "intermediate",
+    "tags": ["western", "beatles", "pop-rock", "adapted"]
+  }
+]

@@ -1,0 +1,164 @@
+{
+  "id": "let-it-be",
+  "title": "Let It Be",
+  "original_title": "Let It Be",
+  "artist": "The Beatles (arr. for sanshin)",
+  "origin": "western",
+  "category": "rock",
+  "tags": ["western", "beatles", "pop-rock", "adapted", "lennon-mccartney"],
+  "tuning": "honchoshi",
+  "difficulty": "intermediate",
+  "description": "Beatles classic (1970) adapted for sanshin in honchoshi tuning. Western notes are approximated: E→尺 (Eb), A→六 (Ab), B→七 (Bb). The sanshin's Ryukyuan scale gives the melody a unique character. Original key: C major.",
+  "source": "Lennon/McCartney, arr. for sanshin study",
+  "added_by": "ai-agent",
+  "date_added": "2025-05-20",
+  "conversion_notes": {
+    "key": "C major transposed to honchoshi (F root)",
+    "method": "Melody-only arrangement; chord tones mapped to nearest available kunkunshi pitch",
+    "mapping": {
+      "C": "上", "D": "中", "E": "尺(Eb)", "F": "工",
+      "G": "五", "A": "六(Ab)", "B": "七(Bb)", "C'": "八"
+    }
+  },
+  "score": [
+    {
+      "section": "Verse",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "五", "lyric": "When",  "duration": 1 },
+            { "char": "五", "lyric": "I",     "duration": 0.5 },
+            { "char": "六", "lyric": "find",  "duration": 0.5 },
+            { "char": "五", "lyric": "my",    "duration": 1 },
+            { "char": "尺", "lyric": "self",  "duration": 1 },
+            { "char": "中", "lyric": "in",    "duration": 0.5 },
+            { "char": "上", "lyric": "times", "duration": 0.5 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "中", "lyric": "of",     "duration": 0.5 },
+            { "char": "五", "lyric": "trou",   "duration": 0.5 },
+            { "char": "五", "lyric": "-ble",   "duration": 1 },
+            { "char": "五", "lyric": "Mo-",    "duration": 0.5 },
+            { "char": "六", "lyric": "ther",   "duration": 0.5 },
+            { "char": "五", "lyric": "Ma-",    "duration": 1 },
+            { "char": "尺", "lyric": "ry",     "duration": 1 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "中", "lyric": "comes",  "duration": 1 },
+            { "char": "上", "lyric": "to",     "duration": 1 },
+            { "char": "上", "lyric": "me",     "duration": 4 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "上", "lyric": "Speak-", "duration": 1 },
+            { "char": "七", "lyric": "ing",    "duration": 0.5 },
+            { "char": "六", "lyric": "words",  "duration": 0.5 },
+            { "char": "五", "lyric": "of",     "duration": 0.5 },
+            { "char": "工", "lyric": "wis-",   "duration": 0.5 },
+            { "char": "尺", "lyric": "dom",    "duration": 1 },
+            { "char": "中", "lyric": "let",    "duration": 0.5 },
+            { "char": "上", "lyric": "it",     "duration": 0.5 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "上", "lyric": "be",     "duration": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "尺", "lyric": "Let",    "duration": 1 },
+            { "char": "中", "lyric": "it",     "duration": 0.5 },
+            { "char": "上", "lyric": "be,",    "duration": 1 },
+            { "char": "尺", "lyric": "let",    "duration": 0.5 },
+            { "char": "中", "lyric": "it",     "duration": 0.5 },
+            { "char": "上", "lyric": "be",     "duration": 1 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "尺", "lyric": "Let",    "duration": 1 },
+            { "char": "中", "lyric": "it",     "duration": 0.5 },
+            { "char": "上", "lyric": "be,",    "duration": 1 },
+            { "char": "尺", "lyric": "let",    "duration": 0.5 },
+            { "char": "中", "lyric": "it",     "duration": 0.5 },
+            { "char": "上", "lyric": "be",     "duration": 1 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "上", "lyric": "Whis-",  "duration": 0.5 },
+            { "char": "七", "lyric": "per",    "duration": 0.5 },
+            { "char": "六", "lyric": "words",  "duration": 0.5 },
+            { "char": "五", "lyric": "of",     "duration": 0.5 },
+            { "char": "工", "lyric": "wis-",   "duration": 0.5 },
+            { "char": "尺", "lyric": "dom",    "duration": 1 },
+            { "char": "中", "lyric": "let",    "duration": 0.5 },
+            { "char": "上", "lyric": "it",     "duration": 0.5 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "上", "lyric": "be",     "duration": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "八", "lyric": "And",    "duration": 0.5 },
+            { "char": "七", "lyric": "when",   "duration": 0.5 },
+            { "char": "六", "lyric": "the",    "duration": 0.5 },
+            { "char": "五", "lyric": "bro-",   "duration": 0.5 },
+            { "char": "工", "lyric": "ken",    "duration": 1 },
+            { "char": "中", "lyric": "hear",   "duration": 0.5 },
+            { "char": "上", "lyric": "ted",    "duration": 0.5 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "中", "lyric": "peo-",   "duration": 0.5 },
+            { "char": "上", "lyric": "ple",    "duration": 0.5 },
+            { "char": "工", "lyric": "liv-",   "duration": 0.5 },
+            { "char": "中", "lyric": "ing",    "duration": 0.5 },
+            { "char": "上", "lyric": "in",     "duration": 0.5 },
+            { "char": "工", "lyric": "the",    "duration": 0.5 },
+            { "char": "中", "lyric": "world",  "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "中", "lyric": "a-",     "duration": 0.5 },
+            { "char": "上", "lyric": "gree,",  "duration": 1 },
+            { "char": "工", "lyric": "there",  "duration": 0.5 },
+            { "char": "中", "lyric": "will",   "duration": 0.5 },
+            { "char": "上", "lyric": "be",     "duration": 0.5 },
+            { "char": "工", "lyric": "an",     "duration": 0.5 },
+            { "char": "五", "lyric": "ans",    "duration": 0.5 },
+            { "char": "六", "lyric": "wer",    "duration": 1 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "五", "lyric": "let",    "duration": 0.5 },
+            { "char": "工", "lyric": "it",     "duration": 0.5 },
+            { "char": "四", "lyric": "be",     "duration": 4 }
+          ]
+        }
+      ]
+    }
+  ]
+}
