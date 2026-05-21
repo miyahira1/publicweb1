@@ -1,0 +1,9 @@
+[
+  {
+    "date": "2025-05-21",
+    "summary": "Initial seed: 3 foundational pages covering Claude model history, tool use & agents, and Claude Code.",
+    "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
+    "pagesUpdated": [],
+    "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  }
+]

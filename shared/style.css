@@ -108,6 +108,7 @@ a { color: var(--accent); text-decoration: none; }
 .badge-game { border-color: rgba(108,142,247,0.4); color: var(--accent); }
 .badge-tool { border-color: rgba(167,139,250,0.4); color: var(--accent2); }
 .badge-note { border-color: rgba(52,211,153,0.4); color: #34d399; }
+.badge-wiki { border-color: rgba(251,191,36,0.4); color: #fbbf24; }
 
 /* ── Filter chips ── */
 .filter-chip {

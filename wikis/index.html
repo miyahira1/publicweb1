@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Living knowledge bases maintained by AI agents on a schedule." />
+  <title>LLM Wikis — Playground</title>
+  <link rel="stylesheet" href="../shared/style.css" />
+  <style>
+    .wiki-main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: calc(56px + 2rem) 1.5rem 6rem;
+    }
+
+    /* Catalog */
+    .catalog-hero {
+      text-align: center;
+      padding: 2rem 0 2.5rem;
+      position: relative;
+    }
+    .catalog-hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(108,142,247,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .catalog-hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.6rem;
+    }
+    .catalog-hero-sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin: 0 auto 0.5rem;
+      line-height: 1.6;
+    }
+    .agent-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(108,142,247,0.08);
+      border: 1px solid rgba(108,142,247,0.2);
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-top: 1rem;
+    }
+    .wiki-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .wiki-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
+      cursor: pointer;
+    }
+    .wiki-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 36px rgba(108,142,247,0.12);
+    }
+    .wiki-card-top {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .wiki-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--grad);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; flex-shrink: 0;
+    }
+    .wiki-card-title { font-size: 1.1rem; font-weight: 700; }
+    .wiki-card-updated { font-size: 0.76rem; color: var(--muted); }
+    .wiki-card-desc { font-size: 0.85rem; color: var(--muted); flex: 1; }
+    .wiki-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 0.25rem; font-size: 0.8rem; color: var(--muted);
+    }
+    .wiki-stat strong { color: var(--accent); font-weight: 700; }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem;
+    }
+    .breadcrumb a {
+      color: var(--muted); text-decoration: none;
+      transition: color var(--trans);
+    }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb-sep { opacity: 0.4; }
+
+    /* Wiki / page headers */
+    .section-header {
+      padding: 1.5rem 0 1.75rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .section-desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .topic-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .topic-chip {
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px; border: 1px solid var(--border);
+      font-size: 0.74rem; color: var(--muted);
+    }
+
+    /* Tabs */
+    .tab-bar {
+      display: flex; gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.75rem;
+    }
+    .tab-btn {
+      padding: 0.65rem 1.25rem;
+      border: none; background: transparent;
+      color: var(--muted); font-size: 0.9rem; font-weight: 500;
+      font-family: inherit; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px;
+      transition: color var(--trans), border-color var(--trans);
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* Pages grid */
+    .pages-search {
+      width: 100%; max-width: 360px;
+      padding: 0.55rem 1rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); color: var(--text);
+      font-size: 0.9rem; font-family: inherit;
+      margin-bottom: 1.5rem;
+      transition: border-color var(--trans);
+    }
+    .pages-search:focus { outline: none; border-color: var(--accent); }
+    .pages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .page-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.1rem 1.25rem;
+      color: inherit; cursor: pointer;
+      transition: border-color var(--trans), transform var(--trans);
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .page-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .page-card-title { font-size: 0.95rem; font-weight: 700; }
+    .page-card-summary { font-size: 0.82rem; color: var(--muted); flex: 1; }
+    .page-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 0.25rem;
+    }
+    .page-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .page-tag {
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: var(--surface2); border: 1px solid var(--border);
+      font-size: 0.7rem; color: var(--muted);
+    }
+    .page-date { font-size: 0.72rem; color: var(--muted); white-space: nowrap; }
+
+    /* Changelog */
+    .changelog-timeline { position: relative; padding-left: 2.5rem; }
+    .changelog-timeline::before {
+      content: '';
+      position: absolute; left: 10px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
+    }
+    .changelog-entry { position: relative; margin-bottom: 2rem; }
+    .changelog-entry::before {
+      content: '';
+      position: absolute; left: -1.9rem; top: 7px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent); border: 2px solid var(--bg);
+    }
+    .changelog-date { font-size: 0.78rem; color: var(--accent); font-weight: 600; margin-bottom: 0.3rem; }
+    .changelog-summary { font-size: 0.9rem; color: var(--text); margin-bottom: 0.5rem; }
+    .changelog-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.4rem; }
+    .cl-chip {
+      padding: 0.2rem 0.6rem; border-radius: 999px;
+      font-size: 0.74rem; text-decoration: none; cursor: pointer;
+    }
+    .cl-chip.added {
+      background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); color: #34d399;
+    }
+    .cl-chip.updated {
+      background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); color: #fbbf24;
+    }
+    .changelog-sources { font-size: 0.76rem; color: var(--muted); }
+    .changelog-sources a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Page viewer */
+    .page-viewer-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem;
+    }
+    .page-viewer-meta {
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: 0.75rem; font-size: 0.82rem; color: var(--muted);
+    }
+    .page-body {
+      font-size: 0.95rem; line-height: 1.75; color: var(--text); max-width: 720px;
+    }
+    .page-body h2 { font-size: 1.25rem; font-weight: 700; margin: 2rem 0 0.75rem; }
+    .page-body h3 { font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    .page-body p { margin-bottom: 1rem; }
+    .page-body ul, .page-body ol { margin: 0.5rem 0 1rem 1.5rem; }
+    .page-body li { margin-bottom: 0.25rem; }
+    .page-body code {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 4px; padding: 0.1em 0.4em;
+      font-size: 0.87em; font-family: "Fira Code", "Cascadia Code", monospace;
+    }
+    .page-body pre {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1rem 1.25rem;
+      overflow-x: auto; margin: 1rem 0;
+    }
+    .page-body pre code { background: none; border: none; padding: 0; }
+    .page-body blockquote {
+      border-left: 3px solid var(--accent); padding-left: 1rem;
+      color: var(--muted); margin: 1rem 0;
+    }
+    .page-body a { color: var(--accent); }
+    .page-body table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.88rem; }
+    .page-body th, .page-body td {
+      border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left;
+    }
+    .page-body th { background: var(--surface2); font-weight: 600; }
+    .page-body hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    .page-sources {
+      margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.6rem;
+    }
+    .sources-list { list-style: none; }
+    .sources-list li { font-size: 0.82rem; margin-bottom: 0.3rem; }
+    .related-section { margin-top: 2rem; }
+    .related-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+    .related-chip {
+      padding: 0.3rem 0.9rem; border-radius: 999px;
+      border: 1px solid var(--border); font-size: 0.82rem; color: var(--accent);
+      text-decoration: none; transition: border-color var(--trans), background var(--trans);
+    }
+    .related-chip:hover { border-color: var(--accent); background: rgba(108,142,247,0.08); }
+
+    /* Loading / error */
+    .loading, .empty-state {
+      text-align: center; padding: 4rem 0; color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      .wiki-grid { grid-template-columns: 1fr; }
+      .pages-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="module">
+    import { createElement as h, useState, useEffect } from 'https://esm.sh/react@18.3.1';
+    import { createRoot }                              from 'https://esm.sh/react-dom@18.3.1/client';
+    import htm                                         from 'https://esm.sh/htm@3.1.1';
+    import { marked }                                  from 'https://esm.sh/marked@12.0.0';
+
+    const html = htm.bind(h);
+    marked.use({ breaks: true, gfm: true });
+
+    // ── Hooks ─────────────────────────────────────────────────────────────────
+
+    function useHash() {
+      const [hash, setHash] = useState(window.location.hash || '#/');
+      useEffect(() => {
+        const handler = () => setHash(window.location.hash || '#/');
+        window.addEventListener('hashchange', handler);
+        return () => window.removeEventListener('hashchange', handler);
+      }, []);
+      return hash;
+    }
+
+    function useFetch(url) {
+      const [state, setState] = useState({ data: null, loading: true, error: null });
+      useEffect(() => {
+        if (!url) return;
+        setState({ data: null, loading: true, error: null });
+        fetch(url)
+          .then(r => { if (!r.ok) throw new Error(`${r.status}`); return r.json(); })
+          .then(data => setState({ data, loading: false, error: null }))
+          .catch(err => setState({ data: null, loading: false, error: err.message }));
+      }, [url]);
+      return state;
+    }
+
+    // ── Routing ───────────────────────────────────────────────────────────────
+
+    function parseRoute(hash) {
+      const path = (hash || '').replace(/^#\/?/, '');
+      const parts = path.split('/').filter(Boolean);
+      if (!parts.length) return { view: 'catalog' };
+      if (parts.length === 1) return { view: 'wiki', wikiId: parts[0] };
+      if (parts[1] === 'changelog') return { view: 'changelog', wikiId: parts[0] };
+      if (parts[1] === 'page' && parts[2]) return { view: 'page', wikiId: parts[0], pageId: parts[2] };
+      return { view: 'catalog' };
+    }
+
+    // ── Shared ────────────────────────────────────────────────────────────────
+
+    function Loading() {
+      return html`<div class="loading">Loading…</div>`;
+    }
+
+    function ErrorMsg({ msg }) {
+      return html`<div class="empty-state">Could not load content (${msg})</div>`;
+    }
+
+    function ChangelogTimeline({ entries, wikiId }) {
+      const sorted = [...entries].reverse();
+      return html`
+        <div class="changelog-timeline">
+          ${sorted.map((entry, i) => html`
+            <div key=${i} class="changelog-entry">
+              <div class="changelog-date">${entry.date}</div>
+              <div class="changelog-summary">${entry.summary}</div>
+              <div class="changelog-chips">
+                ${(entry.pagesAdded || []).map(id => html`
+                  <a key=${id} class="cl-chip added"
+                     href=${`#/${wikiId}/page/${id}`}>
+                    + ${id.replace(/-/g, ' ')}
+                  </a>
+                `)}
+                ${(entry.pagesUpdated || []).map(id => html`
+                  <a key=${id} class="cl-chip updated"
+                     href=${`#/${wikiId}/page/${id}`}>
+                    ↻ ${id.replace(/-/g, ' ')}
+                  </a>
+                `)}
+              </div>
+              ${(entry.sources || []).length > 0 && html`
+                <div class="changelog-sources">
+                  Sources: ${entry.sources.map((s, j) => {
+                    let host = s;
+                    try { host = new URL(s).hostname; } catch(_) {}
+                    return html`
+                      <span key=${j}>
+                        <a href=${s} target="_blank" rel="noopener">${host}</a>${j < entry.sources.length - 1 ? ', ' : ''}
+                      </span>
+                    `;
+                  })}
+                </div>
+              `}
+            </div>
+          `)}
+        </div>
+      `;
+    }
+
+    // ── Catalog ───────────────────────────────────────────────────────────────
+
+    function CatalogView() {
+      const { data: catalog, loading, error } = useFetch('./_catalog.json');
+
+      if (loading) return html`<${Loading} />`;
+      if (error) return html`<${ErrorMsg} msg=${error} />`;
+
+      return html`
+        <div>
+          <div class="catalog-hero">
+            <h1 class="catalog-hero-title">
+              <span class="gradient-text">LLM Wikis</span>
+            </h1>
+            <p class="catalog-hero-sub">
+              Living knowledge bases researched and maintained by AI agents on a schedule.
+              Each wiki grows richer over time — contradictions flagged, cross-references wired.
+            </p>
+            <div class="agent-note">
+              🤖 Maintained automatically · History in each wiki's changelog
+            </div>
+          </div>
+
+          <div class="wiki-grid">
+            ${catalog.map(wiki => html`
+              <div key=${wiki.id} class="wiki-card"
+                   onClick=${() => { window.location.hash = '#/' + wiki.id; }}>
+                <div class="wiki-card-top">
+                  <div class="wiki-icon">${wiki.icon}</div>
+                  <div>
+                    <div class="wiki-card-title">${wiki.title}</div>
+                    <div class="wiki-card-updated">Updated ${wiki.lastUpdated}</div>
+                  </div>
+                </div>
+                <div class="wiki-card-desc">${wiki.description}</div>
+                <div class="wiki-card-footer">
+                  <span class="wiki-stat"><strong>${wiki.pageCount}</strong> pages</span>
+                  ${wiki.latestEntry && html`
+                    <span class="wiki-stat" style=${{ fontSize: '0.75rem' }}>
+                      Latest: ${wiki.latestEntry}
+                    </span>
+                  `}
+                </div>
+              </div>
+            `)}
+          </div>
+        </div>
+      `;
+    }
+
+    // ── Wiki detail ───────────────────────────────────────────────────────────
+
+    function WikiView({ wikiId }) {
+      const [tab, setTab] = useState('pages');
+      const [search, setSearch] = useState('');
+      const { data: meta,      loading: ml } = useFetch(`./${wikiId}/_meta.json`);
+      const { data: pages,     loading: pl, error: pe } = useFetch(`./${wikiId}/_index.json`);
+      const { data: changelog, loading: cl, error: ce } = useFetch(`./${wikiId}/_changelog.json`);
+
+      if (ml || pl || cl) return html`<${Loading} />`;
+      if (pe || ce) return html`<${ErrorMsg} msg=${pe || ce} />`;
+
+      const filtered = search
+        ? pages.filter(p =>
+            p.title.toLowerCase().includes(search.toLowerCase()) ||
+            (p.tags || []).some(t => t.toLowerCase().includes(search.toLowerCase()))
+          )
+        : pages;
+
+      return html`
+        <div>
+          <div class="section-header">
+            <div class="breadcrumb">
+              <a href="#/">Wikis</a>
+              <span class="breadcrumb-sep">/</span>
+              <span>${meta?.title || wikiId}</span>
+            </div>
+            <h1 class="section-title">${meta?.icon} ${meta?.title}</h1>
+            <p class="section-desc">${meta?.description}</p>
+            <div class="topic-chips">
+              ${(meta?.topics || []).map(t => html`<span key=${t} class="topic-chip">${t}</span>`)}
+            </div>
+          </div>
+
+          <div class="tab-bar">
+            <button class=${`tab-btn ${tab === 'pages' ? 'active' : ''}`}
+                    onClick=${() => setTab('pages')}>
+              Pages (${pages.length})
+            </button>
+            <button class=${`tab-btn ${tab === 'changelog' ? 'active' : ''}`}
+                    onClick=${() => setTab('changelog')}>
+              Changelog (${changelog.length})
+            </button>
+          </div>
+
+          ${tab === 'pages' ? html`
+            <div>
+              <input class="pages-search" type="search" placeholder="Search pages…"
+                     value=${search} onInput=${e => setSearch(e.target.value)} />
+              <div class="pages-grid">
+                ${filtered.map(p => html`
+                  <div key=${p.id} class="page-card"
+                       onClick=${() => { window.location.hash = '#/' + wikiId + '/page/' + p.id; }}>
+                    <div class="page-card-title">${p.title}</div>
+                    <div class="page-card-summary">${p.summary}</div>
+                    <div class="page-card-footer">
+                      <div class="page-tags">
+                        ${(p.tags || []).slice(0, 3).map(t => html`
+                          <span key=${t} class="page-tag">${t}</span>
+                        `)}
+                      </div>
+                      <span class="page-date">${p.updatedAt}</span>
+                    </div>
+                  </div>
+                `)}
+              </div>
+              ${filtered.length === 0 && html`
+                <div class="empty-state">No pages match "${search}"</div>
+              `}
+            </div>
+          ` : html`
+            <${ChangelogTimeline} entries=${changelog} wikiId=${wikiId} />
+          `}
+        </div>
+      `;
+    }
+
+    // ── Page viewer ───────────────────────────────────────────────────────────
+
+    function PageView({ wikiId, pageId }) {
+      const { data: meta } = useFetch(`./${wikiId}/_meta.json`);
+      const { data: page, loading, error } = useFetch(`./${wikiId}/pages/${pageId}.json`);
+
+      if (loading) return html`<${Loading} />`;
+      if (error) return html`<${ErrorMsg} msg=${error} />`;
+
+      const bodyHtml = marked.parse(page.content || '');
+
+      return html`
+        <div>
+          <div class="section-header">
+            <div class="breadcrumb">
+              <a href="#/">Wikis</a>
+              <span class="breadcrumb-sep">/</span>
+              <a href=${`#/${wikiId}`}>${meta?.title || wikiId}</a>
+              <span class="breadcrumb-sep">/</span>
+              <span>${page.title}</span>
+            </div>
+            <h1 class="page-viewer-title">${page.title}</h1>
+            <div class="page-viewer-meta">
+              <div class="page-tags">
+                ${(page.tags || []).map(t => html`<span key=${t} class="page-tag">${t}</span>`)}
+              </div>
+              <span>Updated ${page.updatedAt}</span>
+            </div>
+          </div>
+
+          <div class="page-body"
+               dangerouslySetInnerHTML=${{ __html: bodyHtml }} />
+
+          ${(page.relatedPages || []).length > 0 && html`
+            <div class="related-section">
+              <div class="section-label">Related Pages</div>
+              <div class="related-chips">
+                ${page.relatedPages.map(id => html`
+                  <a key=${id} class="related-chip"
+                     href=${`#/${wikiId}/page/${id}`}>
+                    ${id.replace(/-/g, ' ')}
+                  </a>
+                `)}
+              </div>
+            </div>
+          `}
+
+          ${(page.sources || []).length > 0 && html`
+            <div class="page-sources">
+              <div class="section-label">Sources</div>
+              <ul class="sources-list">
+                ${page.sources.map((s, i) => html`
+                  <li key=${i}>
+                    <a href=${s} target="_blank" rel="noopener">${s}</a>
+                  </li>
+                `)}
+              </ul>
+            </div>
+          `}
+        </div>
+      `;
+    }
+
+    // ── Changelog view ────────────────────────────────────────────────────────
+
+    function ChangelogView({ wikiId }) {
+      const { data: meta } = useFetch(`./${wikiId}/_meta.json`);
+      const { data: changelog, loading, error } = useFetch(`./${wikiId}/_changelog.json`);
+
+      if (loading) return html`<${Loading} />`;
+      if (error) return html`<${ErrorMsg} msg=${error} />`;
+
+      return html`
+        <div>
+          <div class="section-header">
+            <div class="breadcrumb">
+              <a href="#/">Wikis</a>
+              <span class="breadcrumb-sep">/</span>
+              <a href=${`#/${wikiId}`}>${meta?.title || wikiId}</a>
+              <span class="breadcrumb-sep">/</span>
+              <span>Changelog</span>
+            </div>
+            <h1 class="section-title">Changelog</h1>
+            <p class="section-desc">Full history of agent maintenance runs for this wiki.</p>
+          </div>
+          <${ChangelogTimeline} entries=${changelog} wikiId=${wikiId} />
+        </div>
+      `;
+    }
+
+    // ── Nav ───────────────────────────────────────────────────────────────────
+
+    function Nav({ route }) {
+      const isCatalog = route.view === 'catalog';
+      return html`
+        <nav class="pg-nav">
+          ${isCatalog
+            ? html`<a href="../" class="pg-nav-back">← Playground</a>`
+            : html`<a href="#/" class="pg-nav-back">← Wikis</a>`
+          }
+          <span class="pg-nav-logo">LLM Wikis</span>
+          <span style=${{ minWidth: '80px' }}></span>
+        </nav>
+      `;
+    }
+
+    // ── App ───────────────────────────────────────────────────────────────────
+
+    function App() {
+      const hash = useHash();
+      const route = parseRoute(hash);
+
+      return html`
+        <div>
+          <${Nav} route=${route} />
+          <main class="wiki-main">
+            ${route.view === 'catalog'   && html`<${CatalogView} />`}
+            ${route.view === 'wiki'      && html`<${WikiView} wikiId=${route.wikiId} />`}
+            ${route.view === 'page'      && html`<${PageView} wikiId=${route.wikiId} pageId=${route.pageId} />`}
+            ${route.view === 'changelog' && html`<${ChangelogView} wikiId=${route.wikiId} />`}
+          </main>
+        </div>
+      `;
+    }
+
+    createRoot(document.getElementById('root')).render(html`<${App} />`);
+  </script>
+</body>
+</html>

@@ -20,6 +20,16 @@ export const tools = [
     featured: false,
   },
   {
+    id: 'wikis',
+    title: 'LLM Wikis',
+    description: 'Living knowledge bases maintained by AI agents on a schedule — researched and expanded automatically. Starts with Claude & Community.',
+    category: 'wiki',
+    icon: '📚',
+    url: './wikis/',
+    tags: ['ai', 'knowledge', 'agentic'],
+    featured: true,
+  },
+  {
     id: 'how-it-works',
     title: 'How It Works',
     description: 'How this playground is built — Claude Code on a phone, git push to GitHub, served free via Pages. Advantages and limitations.',
