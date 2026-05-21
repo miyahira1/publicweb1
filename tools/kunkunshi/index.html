@@ -177,45 +177,68 @@ const CHAR_FREQ = {
   '五': 392.00, '六': 415.30, '七': 466.16, '八': 523.25,
 };
 
-// ── Sanshin pluck synthesis ──────────────────────────────────────────────────
+// ── Sanshin pluck synthesis — scheduled at a specific AudioContext time ───────
 
-function pluckSanshin(ctx, freq, durationSec) {
-  const t = ctx.currentTime;
-  const decay = Math.min(durationSec * 0.88, 2.2);
+function schedulePluck(ctx, freq, durationSec, atTime) {
+  const decay = Math.min(durationSec * 0.85, 2.0);
+  const nodes = [];
 
-  // Main body: triangle wave, slow exponential decay
+  // Main body: triangle wave with exponential decay
   const osc = ctx.createOscillator();
   const env = ctx.createGain();
   osc.type = 'triangle';
   osc.frequency.value = freq;
-  env.gain.setValueAtTime(0.55, t);
-  env.gain.exponentialRampToValueAtTime(0.001, t + decay);
-  osc.connect(env);
-  env.connect(ctx.destination);
-  osc.start(t);
-  osc.stop(t + decay);
+  env.gain.setValueAtTime(0, atTime);
+  env.gain.linearRampToValueAtTime(0.5, atTime + 0.005);
+  env.gain.exponentialRampToValueAtTime(0.001, atTime + decay);
+  osc.connect(env); env.connect(ctx.destination);
+  osc.start(atTime); osc.stop(atTime + decay + 0.01);
+  nodes.push(osc);
 
-  // Attack transient: brief sawtooth burst for pluck brightness
+  // Sawtooth transient for pluck brightness
   const osc2 = ctx.createOscillator();
   const env2 = ctx.createGain();
   osc2.type = 'sawtooth';
   osc2.frequency.value = freq;
-  env2.gain.setValueAtTime(0.28, t);
-  env2.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
-  osc2.connect(env2);
-  env2.connect(ctx.destination);
-  osc2.start(t);
-  osc2.stop(t + 0.06);
+  env2.gain.setValueAtTime(0.28, atTime);
+  env2.gain.exponentialRampToValueAtTime(0.001, atTime + 0.055);
+  osc2.connect(env2); env2.connect(ctx.destination);
+  osc2.start(atTime); osc2.stop(atTime + 0.06);
+  nodes.push(osc2);
+
+  // Filtered noise burst for the bachi (plectrum) attack click
+  try {
+    const bufLen = Math.ceil(ctx.sampleRate * 0.07);
+    const buf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+    const data = buf.getChannelData(0);
+    for (let i = 0; i < bufLen; i++) data[i] = Math.random() * 2 - 1;
+    const src = ctx.createBufferSource();
+    src.buffer = buf;
+    const filt = ctx.createBiquadFilter();
+    filt.type = 'bandpass';
+    filt.frequency.value = freq * 1.8;
+    filt.Q.value = 1.2;
+    const env3 = ctx.createGain();
+    env3.gain.setValueAtTime(0.1, atTime);
+    env3.gain.exponentialRampToValueAtTime(0.001, atTime + 0.055);
+    src.connect(filt); filt.connect(env3); env3.connect(ctx.destination);
+    src.start(atTime); src.stop(atTime + 0.07);
+    nodes.push(src);
+  } catch (_) {}
+
+  return nodes;
 }
 
-// ── Score flattening ─────────────────────────────────────────────────────────
+// ── Score flattening — adds cumulative beatOffset to each cell ───────────────
 
 function flattenScore(score) {
   const events = [];
+  let beat = 0;
   score.forEach((section, si) => {
     section.phrases.forEach((phrase, pi) => {
       phrase.cells.forEach((cell, ci) => {
-        events.push({ si, pi, ci, cell });
+        events.push({ si, pi, ci, cell, beatOffset: beat });
+        beat += cell.duration;
       });
     });
   });
@@ -397,8 +420,17 @@ function Viewer({ songId, importedSong, onBack }) {
   const [zoomIdx, setZoomIdx]   = useState(2);
   const [playState, setPlayState] = useState('stopped'); // 'stopped'|'playing'|'paused'
   const [playingKey, setPlayingKey] = useState(null);
-  const [bpm, setBpm]           = useState(100);
-  const pr = useRef({ state: 'stopped', idx: 0, timers: [], ctx: null });
+  const [bpm, setBpm]           = useState(80);
+  // pr holds mutable playback state that must not trigger re-renders
+  const pr = useRef({
+    state: 'stopped',
+    timers: [],   // visual setTimeout IDs
+    nodes: [],    // scheduled AudioNodes (for cancellation)
+    ctx: null,
+    fromBeat: 0,  // cumulative beat offset where current run started
+    startWall: 0, // performance.now() when current run started
+    bpm: 80,
+  });
 
   // Load song
   useEffect(() => {
@@ -410,71 +442,100 @@ function Viewer({ songId, importedSong, onBack }) {
       .catch(err => setError(err.message));
   }, [songId, importedSong]);
 
-  // Stop playback whenever the song source changes
+  // Stop playback and reset when song changes or component unmounts
   useEffect(() => {
     return () => {
-      pr.current.timers.forEach(clearTimeout);
-      pr.current.timers = [];
-      pr.current.state = 'stopped';
-      pr.current.idx = 0;
+      const p = pr.current;
+      p.timers.forEach(clearTimeout);
+      p.nodes.forEach(n => { try { n.stop(0); } catch (_) {} });
+      p.state = 'stopped'; p.fromBeat = 0; p.timers = []; p.nodes = [];
     };
   }, [songId, importedSong]);
 
   const stopPlayback = useCallback(() => {
-    pr.current.timers.forEach(clearTimeout);
-    pr.current.timers = [];
-    pr.current.state = 'stopped';
-    pr.current.idx = 0;
+    const p = pr.current;
+    p.timers.forEach(clearTimeout);
+    p.nodes.forEach(n => { try { n.stop(0); } catch (_) {} });
+    p.timers = []; p.nodes = [];
+    p.state = 'stopped'; p.fromBeat = 0;
     setPlayState('stopped');
     setPlayingKey(null);
   }, []);
 
-  const startPlayback = useCallback((fromIdx, currentBpm, currentSong) => {
-    if (!currentSong) return;
-    const events = flattenScore(currentSong.score);
-    if (fromIdx >= events.length) return;
+  const doStart = useCallback((fromBeat, currentBpm, events) => {
+    if (!events || events.length === 0) return;
+    const p = pr.current;
+    p.state = 'playing'; p.fromBeat = fromBeat; p.bpm = currentBpm;
 
-    if (!pr.current.ctx) pr.current.ctx = new AudioContext();
-    const ctx = pr.current.ctx;
-    if (ctx.state === 'suspended') ctx.resume();
+    if (!p.ctx) p.ctx = new AudioContext();
+    const ctx = p.ctx;
 
-    pr.current.state = 'playing';
-    pr.current.timers = [];
+    // Resume AudioContext (required after user gesture), then schedule everything
+    ctx.resume().then(() => {
+      if (p.state !== 'playing') return; // aborted before resume completed
 
-    const beatSec = 60 / currentBpm;
+      const beatSec = 60 / currentBpm;
+      const AHEAD_MS = 80; // scheduling lookahead buffer
+      const ctxStart  = ctx.currentTime + AHEAD_MS / 1000;
+      const wallStart = performance.now() + AHEAD_MS;
+      p.startWall = wallStart;
 
-    function tick() {
-      if (pr.current.state !== 'playing') return;
-      const evt = events[pr.current.idx];
-      if (!evt) { stopPlayback(); return; }
+      const timers = [], nodes = [];
+      let lastEndBeat = fromBeat;
 
-      setPlayingKey(`${evt.si}-${evt.pi}-${evt.ci}`);
+      events.forEach(evt => {
+        if (evt.beatOffset < fromBeat - 0.001) return; // already past
+        const offsetSec = (evt.beatOffset - fromBeat) * beatSec;
 
-      if (!evt.cell.rest) {
-        const freq = CHAR_FREQ[evt.cell.char];
-        if (freq) pluckSanshin(ctx, freq, evt.cell.duration * beatSec);
-      }
+        // Audio — scheduled at exact AudioContext time (sample-accurate, no drift)
+        if (!evt.cell.rest && CHAR_FREQ[evt.cell.char]) {
+          const newNodes = schedulePluck(ctx, CHAR_FREQ[evt.cell.char],
+                                         evt.cell.duration * beatSec,
+                                         ctxStart + offsetSec);
+          nodes.push(...newNodes);
+        }
 
-      const timer = setTimeout(() => {
-        pr.current.idx++;
-        tick();
-      }, evt.cell.duration * beatSec * 1000);
-      pr.current.timers.push(timer);
-    }
+        // Visual cursor — all delays measured from same wallStart anchor (independent, not chained)
+        timers.push(setTimeout(() => {
+          if (pr.current.state === 'playing')
+            setPlayingKey(`${evt.si}-${evt.pi}-${evt.ci}`);
+        }, offsetSec * 1000));
 
-    pr.current.idx = fromIdx;
-    tick();
-    setPlayState('playing');
-  }, [stopPlayback]);
+        lastEndBeat = Math.max(lastEndBeat, evt.beatOffset + evt.cell.duration);
+      });
+
+      // End-of-song cleanup
+      timers.push(setTimeout(() => {
+        if (pr.current.state === 'playing') {
+          p.state = 'stopped'; p.fromBeat = 0;
+          setPlayState('stopped'); setPlayingKey(null);
+        }
+      }, (lastEndBeat - fromBeat) * beatSec * 1000 + 100));
+
+      p.timers = timers; p.nodes = nodes;
+      setPlayState('playing');
+    });
+  }, []);
+
+  function pausePlayback() {
+    const p = pr.current;
+    // Calculate exactly how many beats have elapsed since this run started
+    const elapsedSec = Math.max(0, (performance.now() - p.startWall) / 1000);
+    p.fromBeat = p.fromBeat + elapsedSec * (p.bpm / 60);
+
+    p.timers.forEach(clearTimeout);
+    p.nodes.forEach(n => { try { n.stop(0); } catch (_) {} });
+    p.timers = []; p.nodes = [];
+    p.state = 'paused';
+    setPlayState('paused'); setPlayingKey(null);
+  }
 
   function togglePlay() {
     if (playState === 'playing') {
-      pr.current.timers.forEach(clearTimeout);
-      pr.current.timers = [];
-      pr.current.state = 'paused';
-      setPlayState('paused');
+      pausePlayback();
     } else {
-      startPlayback(pr.current.idx, bpm, song);
+      const events = song ? flattenScore(song.score) : [];
+      doStart(pr.current.fromBeat, bpm, events);
     }
   }
 
@@ -513,8 +574,8 @@ function Viewer({ songId, importedSong, onBack }) {
         <button class="kk-play-btn" onClick=${togglePlay} title=${playState === 'playing' ? 'Pause' : 'Play'}>
           ${playState === 'playing' ? '⏸' : '▶'}
         </button>
-        <button class="kk-stop-btn" onClick=${stopPlayback} title="Stop"
-                disabled=${playState === 'stopped'}>⏹</button>
+        <button class="kk-stop-btn" onClick=${() => { stopPlayback(); }}
+                title="Stop" disabled=${playState === 'stopped'}>⏹</button>
         <div class="kk-bpm-wrap">
           <input class="kk-bpm-slider" type="range" min="50" max="200" step="5"
                  value=${bpm} onInput=${e => setBpm(Number(e.target.value))} />
