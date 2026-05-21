@@ -1,0 +1,128 @@
+{
+  "id": "nada-so-so",
+  "title": "Nada So So",
+  "original_title": "涙そうそう",
+  "artist": "BEGIN (arr. for sanshin)",
+  "origin": "okinawan",
+  "category": "pop",
+  "tags": ["modern", "okinawa", "popular", "begin", "natsukawa-rimi"],
+  "tuning": "honchoshi",
+  "difficulty": "intermediate",
+  "description": "Modern Okinawan pop song by BEGIN (1998), widely popularized by Natsukawa Rimi. 'Nada So So' means 'tears flowing freely.' Educational arrangement — pitch accuracy is approximate.",
+  "source": "BEGIN, arr. for sanshin study",
+  "added_by": "ai-agent",
+  "date_added": "2025-05-20",
+  "score": [
+    {
+      "section": "Intro",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "合", "duration": 2 },
+            { "char": "乙", "duration": 1 },
+            { "char": "四", "duration": 1 },
+            { "char": "上", "duration": 4 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "上", "duration": 1 },
+            { "char": "中", "duration": 1 },
+            { "char": "工", "duration": 1 },
+            { "char": "五", "duration": 2 },
+            { "char": "工", "duration": 1 },
+            { "char": "四", "duration": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Verse",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "上", "lyric": "ふ",   "duration": 0.5 },
+            { "char": "中", "lyric": "る",   "duration": 0.5 },
+            { "char": "工", "lyric": "い",   "duration": 1 },
+            { "char": "五", "lyric": "アル", "duration": 1 },
+            { "char": "工", "lyric": "バム", "duration": 1 },
+            { "char": "中", "lyric": "の",   "duration": 1 },
+            { "char": "上", "lyric": "中",   "duration": 1 },
+            { "char": "工", "lyric": "に",   "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "中", "lyric": "か",   "duration": 1 },
+            { "char": "上", "lyric": "く",   "duration": 1 },
+            { "char": "工", "lyric": "れ",   "duration": 1 },
+            { "char": "五", "lyric": "ん",   "duration": 1 },
+            { "char": "六", "lyric": "ぼ",   "duration": 1 },
+            { "char": "五", "lyric": "し",   "duration": 1 },
+            { "char": "工", "lyric": "て",   "duration": 1 },
+            { "char": "四", "lyric": "た",   "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "上", "lyric": "あ",   "duration": 1 },
+            { "char": "中", "lyric": "の",   "duration": 1 },
+            { "char": "工", "lyric": "笑",   "duration": 1 },
+            { "char": "五", "lyric": "顔",   "duration": 2 },
+            { "char": "四", "lyric": "見",   "duration": 1 },
+            { "char": "上", "lyric": "る",   "duration": 1 },
+            { "char": "中", "lyric": "た",   "duration": 1 },
+            { "char": "上", "lyric": "び",   "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "工", "lyric": "泣",   "duration": 1 },
+            { "char": "五", "lyric": "け",   "duration": 1 },
+            { "char": "六", "lyric": "て",   "duration": 1 },
+            { "char": "五", "lyric": "く",   "duration": 1 },
+            { "char": "工", "lyric": "る",   "duration": 1 },
+            { "char": "四", "lyric": "な",   "duration": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "工", "lyric": "な",   "duration": 2 },
+            { "char": "五", "lyric": "だ",   "duration": 1 },
+            { "char": "六", "lyric": "そ",   "duration": 1 },
+            { "char": "五", "lyric": "う",   "duration": 1 },
+            { "char": "工", "lyric": "そ",   "duration": 2 },
+            { "char": "四", "lyric": "う",   "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "上", "lyric": "会",   "duration": 1 },
+            { "char": "中", "lyric": "い",   "duration": 1 },
+            { "char": "工", "lyric": "た",   "duration": 1 },
+            { "char": "五", "lyric": "く",   "duration": 1 },
+            { "char": "工", "lyric": "て",   "duration": 2 },
+            { "char": "中", "lyric": "会",   "duration": 1 },
+            { "char": "上", "lyric": "え",   "duration": 1 },
+            { "char": "四", "lyric": "た",   "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "合", "lyric": "あ",   "duration": 1 },
+            { "char": "乙", "lyric": "な",   "duration": 1 },
+            { "char": "四", "lyric": "た",   "duration": 1 },
+            { "char": "上", "lyric": "が",   "duration": 1 },
+            { "char": "中", "lyric": "い",   "duration": 1 },
+            { "char": "工", "lyric": "る",   "duration": 4 }
+          ]
+        }
+      ]
+    }
+  ]
+}

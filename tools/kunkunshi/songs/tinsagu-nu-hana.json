@@ -1,0 +1,88 @@
+{
+  "id": "tinsagu-nu-hana",
+  "title": "Tinsagu nu Hana",
+  "original_title": "ティンサグぬ花",
+  "artist": "Traditional Okinawan",
+  "origin": "okinawan",
+  "category": "folk",
+  "tags": ["traditional", "okinawa", "folk", "pentatonic"],
+  "tuning": "honchoshi",
+  "difficulty": "beginner",
+  "description": "One of the most beloved Okinawan folk songs, often sung as a lullaby. The title means 'Balsam flower.' Educational arrangement — see KUNKUNSHI_FORMAT.md for notation details.",
+  "source": "Traditional Okinawan oral tradition",
+  "added_by": "ai-agent",
+  "date_added": "2025-05-20",
+  "score": [
+    {
+      "section": "A",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "合", "lyric": "ティン", "duration": 1 },
+            { "char": "四", "lyric": "サグ",  "duration": 1 },
+            { "char": "工", "lyric": "ぬ",   "duration": 1 },
+            { "char": "五", "lyric": "花",   "duration": 2 },
+            { "char": "工", "lyric": "や",   "duration": 1 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "工", "lyric": "爪",   "duration": 1 },
+            { "char": "上", "lyric": "先",   "duration": 1 },
+            { "char": "中", "lyric": "に",   "duration": 1 },
+            { "char": "上", "lyric": "染",   "duration": 1 },
+            { "char": "工", "lyric": "み",   "duration": 1 },
+            { "char": "四", "lyric": "てぃ", "duration": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "B",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "合", "lyric": "親",   "duration": 1 },
+            { "char": "乙", "lyric": "ぬ",   "duration": 1 },
+            { "char": "老", "lyric": "ゆ",   "duration": 1 },
+            { "char": "四", "lyric": "し",   "duration": 1 },
+            { "char": "上", "lyric": "ぐ",   "duration": 1 },
+            { "char": "中", "lyric": "とぅ", "duration": 1 },
+            { "char": "上", "lyric": "や",   "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "中", "lyric": "肝",   "duration": 1 },
+            { "char": "上", "lyric": "に",   "duration": 1 },
+            { "char": "工", "lyric": "染",   "duration": 1 },
+            { "char": "五", "lyric": "み",   "duration": 1 },
+            { "char": "工", "lyric": "れ",   "duration": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "C (Instrumental interlude)",
+      "phrases": [
+        {
+          "cells": [
+            { "char": "合", "duration": 1 },
+            { "char": "乙", "duration": 1 },
+            { "char": "四", "duration": 1 },
+            { "char": "工", "duration": 2 }
+          ]
+        },
+        {
+          "cells": [
+            { "char": "五", "duration": 1 },
+            { "char": "工", "duration": 1 },
+            { "char": "上", "duration": 1 },
+            { "char": "四", "duration": 1 },
+            { "char": "合", "duration": 4 }
+          ]
+        }
+      ]
+    }
+  ]
+}
