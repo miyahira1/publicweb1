@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How this playground is built — Claude Code on a phone, git push, and GitHub Pages hosting." />
+  <title>How It Works · Playground</title>
+  <link rel="stylesheet" href="../../shared/style.css" />
+  <style>
+    .note-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: calc(56px + 3rem) 1.5rem 6rem;
+    }
+
+    /* ── Hero ── */
+    .note-hero {
+      margin-bottom: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .note-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .note-title {
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .note-lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .note-meta {
+      margin-top: 1.25rem;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+    .note-meta span { display: flex; align-items: center; gap: 0.3rem; }
+
+    /* ── Section headings ── */
+    .note-h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 1.25rem;
+    }
+    .note-p {
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .note-p strong { color: var(--text); }
+
+    /* ── Pipeline diagram ── */
+    .pipeline {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+    }
+    .pipeline-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .pipeline-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: nowrap;
+      min-width: 600px;
+    }
+    .pipe-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 0 0 auto;
+    }
+    .pipe-icon {
+      width: 60px; height: 60px;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      border: 1px solid var(--border2);
+      background: var(--surface2);
+      position: relative;
+    }
+    .pipe-icon.highlight {
+      background: rgba(108, 142, 247, 0.12);
+      border-color: rgba(108, 142, 247, 0.4);
+    }
+    .pipe-icon-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .pipe-sublabel {
+      font-size: 0.62rem;
+      color: var(--muted);
+      white-space: nowrap;
+      text-align: center;
+    }
+    .pipe-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0 0.5rem;
+      flex: 0 0 auto;
+      margin-bottom: 2rem;
+    }
+    .pipe-arrow-line {
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--border2), var(--accent));
+      border-radius: 1px;
+      position: relative;
+    }
+    .pipe-arrow-line::after {
+      content: '';
+      position: absolute;
+      right: -1px; top: -3px;
+      border-left: 6px solid var(--accent);
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+    .pipe-arrow-tag {
+      font-size: 0.58rem;
+      color: var(--accent);
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    /* ── Step-by-step flow ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      left: 22px; top: 44px; bottom: 44px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2));
+      border-radius: 1px;
+    }
+    .step {
+      display: flex;
+      gap: 1.25rem;
+      padding: 0.9rem 0;
+      position: relative;
+    }
+    .step-num {
+      flex: 0 0 44px;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 2px solid var(--border2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 800;
+      color: var(--accent);
+      z-index: 1;
+    }
+    .step-content { padding-top: 0.55rem; }
+    .step-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .step-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+
+    /* ── Advantage / Limitation cards ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+    }
+    .info-card.pro { border-left: 3px solid #34d399; }
+    .info-card.con { border-left: 3px solid #f87171; }
+    .info-card.neutral { border-left: 3px solid var(--accent); }
+    .info-card-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .info-card-title {
+      font-size: 0.88rem; font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .info-card.pro .info-card-title { color: #34d399; }
+    .info-card.con .info-card-title { color: #f87171; }
+    .info-card.neutral .info-card-title { color: var(--accent); }
+    .info-card-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── Stats bar ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .stat-box {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+    }
+    .stat-val {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-label { font-size: 0.72rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Architecture block ── */
+    .arch-block {
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+    }
+    .arch-block .hl { color: var(--accent); }
+    .arch-block .hl2 { color: var(--accent2); }
+    .arch-block .ok { color: #34d399; }
+
+    /* ── Quote ── */
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1.25rem;
+      margin: 1.75rem 0;
+      background: rgba(108,142,247,0.06);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .pull-quote p {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.65;
+      font-style: italic;
+    }
+
+    @media (max-width: 640px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="pg-nav">
+    <a href="../../index.html" class="pg-nav-back">← Playground</a>
+    <span class="badge badge-note" style="font-size:0.75rem">Note</span>
+  </nav>
+
+  <article class="note-body">
+
+    <!-- Hero -->
+    <header class="note-hero">
+      <p class="note-eyebrow">Devlog · How It Works</p>
+      <h1 class="note-title">Built from a Phone,<br><span class="gradient-text">Hosted for Free</span></h1>
+      <p class="note-lead">
+        This playground is assembled almost entirely through conversations with an AI —
+        on a phone. No laptop required. Here's the full pipeline, from idea to live URL.
+      </p>
+      <div class="note-meta">
+        <span>📅 May 2025</span>
+        <span>⏱ 4 min read</span>
+        <span>🤖 Claude Code</span>
+        <span>📱 Mobile-first</span>
+      </div>
+    </header>
+
+    <!-- Pipeline diagram -->
+    <h2 class="note-h2">The Pipeline</h2>
+    <p class="note-p">Every feature on this site travels this exact path — from a message typed on a phone to a live URL anyone can visit:</p>
+
+    <div class="pipeline">
+      <p class="pipeline-label">Deploy pipeline</p>
+      <div class="pipeline-row">
+
+        <div class="pipe-node">
+          <div class="pipe-icon highlight">📱</div>
+          <span class="pipe-icon-label">Phone</span>
+          <span class="pipe-sublabel">idea / prompt</span>
+        </div>
+
+        <div class="pipe-arrow">
+          <div class="pipe-arrow-line"></div>
+          <span class="pipe-arrow-tag">chat</span>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-icon highlight">🤖</div>
+          <span class="pipe-icon-label">Claude Code</span>
+          <span class="pipe-sublabel">writes &amp; edits</span>
+        </div>
+
+        <div class="pipe-arrow">
+          <div class="pipe-arrow-line"></div>
+          <span class="pipe-arrow-tag">commit</span>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-icon">🐙</div>
+          <span class="pipe-icon-label">GitHub</span>
+          <span class="pipe-sublabel">git push</span>
+        </div>
+
+        <div class="pipe-arrow">
+          <div class="pipe-arrow-line"></div>
+          <span class="pipe-arrow-tag">~1 min</span>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-icon">⚡</div>
+          <span class="pipe-icon-label">Pages CDN</span>
+          <span class="pipe-sublabel">global edge</span>
+        </div>
+
+        <div class="pipe-arrow">
+          <div class="pipe-arrow-line"></div>
+          <span class="pipe-arrow-tag">https</span>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-icon highlight">🌐</div>
+          <span class="pipe-icon-label">Browser</span>
+          <span class="pipe-sublabel">you're here</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- How a change happens -->
+    <h2 class="note-h2">How a Change Happens</h2>
+    <p class="note-p">No IDE, no laptop, no local dev server. The workflow fits entirely in the Claude.ai app on a phone:</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <p class="step-title">Open Claude Code on the phone</p>
+          <p class="step-desc">The Claude.ai app connects to a remote container that already has the repo cloned. Claude Code runs in that container — it can read files, run commands, and edit code.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <p class="step-title">Describe what to build</p>
+          <p class="step-desc">Type (or speak) what you want: "add audio playback to kunkunshi", "create a notes section". Claude reads the codebase first, then plans and implements the change.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <p class="step-title">Claude edits files and commits</p>
+          <p class="step-desc">The AI writes the HTML/JS/JSON directly, runs git add &amp; commit with a clear message, then pushes to the feature branch on GitHub.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <p class="step-title">GitHub Pages deploys automatically</p>
+          <p class="step-desc">Within ~60 seconds, GitHub's CDN picks up the new files. No build step, no CI/CD pipeline to configure — just static files, served instantly.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <p class="step-title">Refresh and verify</p>
+          <p class="step-desc">Open the live URL on the same phone. If something looks off, describe the fix — Claude patches it and pushes again in minutes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Architecture -->
+    <h2 class="note-h2">File Architecture</h2>
+    <p class="note-p">The whole site is plain files. No bundler, no framework install, no <code style="font-family:monospace;color:var(--accent2);font-size:0.88em">node_modules</code>. React is loaded from a CDN at runtime.</p>
+
+    <div class="arch-block">
+<span class="ok">/</span>  ← repo root (GitHub Pages serves from here)<br>
+├── <span class="hl">index.html</span>          ← hub page (React via CDN)<br>
+├── <span class="hl">.nojekyll</span>           ← disables Jekyll (lets _index.json be served)<br>
+├── <span class="hl2">shared/</span><br>
+│   ├── style.css           ← design tokens, shared by every page<br>
+│   └── tools.js            ← <span class="ok">← add 1 object here to add a new card</span><br>
+├── <span class="hl2">games/snake/</span><br>
+│   └── index.html          ← self-contained game<br>
+├── <span class="hl2">tools/kunkunshi/</span><br>
+│   ├── index.html          ← React app, songs viewer<br>
+│   └── songs/              ← JSON song files<br>
+└── <span class="hl2">notes/how-it-works/</span><br>
+    └── index.html          ← you are here
+    </div>
+
+    <div class="pull-quote">
+      <p>Adding a new tool takes two steps: create a directory with an <code style="font-family:monospace;font-size:0.9em;color:var(--accent)">index.html</code>, then add one object to <code style="font-family:monospace;font-size:0.9em;color:var(--accent)">shared/tools.js</code>. The hub card appears automatically.</p>
+    </div>
+
+    <!-- Stats -->
+    <h2 class="note-h2">By the Numbers</h2>
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-val">$0</div>
+        <div class="stat-label">Hosting cost</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">~60s</div>
+        <div class="stat-label">Deploy time</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">0</div>
+        <div class="stat-label">Build steps</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">100%</div>
+        <div class="stat-label">Client-side</div>
+      </div>
+    </div>
+
+    <!-- Advantages -->
+    <h2 class="note-h2">Advantages</h2>
+
+    <div class="card-grid">
+      <div class="info-card pro">
+        <div class="info-card-icon">💰</div>
+        <div class="info-card-title">Zero cost</div>
+        <div class="info-card-desc">GitHub Pages is free for public repos. No server, no database, no monthly bill — ever.</div>
+      </div>
+      <div class="info-card pro">
+        <div class="info-card-icon">🚀</div>
+        <div class="info-card-title">Instant deploys</div>
+        <div class="info-card-desc">Push to main → live in ~60 seconds. No build pipeline, no Docker, no deployment dashboards to manage.</div>
+      </div>
+      <div class="info-card pro">
+        <div class="info-card-icon">📱</div>
+        <div class="info-card-title">Truly mobile</div>
+        <div class="info-card-desc">Claude Code's remote container means the "dev environment" runs in the cloud. Your phone is just a terminal.</div>
+      </div>
+      <div class="info-card pro">
+        <div class="info-card-icon">📜</div>
+        <div class="info-card-title">Git history</div>
+        <div class="info-card-desc">Every change is versioned. Roll back anything. The commit log is also a design journal.</div>
+      </div>
+      <div class="info-card pro">
+        <div class="info-card-icon">🌍</div>
+        <div class="info-card-title">Global CDN</div>
+        <div class="info-card-desc">GitHub Pages is backed by Fastly. Files are cached at edge nodes worldwide — fast everywhere.</div>
+      </div>
+      <div class="info-card pro">
+        <div class="info-card-icon">🤖</div>
+        <div class="info-card-title">AI velocity</div>
+        <div class="info-card-desc">A feature that would take hours from scratch gets done in one conversation. Claude handles boilerplate, debugging, and commits.</div>
+      </div>
+    </div>
+
+    <!-- Limitations -->
+    <h2 class="note-h2">Limitations</h2>
+
+    <div class="card-grid">
+      <div class="info-card con">
+        <div class="info-card-icon">🚫</div>
+        <div class="info-card-title">No backend</div>
+        <div class="info-card-desc">Static only. No user accounts, no persistent data, no server-side logic. Everything runs in the browser — or it doesn't run at all.</div>
+      </div>
+      <div class="info-card con">
+        <div class="info-card-icon">⏳</div>
+        <div class="info-card-title">CDN cache lag</div>
+        <div class="info-card-desc">After a push, old versions can linger for 1–5 minutes at edge nodes. Hard-refresh or wait it out.</div>
+      </div>
+      <div class="info-card con">
+        <div class="info-card-icon">🔓</div>
+        <div class="info-card-title">Everything is public</div>
+        <div class="info-card-desc">Public repo = public source. No secrets or API keys can ever live in the repo. All logic must be client-safe.</div>
+      </div>
+      <div class="info-card con">
+        <div class="info-card-icon">🐛</div>
+        <div class="info-card-title">No local preview</div>
+        <div class="info-card-desc">Reviewing changes on mobile means pushing to see them live. Broken code goes public briefly — though it's easy to revert.</div>
+      </div>
+      <div class="info-card con">
+        <div class="info-card-icon">⚙️</div>
+        <div class="info-card-title">Jekyll quirks</div>
+        <div class="info-card-desc">GitHub Pages runs Jekyll by default. Files starting with <code style="font-family:monospace;font-size:0.85em">_</code> (like <code style="font-family:monospace;font-size:0.85em">_index.json</code>) are silently suppressed unless you add a <code style="font-family:monospace;font-size:0.85em">.nojekyll</code> file.</div>
+      </div>
+      <div class="info-card con">
+        <div class="info-card-icon">🔋</div>
+        <div class="info-card-title">Session limits</div>
+        <div class="info-card-desc">Claude Code remote sessions time out after inactivity. Long gaps mid-task mean starting a fresh context — though the git history bridges continuity.</div>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <h2 class="note-h2">The Bigger Point</h2>
+    <p class="note-p">
+      The goal was never to build the most technically impressive site. It was to see how much a single person — on a phone, in spare moments — can ship when the heavy lifting is handled by an AI.
+    </p>
+    <p class="note-p">
+      The answer so far: <strong>a lot</strong>. A Snake game with Web Audio, a full Okinawan music notation viewer with audio playback, a responsive hub, and this note — all built in a handful of sessions without opening a laptop.
+    </p>
+    <p class="note-p">
+      The constraint is no longer "can I write the code?" It's "can I describe what I want clearly enough?" That's a much more interesting constraint to work within.
+    </p>
+
+  </article>
+
+  <footer style="border-top:1px solid var(--border);text-align:center;padding:1.5rem;color:var(--muted);font-size:0.82rem">
+    Part of the <a href="../../index.html">Playground</a> · Built with Claude Code
+  </footer>
+
+</body>
+</html>

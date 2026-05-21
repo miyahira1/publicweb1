@@ -97,7 +97,7 @@
           <div class="tool-card-footer">
             <span class=${`badge badge-${tool.category}`}>${tool.category}</span>
             <span style=${{ fontSize: '0.83rem', color: 'var(--accent)', fontWeight: 600 }}>
-              ${tool.category === 'game' ? 'Play →' : 'Open →'}
+              ${{ game: 'Play →', note: 'Read →' }[tool.category] || 'Open →'}
             </span>
           </div>
         </a>

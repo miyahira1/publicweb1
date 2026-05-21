@@ -19,6 +19,16 @@ export const tools = [
     tags: ['music', 'okinawa', 'notation'],
     featured: false,
   },
+  {
+    id: 'how-it-works',
+    title: 'How It Works',
+    description: 'How this playground is built — Claude Code on a phone, git push to GitHub, served free via Pages. Advantages and limitations.',
+    category: 'note',
+    icon: '📖',
+    url: './notes/how-it-works/',
+    tags: ['meta', 'devlog', 'github-pages'],
+    featured: false,
+  },
 ];
 
 export const categories = ['all', ...new Set(tools.map(t => t.category))];
