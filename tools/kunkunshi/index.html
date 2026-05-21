@@ -6,7 +6,6 @@
   <title>Kunkunshi — Okinawan Sanshin Notation</title>
   <link rel="stylesheet" href="../../shared/style.css">
   <style>
-    /* ── Layout ── */
     body { min-height: 100vh; display: flex; flex-direction: column; }
     #root { flex: 1; display: flex; flex-direction: column; }
 
@@ -52,6 +51,7 @@
     .badge-other    { background: rgba(148,163,184,0.15); color: #94a3b8; }
     .kk-empty { text-align: center; color: var(--muted); padding: 4rem 0; grid-column: 1/-1; }
     .kk-import-btn { margin-left: auto; }
+    #file-import { display: none; }
 
     /* ── Viewer ── */
     .kk-viewer { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; width: 100%; }
@@ -59,28 +59,70 @@
     .kk-viewer-header h1 { font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem; }
     .kk-viewer-header p  { color: var(--muted); margin: 0.2rem 0; font-size: 0.9rem; }
     .kk-viewer-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; margin-top: 0.75rem; }
-    .kk-viewer-toolbar {
+
+    .kk-toolbar {
       display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;
       margin-bottom: 1.5rem; padding-bottom: 1rem;
       border-bottom: 1px solid var(--border);
     }
-    .kk-viewer-toolbar-right { margin-left: auto; display: flex; gap: 0.5rem; align-items: center; }
+    .kk-toolbar-right { margin-left: auto; display: flex; gap: 0.5rem; align-items: center; }
+
+    /* ── Playback controls ── */
+    .kk-play-btn {
+      width: 2.4rem; height: 2.4rem; border-radius: 50%;
+      border: none; cursor: pointer; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--grad); color: #fff;
+      transition: opacity var(--trans), transform var(--trans);
+    }
+    .kk-play-btn:hover { opacity: 0.85; transform: scale(1.05); }
+    .kk-play-btn:disabled { opacity: 0.4; cursor: default; transform: none; }
+    .kk-stop-btn {
+      width: 2rem; height: 2rem; border-radius: var(--radius-sm);
+      border: 1px solid var(--border2); cursor: pointer;
+      background: var(--surface); color: var(--muted); font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color var(--trans), color var(--trans);
+    }
+    .kk-stop-btn:hover { border-color: var(--accent); color: var(--text); }
+    .kk-bpm-wrap { display: flex; align-items: center; gap: 0.4rem; }
+    .kk-bpm-label { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+    .kk-bpm-slider {
+      -webkit-appearance: none; appearance: none;
+      width: 80px; height: 3px; border-radius: 2px;
+      background: var(--border2); outline: none; cursor: pointer;
+    }
+    .kk-bpm-slider::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 14px; height: 14px;
+      border-radius: 50%; background: var(--accent); cursor: pointer;
+    }
+    .kk-bpm-slider::-moz-range-thumb {
+      width: 14px; height: 14px; border-radius: 50%; border: none;
+      background: var(--accent); cursor: pointer;
+    }
     .zoom-label { font-size: 0.8rem; color: var(--muted); min-width: 2.8rem; text-align: center; }
 
-    /* ── Score — Horizontal ── */
-    .kk-score { }
+    /* ── Score ── */
     .kk-section { margin-bottom: 2rem; }
     .kk-section-label {
       font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
       text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem;
     }
     .kk-phrases-h { display: flex; flex-direction: column; gap: 0.75rem; }
-    .kk-phrase-h { display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px; }
+    .kk-phrase-h  { display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px; }
+
     .kk-cell {
       display: flex; flex-direction: column; align-items: center;
       padding: 0.4rem 0.5rem; border: 1px solid var(--border);
       border-radius: var(--radius-sm); background: var(--surface);
-      min-width: 2.8rem; transition: border-color 0.15s;
+      min-width: 2.8rem;
+      transition: border-color 0.12s, background 0.12s, transform 0.08s;
+    }
+    .kk-cell.kk-playing {
+      border-color: var(--accent);
+      background: rgba(108,142,247,0.18);
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px rgba(108,142,247,0.35);
     }
     .kk-char {
       font-family: "Noto Serif CJK JP", "Yu Mincho", "Noto Serif JP", serif;
@@ -88,9 +130,8 @@
     }
     .kk-lyric { color: var(--muted); margin-top: 0.2rem; line-height: 1; }
     .kk-rest .kk-char { opacity: 0.2; }
-    .kk-phrase-sep { width: 100%; height: 0; }
 
-    /* ── Score — Vertical ── */
+    /* ── Vertical score ── */
     .kk-phrases-v {
       display: flex; flex-direction: row-reverse;
       align-items: flex-start; gap: 0.75rem;
@@ -102,18 +143,21 @@
       padding: 0.4rem 0.5rem; border: 1px solid var(--border);
       border-radius: var(--radius-sm); background: var(--surface);
       gap: 0.3rem; min-height: 2.8rem;
+      transition: border-color 0.12s, background 0.12s;
+    }
+    .kk-cell-v.kk-playing {
+      border-color: var(--accent);
+      background: rgba(108,142,247,0.18);
+      box-shadow: 0 0 12px rgba(108,142,247,0.35);
     }
     .kk-lyric-v { color: var(--muted); line-height: 1; writing-mode: vertical-rl; text-orientation: upright; }
 
-    /* ── Loading / Error ── */
+    /* ── Misc ── */
     .kk-loading { text-align: center; padding: 4rem; color: var(--muted); }
     .kk-error {
       text-align: center; padding: 2rem; color: #f87171;
       background: rgba(248,113,113,0.08); border-radius: var(--radius); margin: 2rem 0;
     }
-
-    /* ── Hidden file input ── */
-    #file-import { display: none; }
   </style>
 </head>
 <body>
@@ -125,10 +169,62 @@ import { createRoot } from 'https://esm.sh/react-dom@18/client';
 import htm from 'https://esm.sh/htm@3';
 const html = htm.bind(h);
 
-// ── Helpers ─────────────────────────────────────────────────────────────────
+// ── Pitch map (honchoshi, F root) ────────────────────────────────────────────
+
+const CHAR_FREQ = {
+  '合': 174.61, '乙': 196.00, '老': 207.65, '四': 233.08,
+  '上': 261.63, '中': 293.66, '尺': 311.13, '工': 349.23,
+  '五': 392.00, '六': 415.30, '七': 466.16, '八': 523.25,
+};
+
+// ── Sanshin pluck synthesis ──────────────────────────────────────────────────
+
+function pluckSanshin(ctx, freq, durationSec) {
+  const t = ctx.currentTime;
+  const decay = Math.min(durationSec * 0.88, 2.2);
+
+  // Main body: triangle wave, slow exponential decay
+  const osc = ctx.createOscillator();
+  const env = ctx.createGain();
+  osc.type = 'triangle';
+  osc.frequency.value = freq;
+  env.gain.setValueAtTime(0.55, t);
+  env.gain.exponentialRampToValueAtTime(0.001, t + decay);
+  osc.connect(env);
+  env.connect(ctx.destination);
+  osc.start(t);
+  osc.stop(t + decay);
+
+  // Attack transient: brief sawtooth burst for pluck brightness
+  const osc2 = ctx.createOscillator();
+  const env2 = ctx.createGain();
+  osc2.type = 'sawtooth';
+  osc2.frequency.value = freq;
+  env2.gain.setValueAtTime(0.28, t);
+  env2.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
+  osc2.connect(env2);
+  env2.connect(ctx.destination);
+  osc2.start(t);
+  osc2.stop(t + 0.06);
+}
+
+// ── Score flattening ─────────────────────────────────────────────────────────
+
+function flattenScore(score) {
+  const events = [];
+  score.forEach((section, si) => {
+    section.phrases.forEach((phrase, pi) => {
+      phrase.cells.forEach((cell, ci) => {
+        events.push({ si, pi, ci, cell });
+      });
+    });
+  });
+  return events;
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
 
 const ORIGIN_LABELS = { okinawan: 'Okinawan', western: 'Western', japanese: 'Japanese', other: 'Other' };
-const DIFF_ORDER = { beginner: 0, intermediate: 1, advanced: 2 };
 
 function originBadge(origin) {
   return html`<span class=${`badge badge-${origin ?? 'other'}`}>${ORIGIN_LABELS[origin] ?? origin}</span>`;
@@ -231,29 +327,30 @@ function Library({ catalog, onSelect, onImport }) {
   `;
 }
 
-// ── Score rendering ───────────────────────────────────────────────────────────
+// ── Cell ─────────────────────────────────────────────────────────────────────
 
-function Cell({ cell, fontSize, vertical }) {
-  const charStyle = { fontSize };
+function Cell({ cell, fontSize, vertical, playing }) {
   const lyricSize = `calc(${fontSize} * 0.32)`;
 
   if (vertical) {
     return html`
-      <div class=${`kk-cell-v ${cell.rest ? 'kk-rest' : ''}`}>
-        <span class="kk-char" style=${charStyle}>${cell.char}</span>
+      <div class=${`kk-cell-v ${cell.rest ? 'kk-rest' : ''} ${playing ? 'kk-playing' : ''}`}>
+        <span class="kk-char" style=${{ fontSize }}>${cell.char}</span>
         ${cell.lyric && html`<span class="kk-lyric-v" style=${{ fontSize: lyricSize }}>${cell.lyric}</span>`}
       </div>
     `;
   }
   return html`
-    <div class=${`kk-cell ${cell.rest ? 'kk-rest' : ''}`}>
-      <span class="kk-char" style=${charStyle}>${cell.char}</span>
+    <div class=${`kk-cell ${cell.rest ? 'kk-rest' : ''} ${playing ? 'kk-playing' : ''}`}>
+      <span class="kk-char" style=${{ fontSize }}>${cell.char}</span>
       ${cell.lyric && html`<span class="kk-lyric" style=${{ fontSize: lyricSize }}>${cell.lyric}</span>`}
     </div>
   `;
 }
 
-function Score({ score, vertical, fontSize }) {
+// ── Score ─────────────────────────────────────────────────────────────────────
+
+function Score({ score, vertical, fontSize, playingKey }) {
   return html`
     <div class="kk-score">
       ${score.map((section, si) => html`
@@ -265,7 +362,8 @@ function Score({ score, vertical, fontSize }) {
                 ${[...section.phrases].reverse().map((phrase, pi) => html`
                   <div class="kk-phrase-v" key=${pi}>
                     ${phrase.cells.map((cell, ci) => html`
-                      <${Cell} key=${ci} cell=${cell} fontSize=${fontSize} vertical />
+                      <${Cell} key=${ci} cell=${cell} fontSize=${fontSize} vertical
+                               playing=${playingKey === `${si}-${pi}-${ci}`} />
                     `)}
                   </div>
                 `)}
@@ -275,7 +373,8 @@ function Score({ score, vertical, fontSize }) {
                 ${section.phrases.map((phrase, pi) => html`
                   <div class="kk-phrase-h" key=${pi}>
                     ${phrase.cells.map((cell, ci) => html`
-                      <${Cell} key=${ci} cell=${cell} fontSize=${fontSize} vertical=${false} />
+                      <${Cell} key=${ci} cell=${cell} fontSize=${fontSize} vertical=${false}
+                               playing=${playingKey === `${si}-${pi}-${ci}`} />
                     `)}
                   </div>
                 `)}
@@ -292,11 +391,16 @@ function Score({ score, vertical, fontSize }) {
 const ZOOM_SIZES = ['1rem', '1.35rem', '1.7rem', '2.1rem', '2.6rem'];
 
 function Viewer({ songId, importedSong, onBack }) {
-  const [song, setSong] = useState(null);
-  const [error, setError] = useState(null);
+  const [song, setSong]         = useState(null);
+  const [error, setError]       = useState(null);
   const [vertical, setVertical] = useState(false);
-  const [zoomIdx, setZoomIdx] = useState(2);
+  const [zoomIdx, setZoomIdx]   = useState(2);
+  const [playState, setPlayState] = useState('stopped'); // 'stopped'|'playing'|'paused'
+  const [playingKey, setPlayingKey] = useState(null);
+  const [bpm, setBpm]           = useState(100);
+  const pr = useRef({ state: 'stopped', idx: 0, timers: [], ctx: null });
 
+  // Load song
   useEffect(() => {
     if (importedSong) { setSong(importedSong); return; }
     setSong(null); setError(null);
@@ -306,11 +410,82 @@ function Viewer({ songId, importedSong, onBack }) {
       .catch(err => setError(err.message));
   }, [songId, importedSong]);
 
+  // Stop playback whenever the song source changes
+  useEffect(() => {
+    return () => {
+      pr.current.timers.forEach(clearTimeout);
+      pr.current.timers = [];
+      pr.current.state = 'stopped';
+      pr.current.idx = 0;
+    };
+  }, [songId, importedSong]);
+
+  const stopPlayback = useCallback(() => {
+    pr.current.timers.forEach(clearTimeout);
+    pr.current.timers = [];
+    pr.current.state = 'stopped';
+    pr.current.idx = 0;
+    setPlayState('stopped');
+    setPlayingKey(null);
+  }, []);
+
+  const startPlayback = useCallback((fromIdx, currentBpm, currentSong) => {
+    if (!currentSong) return;
+    const events = flattenScore(currentSong.score);
+    if (fromIdx >= events.length) return;
+
+    if (!pr.current.ctx) pr.current.ctx = new AudioContext();
+    const ctx = pr.current.ctx;
+    if (ctx.state === 'suspended') ctx.resume();
+
+    pr.current.state = 'playing';
+    pr.current.timers = [];
+
+    const beatSec = 60 / currentBpm;
+
+    function tick() {
+      if (pr.current.state !== 'playing') return;
+      const evt = events[pr.current.idx];
+      if (!evt) { stopPlayback(); return; }
+
+      setPlayingKey(`${evt.si}-${evt.pi}-${evt.ci}`);
+
+      if (!evt.cell.rest) {
+        const freq = CHAR_FREQ[evt.cell.char];
+        if (freq) pluckSanshin(ctx, freq, evt.cell.duration * beatSec);
+      }
+
+      const timer = setTimeout(() => {
+        pr.current.idx++;
+        tick();
+      }, evt.cell.duration * beatSec * 1000);
+      pr.current.timers.push(timer);
+    }
+
+    pr.current.idx = fromIdx;
+    tick();
+    setPlayState('playing');
+  }, [stopPlayback]);
+
+  function togglePlay() {
+    if (playState === 'playing') {
+      pr.current.timers.forEach(clearTimeout);
+      pr.current.timers = [];
+      pr.current.state = 'paused';
+      setPlayState('paused');
+    } else {
+      startPlayback(pr.current.idx, bpm, song);
+    }
+  }
+
   const fontSize = ZOOM_SIZES[zoomIdx];
 
   if (error) return html`
     <div class="kk-viewer">
-      <a class="pg-nav-back" onClick=${onBack} href="#" style=${{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginBottom: '1rem', color: 'var(--accent)', textDecoration: 'none' }}>← Library</a>
+      <a href="#" onClick=${e => { e.preventDefault(); onBack(); }}
+         style=${{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginBottom: '1rem', color: 'var(--accent)', textDecoration: 'none' }}>
+        ← Library
+      </a>
       <div class="kk-error">Failed to load song: ${error}</div>
     </div>`;
 
@@ -319,7 +494,7 @@ function Viewer({ songId, importedSong, onBack }) {
   return html`
     <div class="kk-viewer">
       <div class="kk-viewer-header">
-        <a href="#" onClick=${e => { e.preventDefault(); onBack(); }}
+        <a href="#" onClick=${e => { e.preventDefault(); stopPlayback(); onBack(); }}
            style=${{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.75rem', color: 'var(--accent)', textDecoration: 'none', fontSize: '0.9rem' }}>
           ← Library
         </a>
@@ -333,12 +508,26 @@ function Viewer({ songId, importedSong, onBack }) {
         </div>
       </div>
 
-      <div class="kk-viewer-toolbar">
+      <div class="kk-toolbar">
+        <!-- Playback -->
+        <button class="kk-play-btn" onClick=${togglePlay} title=${playState === 'playing' ? 'Pause' : 'Play'}>
+          ${playState === 'playing' ? '⏸' : '▶'}
+        </button>
+        <button class="kk-stop-btn" onClick=${stopPlayback} title="Stop"
+                disabled=${playState === 'stopped'}>⏹</button>
+        <div class="kk-bpm-wrap">
+          <input class="kk-bpm-slider" type="range" min="50" max="200" step="5"
+                 value=${bpm} onInput=${e => setBpm(Number(e.target.value))} />
+          <span class="kk-bpm-label">${bpm} BPM</span>
+        </div>
+
+        <!-- Layout / zoom -->
         <button class=${`btn ${vertical ? 'btn-primary' : 'btn-ghost'}`}
+                style=${{ marginLeft: '0.5rem' }}
                 onClick=${() => setVertical(v => !v)}>
           ${vertical ? 'Vertical ✓' : 'Horizontal'}
         </button>
-        <div class="kk-viewer-toolbar-right">
+        <div class="kk-toolbar-right">
           <button class="btn btn-ghost" onClick=${() => setZoomIdx(i => Math.max(0, i - 1))}
                   disabled=${zoomIdx === 0}>−</button>
           <span class="zoom-label">${Math.round((zoomIdx + 1) / ZOOM_SIZES.length * 100)}%</span>
@@ -347,7 +536,7 @@ function Viewer({ songId, importedSong, onBack }) {
         </div>
       </div>
 
-      <${Score} score=${song.score} vertical=${vertical} fontSize=${fontSize} />
+      <${Score} score=${song.score} vertical=${vertical} fontSize=${fontSize} playingKey=${playingKey} />
     </div>
   `;
 }
@@ -355,9 +544,9 @@ function Viewer({ songId, importedSong, onBack }) {
 // ── App ──────────────────────────────────────────────────────────────────────
 
 function App() {
-  const [catalog, setCatalog] = useState(null);
+  const [catalog, setCatalog]       = useState(null);
   const [catalogError, setCatalogError] = useState(null);
-  const [view, setView] = useState('library'); // 'library' | 'viewer'
+  const [view, setView]             = useState('library');
   const [selectedId, setSelectedId] = useState(null);
   const [importedSong, setImportedSong] = useState(null);
 
@@ -368,23 +557,9 @@ function App() {
       .catch(err => setCatalogError(err.message));
   }, []);
 
-  function openSong(id) {
-    setImportedSong(null);
-    setSelectedId(id);
-    setView('viewer');
-  }
-
-  function openImported(song) {
-    setImportedSong(song);
-    setSelectedId(null);
-    setView('viewer');
-  }
-
-  function goBack() {
-    setView('library');
-    setSelectedId(null);
-    setImportedSong(null);
-  }
+  function openSong(id) { setImportedSong(null); setSelectedId(id); setView('viewer'); }
+  function openImported(song) { setImportedSong(song); setSelectedId(null); setView('viewer'); }
+  function goBack() { setView('library'); setSelectedId(null); setImportedSong(null); }
 
   return html`
     <div style=${{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
