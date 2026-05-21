@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-21",
+    "summary": "Added 2 new pages (Claude Managed Agents public beta, MCP Ecosystem 2026) and updated model history with Claude Opus 4.7 benchmarks and Fast mode details.",
+    "pagesAdded": ["claude-managed-agents", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://platform.claude.com/docs/en/managed-agents/overview",
+      "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+      "https://9to5mac.com/2026/05/19/anthropic-enhances-claude-managed-agents-with-two-new-privacy-and-security-features/",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://releasebot.io/updates/anthropic/claude"
+    ]
   }
 ]
