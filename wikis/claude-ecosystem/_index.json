@@ -4,7 +4,7 @@
     "title": "Claude Model History",
     "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-05-22"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's platform for cloud-hosted agents at scale: Memory, Dreaming, Outcomes, Multiagent Orchestration, and MCP Tunnels.",
+    "tags": ["managed-agents", "agents", "dreaming", "orchestration", "platform"],
+    "updatedAt": "2026-05-22"
+  },
+  {
+    "id": "claude-code-2026-updates",
+    "title": "Claude Code 2026: Desktop Redesign & Routines",
+    "summary": "The rebuilt Claude Code desktop app with parallel sessions, the Routines automation feature, computer use integration, and April–May 2026 improvements.",
+    "tags": ["claude-code", "desktop", "routines", "computer-use", "2026"],
+    "updatedAt": "2026-05-22"
   }
 ]
