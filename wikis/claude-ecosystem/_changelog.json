@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-23",
+    "summary": "Added 3 pages covering major mid-2026 developments: Claude Opus 4.7 release (87.6% SWE-Bench Verified), Claude Managed Agents platform (orchestration, Dreaming, Outcomes, MCP tunnels), and Claude Code 2026 feature updates (Agent View, /goal, Dispatch, Computer Use, desktop GA).",
+    "pagesAdded": ["claude-opus-4-7", "claude-managed-agents", "claude-code-2026-updates"],
+    "pagesUpdated": [],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-7",
+      "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+      "https://9to5mac.com/2026/05/19/anthropic-enhances-claude-managed-agents-with-two-new-privacy-and-security-features/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://releasebot.io/updates/anthropic/claude-code"
+    ]
   }
 ]

@@ -19,5 +19,26 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-opus-4-7",
+    "title": "Claude Opus 4.7",
+    "summary": "Anthropic's most capable model as of mid-2026: 87.6% on SWE-Bench Verified, 3× vision resolution, xhigh effort level, and same pricing as Opus 4.6.",
+    "tags": ["models", "opus", "benchmarks", "coding", "computer-use"],
+    "updatedAt": "2026-05-23"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's managed infrastructure for autonomous agents: multi-agent orchestration, Dreaming (self-improvement), Outcomes (grader agents), MCP tunnels, and self-hosted sandboxes.",
+    "tags": ["agents", "managed-agents", "orchestration", "memory", "MCP"],
+    "updatedAt": "2026-05-23"
+  },
+  {
+    "id": "claude-code-2026-updates",
+    "title": "Claude Code: 2026 Feature Updates",
+    "summary": "Agent View, /goal command, Fast mode on Opus 4.7, Dispatch, Computer Use, AutoDream, and desktop GA — the major Claude Code additions from early-to-mid 2026.",
+    "tags": ["claude-code", "updates", "2026", "agents", "dispatch", "computer-use"],
+    "updatedAt": "2026-05-23"
   }
 ]
