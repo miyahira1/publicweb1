@@ -2,16 +2,16 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 4.x family and 2026 releases: capability jumps, context window expansion, the Mythos safety-gated tier, and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "mythos", "opus"],
+    "updatedAt": "2026-05-24"
   },
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
-    "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
-    "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
-    "updatedAt": "2025-05-21"
+    "summary": "Claude's function calling API, the Model Context Protocol (MCP), MCP's donation to the Linux Foundation's AAIF, and patterns for building reliable agentic systems.",
+    "tags": ["tool-use", "agents", "MCP", "api", "function-calling", "AAIF"],
+    "updatedAt": "2026-05-24"
   },
   {
     "id": "claude-code-overview",
@@ -19,5 +19,12 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's hosted agent platform: dreaming (self-improvement between runs), outcomes (rubric-based grading), multiagent orchestration, and webhooks. Launched April 2026.",
+    "tags": ["agents", "managed-agents", "dreaming", "outcomes", "orchestration", "webhooks"],
+    "updatedAt": "2026-05-24"
   }
 ]

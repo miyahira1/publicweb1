@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-24",
+    "summary": "Added Claude Managed Agents page covering dreaming, outcomes, multiagent orchestration, and webhooks (launched May 2026); updated Claude Model History with 2026 releases (Opus 4.6 with 1M context, Mythos Preview, Opus 4.7); updated Tool Use & Agents with MCP AAIF governance donation and 97M monthly download milestone.",
+    "pagesAdded": ["claude-managed-agents"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://claude.com/blog/new-in-claude-managed-agents",
+      "https://www.anthropic.com/news/claude-opus-4-7",
+      "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+      "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
+      "https://www.cnbc.com/2026/04/16/anthropic-claude-opus-4-7-model-mythos.html"
+    ]
   }
 ]
