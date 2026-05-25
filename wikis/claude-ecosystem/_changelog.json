@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-25",
+    "summary": "Added 2 new pages covering Claude Managed Agents (Dreaming, Outcomes, Multiagent Orchestration, MCP Tunnels) and the MCP ecosystem growth to 13,000+ servers with OAuth 2.1 and Gateway pattern; updated Claude Code overview with May 2026 Agent View, /goal, and rate limit features.",
+    "pagesAdded": ["claude-managed-agents", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-code-overview"],
+    "sources": [
+      "https://claude.com/blog/new-in-claude-managed-agents",
+      "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+      "https://9to5mac.com/2026/05/19/anthropic-enhances-claude-managed-agents-with-two-new-privacy-and-security-features/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://www.qcode.cc/mcp-servers-ecosystem-2026",
+      "https://simonwillison.net/2026/May/6/code-w-claude-2026/"
+    ]
   }
 ]

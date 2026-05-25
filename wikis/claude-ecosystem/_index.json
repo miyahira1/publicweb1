@@ -16,8 +16,22 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, agentic coding workflows, and May 2026 updates including Agent View and /goal.",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "agent-view"],
+    "updatedAt": "2026-05-25"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's hosted agent platform: Dreaming (self-improving memory), Outcomes, Multiagent Orchestration with up to 20 parallel specialists, MCP Tunnels, and self-hosted sandboxes.",
+    "tags": ["managed-agents", "dreaming", "multiagent", "orchestration", "memory"],
+    "updatedAt": "2026-05-25"
+  },
+  {
+    "id": "mcp-ecosystem-2026",
+    "title": "MCP Ecosystem in 2026",
+    "summary": "The MCP server ecosystem at 13,000+ servers: OAuth 2.1 auth, Streamable HTTP transport, the MCP Gateway pattern, and key server categories including DevOps, legal, and creative tools.",
+    "tags": ["MCP", "ecosystem", "servers", "oauth", "gateway"],
+    "updatedAt": "2026-05-25"
   }
 ]
