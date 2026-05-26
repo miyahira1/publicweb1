@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-26",
+    "summary": "Added 2 new pages covering Claude Managed Agents (Dreaming, Outcomes, Multiagent Orchestration announced at Code with Claude 2026) and 2026 platform updates (ant CLI, Claude Platform on AWS, cache diagnostics, rate limit increases); updated Claude model history to include Claude 5 / Sonnet 5.",
+    "pagesAdded": ["claude-managed-agents", "claude-2026-platform-updates"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://claude.com/blog/new-in-claude-managed-agents",
+      "https://releasebot.io/updates/anthropic/claude",
+      "https://platform.claude.com/docs/en/release-notes/overview",
+      "https://letsdatascience.com/blog/anthropic-dreaming-claude-managed-agents-self-improving-may-6"
+    ]
   }
 ]

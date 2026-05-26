@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5.x family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-05-26"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Platform-managed stateful agents with Dreaming (self-improving memory), Outcomes, and Multiagent Orchestration — announced at Code with Claude 2026.",
+    "tags": ["agents", "managed-agents", "dreaming", "orchestration", "multiagent", "memory"],
+    "updatedAt": "2026-05-26"
+  },
+  {
+    "id": "claude-2026-platform-updates",
+    "title": "2026 Claude Platform & API Updates",
+    "summary": "ant CLI, Claude Platform on AWS, cache diagnostics, doubled rate limits, Claude Design, and Claude for Small Business — the major developer-facing changes of 2026.",
+    "tags": ["api", "platform", "aws", "ant-cli", "cache", "rate-limits", "2026"],
+    "updatedAt": "2026-05-26"
   }
 ]
