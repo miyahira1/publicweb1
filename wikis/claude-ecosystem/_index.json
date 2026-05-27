@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation. Updated with Opus 4.7 (87.6% SWE-Bench Verified).",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-05-27"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's hosted service for persistent, long-horizon agentic workflows: dreaming (self-improvement via memory), multi-agent orchestration, MCP tunnels for private networks, and webhooks.",
+    "tags": ["managed-agents", "agents", "orchestration", "MCP", "dreaming", "webhooks", "enterprise"],
+    "updatedAt": "2026-05-27"
+  },
+  {
+    "id": "mcp-ecosystem",
+    "title": "MCP Ecosystem & Community",
+    "summary": "The Model Context Protocol community: 500+ public servers, official and community registries, open governance via SEPs and Working Groups, and the 2026 roadmap.",
+    "tags": ["MCP", "community", "ecosystem", "servers", "registry", "governance"],
+    "updatedAt": "2026-05-27"
   }
 ]

@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-27",
+    "summary": "Added pages on Claude Managed Agents (dreaming, multi-agent orchestration, MCP tunnels) and the MCP community ecosystem (500+ servers, governance, 2026 roadmap); updated Claude Model History with Opus 4.7 (87.6% SWE-Bench, 3× image resolution).",
+    "pagesAdded": ["claude-managed-agents", "mcp-ecosystem"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+      "https://9to5mac.com/2026/05/19/anthropic-enhances-claude-managed-agents-with-two-new-privacy-and-security-features/",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://www.anthropic.com/news"
+    ]
   }
 ]
