@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-28",
+    "summary": "Added 2 pages covering major May 2026 releases: Claude Managed Agents (dreaming, multiagent orchestration, MCP tunnels, self-hosted sandboxes) and the new Claude Code Security Guidance Plugin.",
+    "pagesAdded": ["claude-managed-agents", "claude-code-security-plugin"],
+    "pagesUpdated": [],
+    "sources": [
+      "https://the-decoder.com/anthropic-adds-self-hosted-sandboxes-and-mcp-tunnels-to-claude-managed-agents/",
+      "https://9to5mac.com/2026/05/19/anthropic-enhances-claude-managed-agents-with-two-new-privacy-and-security-features/",
+      "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+      "https://www.helpnetsecurity.com/2026/05/27/anthropic-claude-code-security-guidance-plugin/",
+      "https://www.securityweek.com/anthropic-releases-new-claude-sandbox-security-guidance-plugin/"
+    ]
   }
 ]

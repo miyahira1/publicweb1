@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's hosted platform for long-horizon agentic tasks: dreaming, multiagent orchestration, MCP tunnels, and self-hosted sandboxes.",
+    "tags": ["managed-agents", "orchestration", "MCP", "sandboxes", "agentic", "enterprise"],
+    "updatedAt": "2026-05-28"
+  },
+  {
+    "id": "claude-code-security-plugin",
+    "title": "Claude Code Security Guidance Plugin",
+    "summary": "Free real-time security plugin for Claude Code that flags ~25 dangerous code patterns (eval, pickle, hardcoded secrets) with no API cost.",
+    "tags": ["claude-code", "security", "plugin", "vulnerability", "enterprise", "devtools"],
+    "updatedAt": "2026-05-28"
   }
 ]
