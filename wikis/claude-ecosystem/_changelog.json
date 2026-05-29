@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-05-29",
+    "summary": "Added Claude Opus 4.8 release page (benchmarks, dynamic workflows, Fast Mode) and Claude Managed Agents page (Dreaming, Outcomes, Multiagent Orchestration); updated Claude Model History with Opus 4.8 and Mythos Preview.",
+    "pagesAdded": ["claude-opus-4-8", "claude-managed-agents"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://9to5mac.com/2026/05/28/anthropic-upgrades-claude-with-new-opus-4-8-model-heres-whats-new/",
+      "https://9to5google.com/2026/05/28/claude-opus-4-8-launches-today-with-agentic-improvements-new-features/",
+      "https://claude.com/blog/new-in-claude-managed-agents",
+      "https://red.anthropic.com/2026/mythos-preview/"
+    ]
   }
 ]
