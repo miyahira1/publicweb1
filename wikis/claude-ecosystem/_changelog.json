@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-01",
+    "summary": "Added two new pages covering the Claude Opus 4.8 release (effort controls, dynamic workflows, new Managed Agents infra) and the Claude Mythos Preview (frontier model with expert-level cybersecurity capabilities, Project Glasswing access); updated Claude Model History with Opus 4.8 and Mythos entries.",
+    "pagesAdded": ["claude-opus-4-8", "claude-mythos-preview"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
+      "https://www.axios.com/2026/05/28/anthropic-opus-release-mythos",
+      "https://red.anthropic.com/2026/mythos-preview/",
+      "https://fortune.com/2026/05/29/anthropic-raises-65-billion-at-record-965-billion-valuation-promises-mythos-ai-model-in-wide-release-in-coming-weeks-releases-claude-opus-4-8/",
+      "https://www.ghacks.net/2026/05/30/anthropic-releases-claude-opus-4-8-with-effort-controls-and-dynamic-workflows-for-claude-code/"
+    ]
   }
 ]

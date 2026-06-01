@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation — updated through Opus 4.8 and Mythos Preview.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-01"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-opus-4-8",
+    "title": "Claude Opus 4.8 — Effort Controls and Dynamic Workflows",
+    "summary": "The May 2026 Opus 4.8 release: improved agentic benchmarks, user effort controls, dynamic workflow orchestration for Claude Code, and new Managed Agents infrastructure features.",
+    "tags": ["models", "opus", "anthropic", "releases", "dynamic-workflows", "claude-code", "api"],
+    "updatedAt": "2026-06-01"
+  },
+  {
+    "id": "claude-mythos-preview",
+    "title": "Claude Mythos Preview",
+    "summary": "Anthropic's most capable model: 97.6% on USAMO 2026, 93.9% on SWE-bench Verified, and expert-level cybersecurity capabilities. Currently restricted to Project Glasswing partners; general release pending.",
+    "tags": ["models", "anthropic", "mythos", "cybersecurity", "frontier", "responsible-scaling", "benchmarks"],
+    "updatedAt": "2026-06-01"
   }
 ]
