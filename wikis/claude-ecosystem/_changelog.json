@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-02",
+    "summary": "Added pages for Claude Opus 4.8 (May 2026 flagship release with model welfare focus) and Claude Code 2026 updates (dynamic workflows, agent view, rate limit increases); updated Claude Model History to reflect Opus 4.8 and upcoming Mythos model.",
+    "pagesAdded": ["claude-opus-4-8", "claude-code-2026-updates"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://the-decoder.com/anthropic-ships-claude-opus-4-8-as-a-modest-but-tangible-improvement-that-tops-gpt-5-5-in-most-benchmarks/",
+      "https://releasebot.io/updates/anthropic/claude-code"
+    ]
   }
 ]

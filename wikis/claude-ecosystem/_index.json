@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation — including Opus 4.8 and the upcoming Mythos model.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-opus-4-8",
+    "title": "Claude Opus 4.8",
+    "summary": "The May 2026 flagship release: benchmark improvements, ~4× fewer missed code flaws, model welfare system card, mid-task system prompt updates, and the Managed Agents self-hosted sandbox.",
+    "tags": ["models", "anthropic", "opus", "benchmarks", "model-welfare", "api", "releases"],
+    "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "claude-code-2026-updates",
+    "title": "Claude Code 2026: Dynamic Workflows, Agent View & Key Updates",
+    "summary": "Dynamic workflows for orchestrating hundreds of parallel subagents, agent view for managing concurrent sessions, doubled rate limits, and the built-in security-guidance plugin.",
+    "tags": ["claude-code", "dynamic-workflows", "agents", "agentic", "rate-limits", "security", "2026"],
+    "updatedAt": "2026-06-02"
   }
 ]
