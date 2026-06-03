@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x and early 5.x family: capability jumps, context window expansion, and key milestones in each generation including Opus 4.8 and Mythos.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-03"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-opus-4-8",
+    "title": "Claude Opus 4.8",
+    "summary": "Released May 28, 2026: benchmarks, effort control, 3× cheaper fast mode, alignment improvements, and the relationship to Claude Mythos.",
+    "tags": ["models", "anthropic", "benchmarks", "releases", "opus", "alignment"],
+    "updatedAt": "2026-06-03"
+  },
+  {
+    "id": "claude-managed-agents-dynamic-workflows",
+    "title": "Claude Managed Agents & Dynamic Workflows",
+    "summary": "Anthropic's cloud-hosted agent platform with Dreaming, Outcomes, multiagent orchestration, and Claude Code's Dynamic Workflows for parallel subagent coordination.",
+    "tags": ["agents", "managed-agents", "dynamic-workflows", "multiagent", "orchestration"],
+    "updatedAt": "2026-06-03"
   }
 ]

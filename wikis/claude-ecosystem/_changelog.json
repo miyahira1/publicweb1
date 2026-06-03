@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-03",
+    "summary": "Added Claude Opus 4.8 page (benchmarks, fast mode pricing, alignment improvements) and Claude Managed Agents & Dynamic Workflows page; updated model history with 2026 releases including Sonnet 5, Opus 4.8, and Mythos.",
+    "pagesAdded": ["claude-opus-4-8", "claude-managed-agents-dynamic-workflows"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://claude.com/blog/new-in-claude-managed-agents",
+      "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+      "https://9to5mac.com/2026/05/28/anthropic-upgrades-claude-with-new-opus-4-8-model-heres-whats-new/"
+    ]
   }
 ]
