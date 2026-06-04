@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation — including Claude Opus 4.8 and its 1M token context window.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "opus-4-8"],
+    "updatedAt": "2026-06-04"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents & Agent SDK",
+    "summary": "Anthropic's fully managed agent platform (public beta, April 2026): sandboxed sessions, built-in tools, state persistence, and the Claude Agent SDK for production deployments.",
+    "tags": ["agents", "managed-agents", "agent-sdk", "api", "agentic", "sandbox", "public-beta"],
+    "updatedAt": "2026-06-04"
+  },
+  {
+    "id": "mcp-ecosystem-2026",
+    "title": "MCP Ecosystem in 2026",
+    "summary": "The state of the Model Context Protocol ecosystem: 500+ community servers, Linux Foundation governance, the 2026 spec with stateless core and Extensions, and a practical guide to using and building MCP servers.",
+    "tags": ["MCP", "model-context-protocol", "community", "servers", "ecosystem", "2026"],
+    "updatedAt": "2026-06-04"
   }
 ]

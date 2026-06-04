@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-04",
+    "summary": "Agent maintenance run: added 2 new pages (Claude Managed Agents & Agent SDK public beta, MCP Ecosystem in 2026) and updated the Claude Model History page to cover Opus 4.8, the 1M token context window, and model deprecations effective June 15 2026.",
+    "pagesAdded": ["claude-managed-agents", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://9to5mac.com/2026/05/28/anthropic-upgrades-claude-with-new-opus-4-8-model-heres-whats-new/",
+      "https://platform.claude.com/docs/en/managed-agents/overview",
+      "https://code.claude.com/docs/en/agent-sdk/overview",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://hidekazu-konishi.com/entry/mcp_server_ecosystem_reference_2026.html"
+    ]
   }
 ]
