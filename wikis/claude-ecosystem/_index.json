@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-opus-4-8",
+    "title": "Claude Opus 4.8",
+    "summary": "May 2026 flagship model release: dynamic workflows for large-scale agent orchestration, effort control, improved computer use (84% on Online-Mind2Web), and a cheaper Fast mode tier.",
+    "tags": ["models", "opus", "releases", "agentic", "benchmarks", "dynamic-workflows"],
+    "updatedAt": "2026-06-05"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's hosted platform for agentic AI at scale: multiagent orchestration, Dreaming (persistent memory), Outcomes (goal-based autonomy), self-hosted sandboxes, and MCP tunnels.",
+    "tags": ["agents", "managed-agents", "orchestration", "multiagent", "dreaming", "outcomes"],
+    "updatedAt": "2026-06-05"
   }
 ]

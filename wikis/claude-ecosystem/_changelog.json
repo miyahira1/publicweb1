@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-05",
+    "summary": "Added 2 pages covering recent Anthropic releases: Claude Opus 4.8 (dynamic workflows, effort control, 84% computer-use benchmark) and Claude Managed Agents (multiagent orchestration, Dreaming, Outcomes, MCP tunnels) announced at Code with Claude 2026.",
+    "pagesAdded": ["claude-opus-4-8", "claude-managed-agents"],
+    "pagesUpdated": [],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
+      "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+      "https://www.anthropic.com/engineering/managed-agents"
+    ]
   }
 ]
