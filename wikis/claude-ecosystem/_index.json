@@ -4,7 +4,7 @@
     "title": "Claude Model History",
     "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-06"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-opus-4-8",
+    "title": "Claude Opus 4.8",
+    "summary": "Release notes, benchmarks, and pricing for Claude Opus 4.8 (May 2026) — Anthropic's current flagship model with 88.6% SWE-bench Verified and 3× cheaper Fast mode.",
+    "tags": ["models", "opus", "benchmarks", "releases", "anthropic", "2026"],
+    "updatedAt": "2026-06-06"
+  },
+  {
+    "id": "claude-code-dynamic-workflows",
+    "title": "Claude Code Dynamic Workflows",
+    "summary": "Research-preview orchestration feature (May 2026) that lets Claude write JavaScript coordination scripts and run up to 1,000 parallel subagents per task.",
+    "tags": ["claude-code", "agents", "workflows", "parallel", "orchestration", "2026"],
+    "updatedAt": "2026-06-06"
   }
 ]

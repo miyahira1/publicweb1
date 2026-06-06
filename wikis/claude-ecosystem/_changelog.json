@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-06",
+    "summary": "Added pages for Claude Opus 4.8 (May 2026 flagship) and Claude Code Dynamic Workflows (parallel subagent orchestration); updated model history with Opus 4.8 benchmarks and table entry.",
+    "pagesAdded": ["claude-opus-4-8", "claude-code-dynamic-workflows"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+      "https://www.marktechpost.com/2026/05/28/anthropic-ships-claude-opus-4-8-alongside-dynamic-workflows-and-cheaper-fast-mode-with-workflows-capped-at-1000-subagents/",
+      "https://www.infoq.com/news/2026/06/dynamic-workflows-claude-code/"
+    ]
   }
 ]
