@@ -9,9 +9,9 @@
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
-    "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
+    "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems. Updated with 2026 MCP governance and upcoming stateless spec.",
     "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-07"
   },
   {
     "id": "claude-code-overview",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-2026-model-releases",
+    "title": "Claude 2026 Model Releases",
+    "summary": "Opus 4.6 (1M context), Opus 4.7 (3.75MP vision), Opus 4.8 (agentic browser), and the restricted Mythos preview — Anthropic's accelerated 2026 release cadence.",
+    "tags": ["models", "anthropic", "releases", "2026", "opus", "vision", "agentic"],
+    "updatedAt": "2026-06-07"
+  },
+  {
+    "id": "claude-code-dynamic-workflows",
+    "title": "Claude Code: Dynamic Workflows & Agent Management",
+    "summary": "Dynamic Workflows (hundreds of parallel subagents), Agent View CLI, Auto Mode, Fast Mode pricing cuts, and visual output — the major 2026 Claude Code feature wave.",
+    "tags": ["claude-code", "dynamic-workflows", "agents", "auto-mode", "2026"],
+    "updatedAt": "2026-06-07"
   }
 ]
