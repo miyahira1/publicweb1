@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation. Now includes Opus 4.8, Project Glasswing, and 2026 deprecation schedule.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-08"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents: Dynamic Workflows, Dreaming & Routines",
+    "summary": "Dynamic Workflows, Dreaming, Multiagent Orchestration, and Routines — the managed agent features added to Claude Code in 2026 for long-horizon, multi-session, and parallel workloads.",
+    "tags": ["agents", "agentic", "dynamic-workflows", "dreaming", "routines", "multiagent", "claude-code"],
+    "updatedAt": "2026-06-08"
+  },
+  {
+    "id": "mcp-2026-ecosystem",
+    "title": "MCP 2026: New Specification & Ecosystem Growth",
+    "summary": "The 2026 MCP specification release candidate (Tasks, MCP Apps, Extensions, OAuth 2.1), ecosystem growth to 500+ servers, and the shift from reference implementations to vendor-owned servers.",
+    "tags": ["MCP", "model-context-protocol", "ecosystem", "specification", "servers", "2026"],
+    "updatedAt": "2026-06-08"
   }
 ]

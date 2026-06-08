@@ -2,8 +2,33 @@
   {
     "date": "2025-05-21",
     "summary": "Initial seed: 3 foundational pages covering Claude model history, tool use & agents, and Claude Code.",
-    "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
+    "pagesAdded": [
+      "claude-model-history",
+      "tool-use-and-agents",
+      "claude-code-overview"
+    ],
     "pagesUpdated": [],
-    "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+    "sources": [
+      "https://www.anthropic.com/news",
+      "https://docs.anthropic.com"
+    ]
+  },
+  {
+    "date": "2026-06-08",
+    "summary": "Added two new pages (Claude Managed Agents covering Dynamic Workflows/Dreaming/Routines, and MCP 2026 Ecosystem covering the new spec RC and 500+ server ecosystem); updated Claude Model History with Opus 4.8, Project Glasswing/Claude Mythos, and 2026 model deprecation schedule.",
+    "pagesAdded": [
+      "claude-managed-agents",
+      "mcp-2026-ecosystem"
+    ],
+    "pagesUpdated": [
+      "claude-model-history"
+    ],
+    "sources": [
+      "https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/",
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://platform.claude.com/docs/en/release-notes/overview",
+      "https://simonwillison.net/2026/May/6/code-w-claude-2026/"
+    ]
   }
 ]
