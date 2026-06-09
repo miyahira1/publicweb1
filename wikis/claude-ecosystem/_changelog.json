@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-09",
+    "summary": "Added 2 new pages covering Claude Code 2026 features (Dynamic Workflows, background agents, unified skills) and the MCP ecosystem in 2026 (registry growth, vendor migrations, 2026 spec RC). Updated claude-model-history with Claude Opus 4.8 release details and benchmarks.",
+    "pagesAdded": ["claude-code-2026-features", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://releasebot.io/updates/anthropic/claude-code"
+    ]
   }
 ]

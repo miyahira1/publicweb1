@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, key milestones, and the Opus 4.8 release in May 2026.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-09"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-code-2026-features",
+    "title": "Claude Code: 2026 Feature Updates",
+    "summary": "Dynamic Workflows, background agents, the unified skills/slash commands system, the /goal command, and rate limit increases added in 2026.",
+    "tags": ["claude-code", "dynamic-workflows", "agents", "skills", "slash-commands", "2026"],
+    "updatedAt": "2026-06-09"
+  },
+  {
+    "id": "mcp-ecosystem-2026",
+    "title": "MCP Ecosystem in 2026",
+    "summary": "The MCP registry, vendor-owned server migrations, the 2026 spec release candidate (stateless core, MCP Apps, Tasks extension), and integration patterns.",
+    "tags": ["MCP", "model-context-protocol", "ecosystem", "servers", "spec", "2026"],
+    "updatedAt": "2026-06-09"
   }
 ]
