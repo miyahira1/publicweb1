@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-10",
+    "summary": "Added pages for Claude Fable 5 (Mythos-class model released June 9, 2026) and MCP governance & 2026 spec evolution; updated Claude model history to include Opus 4.6, 4.8, and Fable 5 entries.",
+    "pagesAdded": ["claude-fable-5", "mcp-governance-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+      "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/"
+    ]
   }
 ]

@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through Claude Fable 5: capability jumps, context window expansion, and key milestones in each generation including the 2026 Opus 4.8 and Mythos-class Fable 5 releases.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-10"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5",
+    "summary": "Anthropic's first publicly available Mythos-class model (released June 9, 2026): benchmarks, capabilities, safety routing architecture, and pricing.",
+    "tags": ["models", "fable", "mythos", "anthropic", "benchmarks", "releases", "safety"],
+    "updatedAt": "2026-06-10"
+  },
+  {
+    "id": "mcp-governance-2026",
+    "title": "MCP Governance & 2026 Evolution",
+    "summary": "MCP's transfer to the Linux Foundation's Agentic AI Foundation (December 2025), 500+ server ecosystem, and the 2026 spec's stateless architecture, Tasks, and Extensions.",
+    "tags": ["MCP", "governance", "linux-foundation", "AAIF", "protocol", "ecosystem", "2026"],
+    "updatedAt": "2026-06-10"
   }
 ]
