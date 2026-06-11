@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through Fable 5 and the Mythos architecture: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-11"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5",
+    "summary": "Anthropic's Mythos-class model released June 2026: 80.3% on SWE-Bench Pro, 90%+ on analytics benchmarks, 128K output tokens, priced at $10/$50 per MTok.",
+    "tags": ["models", "fable", "mythos", "benchmarks", "releases"],
+    "updatedAt": "2026-06-11"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's hosted agent platform: scheduled execution, private MCP connectivity, persistent memory, and dynamic multi-agent workflows (hundreds of parallel subagents).",
+    "tags": ["agents", "managed-agents", "platform", "scheduled", "MCP"],
+    "updatedAt": "2026-06-11"
   }
 ]
