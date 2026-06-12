@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-12",
+    "summary": "Added 3 pages covering the June 2026 Claude Fable 5 / Mythos 5 launch, Claude Code 2026 feature updates (agent view, dynamic workflows, auto mode, ultrareview), and the MCP ecosystem's growth to 97M monthly downloads and Linux Foundation governance.",
+    "pagesAdded": ["claude-fable-5-mythos-5", "claude-code-2026-features", "mcp-ecosystem-2026"],
+    "pagesUpdated": [],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
+      "https://thenewstack.io/model-context-protocol-roadmap-2026/"
+    ]
   }
 ]
