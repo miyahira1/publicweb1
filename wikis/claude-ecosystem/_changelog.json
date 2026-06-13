@@ -5,5 +5,16 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-13",
+    "summary": "Added dedicated Claude Fable 5 page covering the June 9 release (95% SWE-bench Verified, 1M token context, Mythos safety architecture); updated Claude Model History to add the Fable/Mythos class section and extend Key Trends.",
+    "pagesAdded": ["claude-fable-5"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
+      "https://computingforgeeks.com/claude-fable-5-released-features-benchmarks/",
+      "https://artificialanalysis.ai/models/claude-fable-5"
+    ]
   }
 ]

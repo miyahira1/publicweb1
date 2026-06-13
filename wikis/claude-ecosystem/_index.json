@@ -4,7 +4,7 @@
     "title": "Claude Model History",
     "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-13"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,12 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5",
+    "summary": "Anthropic's most capable public model as of June 2026: 95% on SWE-bench Verified, 1M token context, $10/$50 per million tokens, and the public face of the restricted Mythos 5 architecture.",
+    "tags": ["models", "anthropic", "fable", "mythos", "benchmarks", "releases", "2026"],
+    "updatedAt": "2026-06-13"
   }
 ]
