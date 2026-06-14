@@ -19,5 +19,26 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5 & Mythos 5",
+    "summary": "Anthropic's first Mythos-class model available to the public, released June 9 2026. Covers capabilities, safety routing, pricing, and positioning above the Opus tier.",
+    "tags": ["models", "anthropic", "fable-5", "mythos", "releases", "benchmarks", "safety"],
+    "updatedAt": "2026-06-14"
+  },
+  {
+    "id": "claude-managed-agents-dreaming",
+    "title": "Claude Managed Agents: Dreaming, Outcomes & Nested Sub-Agents",
+    "summary": "Announcements from Code with Claude 2026: Dreaming (inter-session memory consolidation), Outcomes (self-grading loop), and nested sub-agents up to 5 levels deep.",
+    "tags": ["agents", "claude-code", "dreaming", "orchestration", "nested-subagents", "agentic", "memory"],
+    "updatedAt": "2026-06-14"
+  },
+  {
+    "id": "mcp-2026-ecosystem",
+    "title": "MCP in 2026: Ecosystem Growth & the 2.0 Specification",
+    "summary": "MCP reaches 97M monthly SDK downloads and 10,000+ servers as every major AI vendor adopts the protocol. Covers the 2026-07-28 spec: stateless core, Tasks extension, MCP Apps, and deprecation policy.",
+    "tags": ["MCP", "model-context-protocol", "ecosystem", "specification", "stateless", "2026"],
+    "updatedAt": "2026-06-14"
   }
 ]

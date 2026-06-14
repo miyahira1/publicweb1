@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-14",
+    "summary": "Added 3 pages covering major developments since May 2025: Claude Fable 5 (the first Mythos-class public model, June 9 2026), Claude Managed Agents featuring Dreaming and nested sub-agents (Code with Claude 2026 conference + v2.1.172), and MCP's explosive ecosystem growth alongside the stateless 2026 specification revision.",
+    "pagesAdded": ["claude-fable-5", "claude-managed-agents-dreaming", "mcp-2026-ecosystem"],
+    "pagesUpdated": [],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://letsdatascience.com/blog/anthropic-dreaming-claude-managed-agents-self-improving-may-6",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://www.digitalapplied.com/blog/mcp-adoption-statistics-2026-model-context-protocol"
+    ]
   }
 ]
