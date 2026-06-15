@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family and the new Mythos tier (Fable 5): capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-15"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5-mythos",
+    "title": "Claude Fable 5 & the Mythos Tier",
+    "summary": "Anthropic's June 2026 frontier model release: benchmarks, the Fable/Mythos safety split, pricing, and the export-control suspension three days after launch.",
+    "tags": ["models", "fable", "mythos", "anthropic", "benchmarks", "releases", "agents"],
+    "updatedAt": "2026-06-15"
+  },
+  {
+    "id": "mcp-ecosystem-2026",
+    "title": "MCP Ecosystem in 2026",
+    "summary": "How the Model Context Protocol grew from hundreds of servers to 13,000+, gained Linux Foundation governance, and reached 41% production adoption across software organizations.",
+    "tags": ["MCP", "model-context-protocol", "community", "ecosystem", "integrations", "governance"],
+    "updatedAt": "2026-06-15"
   }
 ]

@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-15",
+    "summary": "Added pages for Claude Fable 5 & the Mythos tier (June 9, 2026 release) and the MCP Ecosystem in 2026 (13,000+ servers, Linux Foundation governance); updated model history to include the Fable 5 section.",
+    "pagesAdded": ["claude-fable-5-mythos", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
+      "https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained",
+      "https://www.qcode.cc/mcp-servers-ecosystem-2026",
+      "https://chatforest.com/guides/mcp-ecosystem-2026-state-of-the-standard/",
+      "https://www.digitalapplied.com/blog/mcp-adoption-statistics-2026-model-context-protocol"
+    ]
   }
 ]
