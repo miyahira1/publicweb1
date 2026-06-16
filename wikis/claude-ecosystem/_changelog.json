@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-16",
+    "summary": "Added Claude Fable 5 & Mythos 5 page (June 9, 2026 release, new Mythos-class tier, 80.3% SWE-Bench Pro) and Claude Code Dynamic Workflows page (parallel subagents, scheduled deployments, Dreaming, Outcomes); updated Claude Model History with Opus 4.8 and Fable 5 sections.",
+    "pagesAdded": ["claude-fable-5", "claude-code-dynamic-workflows"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
+      "https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained",
+      "https://blockchain.news/ainews/claude-managed-agents-add-scheduled-deployments",
+      "https://decodethefuture.org/en/claude-opus-4-8-explained/"
+    ]
   }
 ]

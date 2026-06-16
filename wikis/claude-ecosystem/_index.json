@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through Fable 5: capability jumps, context window expansion, and key milestones in each generation including Opus 4.8 and the new Mythos-class tier.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-16"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5 & Mythos 5",
+    "summary": "Anthropic's Mythos-class model released June 9, 2026: 1M token context, always-on adaptive thinking, 80.3% on SWE-Bench Pro, and the two-tier Fable/Mythos safety architecture.",
+    "tags": ["models", "fable-5", "mythos", "benchmarks", "releases", "anthropic", "agentic"],
+    "updatedAt": "2026-06-16"
+  },
+  {
+    "id": "claude-code-dynamic-workflows",
+    "title": "Claude Code: Dynamic Workflows & Scheduled Deployments",
+    "summary": "New Claude Code features from mid-2026: hundreds of parallel subagents, cron-based scheduled deployments, Dreaming (memory improvement), Outcomes (rubric-based self-correction), and enhanced multiagent orchestration.",
+    "tags": ["claude-code", "agents", "scheduled-tasks", "multiagent", "orchestration", "dynamic-workflows"],
+    "updatedAt": "2026-06-16"
   }
 ]
