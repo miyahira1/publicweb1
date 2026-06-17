@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-17",
+    "summary": "Added 2 new pages covering Claude Fable 5 / Mythos class (June 2026) and the MCP ecosystem in 2026 (5,000+ servers, 2026 spec RC); updated model history with Opus 4.8 and Fable 5 sections.",
+    "pagesAdded": ["claude-fable-5", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.truefoundry.com/blog/claude-fable-5-api-benchmarks-pricing-how-to-use-it",
+      "https://9to5google.com/2026/05/28/claude-opus-4-8-launches-today-with-agentic-improvements-new-features/",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://hidekazu-konishi.com/entry/mcp_server_ecosystem_reference_2026.html"
+    ]
   }
 ]
