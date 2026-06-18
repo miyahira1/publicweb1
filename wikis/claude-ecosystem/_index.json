@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 Fable/Mythos tier: capability jumps, context window expansion, key milestones, and the full 2026 release timeline.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-18"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5-mythos-5",
+    "title": "Claude Fable 5 & Mythos 5",
+    "summary": "Anthropic's June 2026 frontier launch: a new tier above Opus with 1M context, always-on adaptive thinking, 80.3% on SWE-Bench Pro, and a dual public/restricted release model.",
+    "tags": ["models", "anthropic", "fable-5", "mythos-5", "benchmarks", "releases", "2026"],
+    "updatedAt": "2026-06-18"
+  },
+  {
+    "id": "mcp-ecosystem-2026",
+    "title": "MCP Ecosystem 2026",
+    "summary": "The MCP server ecosystem has grown to 500+ public servers. Covers the 2026 spec RC (stateless core, Tasks, MCP Apps, auth hardening) and enterprise deployment patterns.",
+    "tags": ["MCP", "tool-use", "agents", "ecosystem", "servers", "2026", "protocol"],
+    "updatedAt": "2026-06-18"
   }
 ]

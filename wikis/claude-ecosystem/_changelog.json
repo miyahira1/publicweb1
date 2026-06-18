@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-18",
+    "summary": "Added pages for Claude Fable 5 & Mythos 5 (June 2026 frontier launch with 80.3% SWE-Bench Pro) and MCP Ecosystem 2026 (500+ servers, new spec RC); updated Claude Model History with full 2026 release timeline through Fable 5.",
+    "pagesAdded": ["claude-fable-5-mythos-5", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://github.com/modelcontextprotocol/servers",
+      "https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained"
+    ]
   }
 ]
