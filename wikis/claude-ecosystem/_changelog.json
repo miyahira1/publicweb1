@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-20",
+    "summary": "Added pages for Claude Fable 5 (new Mythos-class tier, June 2026) and MCP enterprise features (EMA, Okta, MCP Tunnels); updated Claude Code overview with 2026 feature highlights.",
+    "pagesAdded": ["claude-fable-5", "mcp-enterprise-features-2026"],
+    "pagesUpdated": ["claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/",
+      "https://thenewstack.io/anthropic-mcp-tunnels-sandboxes/",
+      "https://www.builder.io/blog/claude-code-updates"
+    ]
   }
 ]

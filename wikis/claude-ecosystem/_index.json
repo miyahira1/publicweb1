@@ -16,8 +16,22 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, agentic coding workflows, and 2026 features including Dreaming, artifact capture, and Auto mode.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5 & Mythos 5",
+    "summary": "The first Mythos-class model available to the general public, released June 9 2026. State-of-the-art on nearly all benchmarks including 80.3% on SWE-Bench Pro.",
+    "tags": ["models", "fable", "mythos", "anthropic", "benchmarks", "releases", "frontier"],
+    "updatedAt": "2026-06-20"
+  },
+  {
+    "id": "mcp-enterprise-features-2026",
+    "title": "MCP Enterprise Features (2026)",
+    "summary": "MCP 2.4 spec, Linux Foundation governance, Enterprise-Managed Authorization with Okta SSO, and MCP Tunnels for private-network access to internal MCP servers.",
+    "tags": ["MCP", "enterprise", "authentication", "tunnels", "okta", "agents", "infrastructure"],
+    "updatedAt": "2026-06-20"
   }
 ]
