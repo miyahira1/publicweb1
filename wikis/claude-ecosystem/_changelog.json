@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-21",
+    "summary": "Added pages on Claude Fable 5 / Mythos 5 and the first AI export control directive (June 2026), and Claude Code 2026 feature updates (Dynamic Workflows, computer use, Artifacts, recursive sub-agents). Updated Claude Model History to include Opus 4.8 and Fable 5 / Mythos 5 entries.",
+    "pagesAdded": ["claude-fable-5-and-export-controls", "claude-code-2026-updates"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+      "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]

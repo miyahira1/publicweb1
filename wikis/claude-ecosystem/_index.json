@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 generation (Fable 5 / Mythos 5): capability jumps, context window expansion, key milestones, and the first AI export control event.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-21"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5-and-export-controls",
+    "title": "Claude Fable 5, Mythos 5, and the First AI Export Control",
+    "summary": "The June 2026 launch of Claude 5's Fable and Mythos models, the safety classifier system, and the first US government export control directive targeting an AI model directly.",
+    "tags": ["models", "fable-5", "mythos-5", "policy", "export-controls", "safety", "claude-5"],
+    "updatedAt": "2026-06-21"
+  },
+  {
+    "id": "claude-code-2026-updates",
+    "title": "Claude Code: 2026 Feature Updates",
+    "summary": "Dynamic Workflows, recursive sub-agents, computer use integration, Artifacts, auto-mode safety guardrails, and new CLI flags added to Claude Code in 2026.",
+    "tags": ["claude-code", "cli", "agentic", "computer-use", "dynamic-workflows", "artifacts", "2026"],
+    "updatedAt": "2026-06-21"
   }
 ]
