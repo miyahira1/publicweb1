@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-22",
+    "summary": "Added Claude Fable 5 page (Mythos-class flagship, released June 9 2026) and Claude Agent SDK & Managed Agents page (Dreaming, Outcomes, multi-agent orchestration, June 2026 billing split); updated Claude Model History with Opus 4.8, Fable 5 section, and June 15 deprecation notice for Sonnet 4.0 and Opus 4.0.",
+    "pagesAdded": ["claude-fable-5", "claude-agent-sdk-managed-agents"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://code.claude.com/docs/en/agent-sdk/overview",
+      "https://releasebot.io/updates/anthropic",
+      "https://9to5mac.com/2026/05/28/anthropic-upgrades-claude-with-new-opus-4-8-model-heres-whats-new/",
+      "https://platform.claude.com/docs/en/release-notes/overview"
+    ]
   }
 ]

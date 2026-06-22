@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family and Fable 5: capability jumps, context window expansion, model deprecations, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-22"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5",
+    "summary": "Anthropic's Mythos-class flagship model released June 9, 2026: 1M context window, $10/$50 per MTok pricing, state-of-the-art on SWE-bench and GPQA Diamond.",
+    "tags": ["models", "fable-5", "anthropic", "benchmarks", "releases", "mythos"],
+    "updatedAt": "2026-06-22"
+  },
+  {
+    "id": "claude-agent-sdk-managed-agents",
+    "title": "Claude Agent SDK & Managed Agents",
+    "summary": "The Agent SDK platform for production agentic apps: Managed Agents on schedules, Dreaming (persistent memory), Outcomes, multi-agent orchestration up to 5 levels deep, and the June 2026 billing split.",
+    "tags": ["agent-sdk", "managed-agents", "multi-agent", "api", "billing", "dreaming", "orchestration"],
+    "updatedAt": "2026-06-22"
   }
 ]
