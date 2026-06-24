@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Fable 5 / Mythos 5 tier: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-24"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5",
+    "summary": "Anthropic's most capable publicly available model (June 2026): 80.3% SWE-Bench Pro, 1M token context, adaptive thinking, and built-in safety fallback to Opus 4.8.",
+    "tags": ["models", "fable", "anthropic", "benchmarks", "releases", "safety"],
+    "updatedAt": "2026-06-24"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Anthropic's cloud-hosted agent orchestration platform: Dreaming (memory curation), multiagent orchestration, private MCP sandboxes, and the Rate Limits API.",
+    "tags": ["agents", "managed-agents", "MCP", "orchestration", "platform", "dreaming"],
+    "updatedAt": "2026-06-24"
   }
 ]
