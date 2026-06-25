@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-25",
+    "summary": "Added pages covering Claude Fable 5 & Mythos 5 (June 9 release, benchmarks, export-control suspension) and Claude Managed Agents platform updates (Dreaming, multiagent orchestration, MCP tunnels, AWS launch). Updated Claude Model History to add Fable 5 entry and correct Opus 4.7 → 4.8.",
+    "pagesAdded": ["claude-fable-5-mythos-5", "claude-managed-agents"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://releasebot.io/updates/anthropic/claude",
+      "https://releasebot.io/updates/anthropic/claude-developer-platform",
+      "https://the-decoder.com/anthropic-releases-claude-fable-5-and-mythos-5-with-major-gains-in-coding-and-science/",
+      "https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained"
+    ]
   }
 ]

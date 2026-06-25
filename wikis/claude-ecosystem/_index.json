@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Mythos-class Fable 5: capability jumps, context window expansion, new model tiers, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-25"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5-mythos-5",
+    "title": "Claude Fable 5 & Mythos 5",
+    "summary": "Anthropic's first Mythos-class models (June 2026): benchmark results, the Fable/Mythos safety split, 1M token context, and the June 12 export-control suspension.",
+    "tags": ["models", "fable-5", "mythos-5", "benchmarks", "releases", "anthropic"],
+    "updatedAt": "2026-06-25"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents & Platform Updates (June 2026)",
+    "summary": "Dreaming (automated memory curation), multiagent orchestration with shared filesystems, MCP tunnels for private networks, Claude Platform on AWS, and API billing changes.",
+    "tags": ["api", "managed-agents", "platform", "mcp-tunnels", "aws", "orchestration"],
+    "updatedAt": "2026-06-25"
   }
 ]
