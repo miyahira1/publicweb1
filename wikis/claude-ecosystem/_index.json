@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Fable 5/Mythos class: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-26"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5",
+    "title": "Claude Fable 5 & Mythos 5",
+    "summary": "Anthropic's first Mythos-class public model (June 2026): benchmarks, safety architecture, API access, and how it fits the lineup.",
+    "tags": ["models", "fable", "mythos", "benchmarks", "releases"],
+    "updatedAt": "2026-06-26"
+  },
+  {
+    "id": "claude-tag",
+    "title": "Claude Tag: AI Teammate in Slack",
+    "summary": "Claude Tag embeds a shared @Claude identity in Slack for async task execution, institutional memory, and enterprise MCP integration.",
+    "tags": ["claude-tag", "slack", "enterprise", "agents", "cowork"],
+    "updatedAt": "2026-06-26"
   }
 ]

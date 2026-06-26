@@ -5,5 +5,16 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-26",
+    "summary": "Added 2 new pages covering the Claude Fable 5/Mythos 5 launch (June 9, 2026) and Claude Tag Slack integration (June 23, 2026); updated Claude Model History to include the Mythos-class generation.",
+    "pagesAdded": ["claude-fable-5", "claude-tag"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/",
+      "https://venturebeat.com/technology/anthropic-brings-mythos-to-the-masses-with-claude-fable-5-its-most-powerful-generally-available-model-ever"
+    ]
   }
 ]
