@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family and Fable 5: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-28"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5-and-mythos-5",
+    "title": "Claude Fable 5 & Mythos 5",
+    "summary": "Anthropic's June 2026 flagship model release: benchmarks, API specs, the Mythos-class tier, and the US government export-control suspension.",
+    "tags": ["models", "fable", "mythos", "releases", "benchmarks", "government", "export-controls"],
+    "updatedAt": "2026-06-28"
+  },
+  {
+    "id": "mcp-ecosystem-2026",
+    "title": "MCP Ecosystem in 2026",
+    "summary": "How the Model Context Protocol ecosystem grew to 10,000+ servers, was donated to the Agentic AI Foundation, and expanded with a UI framework and Tool Search API.",
+    "tags": ["MCP", "ecosystem", "integrations", "community", "protocol", "standards"],
+    "updatedAt": "2026-06-28"
   }
 ]

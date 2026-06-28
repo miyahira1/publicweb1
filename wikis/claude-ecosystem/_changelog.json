@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-28",
+    "summary": "Added pages for Claude Fable 5 & Mythos 5 (June 2026 flagship release, benchmarks, government suspension) and MCP Ecosystem in 2026 (10,000+ servers, Agentic AI Foundation, UI framework); updated Claude Model History to include Opus 4.8 and Fable 5 milestones.",
+    "pagesAdded": ["claude-fable-5-and-mythos-5", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+      "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+      "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
+      "https://thenewstack.io/anthropic-extends-mcp-with-an-app-framework/"
+    ]
   }
 ]
