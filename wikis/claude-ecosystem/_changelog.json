@@ -5,5 +5,16 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-29",
+    "summary": "Added Claude Fable 5 & the Mythos Tier page covering the June 2026 model launch, export controls, and new API constraints; added Claude Managed Agents page covering the April 2026 managed harness launch, scheduled deployments, memory, dreams, and MCP tunnels; updated Claude Model History with Opus 4.7, Opus 4.8, and Fable 5 entries.",
+    "pagesAdded": ["claude-fable-5-mythos", "claude-managed-agents"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://platform.claude.com/docs/en/release-notes/overview",
+      "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
+      "https://releasebot.io/updates/anthropic"
+    ]
   }
 ]
