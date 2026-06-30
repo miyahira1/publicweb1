@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Mythos class (Fable 5): capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-06-30"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5-and-opus-48",
+    "title": "Claude Fable 5 & Opus 4.8",
+    "summary": "The two 2026 frontier models: Opus 4.8 (1M context, generally available) and Fable 5 (Mythos class, always-on thinking, state-of-the-art benchmarks).",
+    "tags": ["models", "fable-5", "opus-4.8", "anthropic", "benchmarks", "releases", "mythos"],
+    "updatedAt": "2026-06-30"
+  },
+  {
+    "id": "claude-managed-agents-dynamic-workflows",
+    "title": "Claude Managed Agents & Dynamic Workflows",
+    "summary": "Anthropic's hosted agent infrastructure: stateful sessions, cron scheduling, vault credentials, MCP tunnels, and Claude Code's dynamic multi-agent orchestration.",
+    "tags": ["agents", "managed-agents", "dynamic-workflows", "MCP", "orchestration", "api", "claude-code"],
+    "updatedAt": "2026-06-30"
   }
 ]

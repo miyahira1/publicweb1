@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-06-30",
+    "summary": "Added 2 new pages covering the June 2026 frontier model releases (Fable 5, Opus 4.8, Mythos class) and Claude Managed Agents / Dynamic Workflows; updated claude-model-history with Mythos class section.",
+    "pagesAdded": ["claude-fable-5-and-opus-48", "claude-managed-agents-dynamic-workflows"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.truefoundry.com/blog/claude-fable-5-vs-opus-4-8-benchmarks-pricing-when-to-use-each",
+      "https://claudefa.st/blog/models/claude-opus-4-8",
+      "https://platform.claude.com/docs/en/managed-agents/overview",
+      "https://www.infoq.com/news/2026/06/dynamic-workflows-claude-code/",
+      "https://releasebot.io/updates/anthropic/claude"
+    ]
   }
 ]
