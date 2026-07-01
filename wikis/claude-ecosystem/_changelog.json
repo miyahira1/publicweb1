@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-01",
+    "summary": "Added pages on the new Mythos-class tier (Claude Fable 5 & Mythos 5) and Claude Managed Agents (scheduled deployments, credential vaults, hierarchical agent spawning); updated the model history page with Opus 4.8 and Claude Sonnet 5 details and a corrected current-model table.",
+    "pagesAdded": ["claude-fable-5-mythos-5", "claude-managed-agents"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://claude.com/blog/whats-new-in-claude-managed-agents"
+    ]
   }
 ]

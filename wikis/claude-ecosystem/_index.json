@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 / Mythos-class generation: capability jumps, context window expansion, and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5", "mythos"],
+    "updatedAt": "2026-07-01"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-fable-5-mythos-5",
+    "title": "Claude Fable 5 & Mythos 5: The Mythos-Class Tier",
+    "summary": "Anthropic's June 2026 introduction of the Mythos-class tier above Opus: Fable 5's 1M-token context and benchmark-leading scores, Mythos 5's restricted rollout via Project Glasswing, and how the safeguard-routing split works.",
+    "tags": ["models", "mythos", "fable-5", "anthropic", "releases", "safety", "government"],
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "claude-managed-agents",
+    "title": "Claude Managed Agents: Scheduled Deployments & Credential Vaults",
+    "summary": "Public beta features for running agents on the Claude Platform on a cron schedule with vaulted credentials, plus Claude Code's new three-level-deep hierarchical agent spawning.",
+    "tags": ["claude-code", "agents", "managed-agents", "scheduling", "mcp", "automation"],
+    "updatedAt": "2026-07-01"
   }
 ]
