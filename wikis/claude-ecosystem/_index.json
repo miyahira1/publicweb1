@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the 2026 Claude 5 / Mythos-class generation (Fable 5, Mythos 5, Sonnet 5, Opus 4.8): capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-02"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-code-agentic-features-2026",
+    "title": "Claude Code: Nested Sub-Agents, Fallback Chains & Marketplace (2026)",
+    "summary": "June 2026 Claude Code additions: hierarchical sub-agent spawning, fallbackModel chains with cost ceilings, the community tool marketplace, scoped permissions, per-agent cost attribution, and shell-based MCP auth.",
+    "tags": ["claude-code", "subagents", "fallback-models", "marketplace", "permissions", "mcp"],
+    "updatedAt": "2026-07-02"
+  },
+  {
+    "id": "mcp-ecosystem-2026",
+    "title": "MCP Ecosystem in 2026: Adoption, New Servers & Spec Update",
+    "summary": "X launches a hosted MCP server, Salesforce anchors Agentforce 3 around MCP, a new spec release candidate targets July 28 2026, and MCP tunnels plus fresh security guidance address the protocol's growing attack surface.",
+    "tags": ["MCP", "ecosystem", "protocol", "integrations", "security"],
+    "updatedAt": "2026-07-02"
   }
 ]

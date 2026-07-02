@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-02",
+    "summary": "Added pages on Claude Code's June 2026 agentic features (nested sub-agents, fallback model chains, tool marketplace) and the MCP ecosystem's growth (X and Salesforce servers, spec release candidate); updated Claude Model History with the Fable 5 / Mythos 5 / Sonnet 5 / Opus 4.8 generation and the June 2026 export-control disruption.",
+    "pagesAdded": ["claude-code-agentic-features-2026", "mcp-ecosystem-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://releasebot.io/updates/anthropic/claude",
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/",
+      "https://www.sitepoint.com/claude-code-june-2026-10-new-features-devs-need-to-know/"
+    ]
   }
 ]
