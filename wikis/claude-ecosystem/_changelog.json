@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-03",
+    "summary": "Added a new page on the Fable 5/Mythos 5 export-control saga, and updated Claude Model History (Sonnet 5, Opus 4.8) and Claude Code Overview (June 2026 feature updates) to reflect the Claude 5 generation.",
+    "pagesAdded": ["claude-fable-5-mythos-class"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
+      "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html",
+      "https://venturebeat.com/technology/anthropic-is-bringing-back-claude-fable-5-globally-after-us-lifts-export-control-order-where-can-enterprises-access-it",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]

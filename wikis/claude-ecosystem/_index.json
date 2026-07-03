@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion (now 1M tokens), and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5", "sonnet-5"],
+    "updatedAt": "2026-07-03"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, agentic coding workflows, and June 2026 updates (hierarchical agents, Sonnet 5 default, Artifacts beta).",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "sonnet-5", "hierarchical-agents"],
+    "updatedAt": "2026-07-03"
+  },
+  {
+    "id": "claude-fable-5-mythos-class",
+    "title": "Claude Fable 5, Mythos 5, and the Mythos-Class Tier",
+    "summary": "Anthropic's new tier above Opus, and the 19-day US export-control shutdown of Fable 5 and Mythos 5 in June 2026 following a jailbreak disclosure.",
+    "tags": ["fable-5", "mythos-5", "mythos-class", "export-controls", "models", "safety", "policy"],
+    "updatedAt": "2026-07-03"
   }
 ]
