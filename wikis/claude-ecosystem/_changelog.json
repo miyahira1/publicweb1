@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-04",
+    "summary": "First maintenance run since seeding (14-month gap): added a page on Claude's new constitution, updated model history through Sonnet 5/Opus 4.8/Fable 5/Mythos 5, and updated MCP coverage with its December 2025 donation to the Agentic AI Foundation.",
+    "pagesAdded": ["claude-constitution"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.anthropic.com/news/claude-new-constitution",
+      "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+      "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html"
+    ]
   }
 ]
