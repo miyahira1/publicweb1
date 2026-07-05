@@ -2,22 +2,22 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through Opus 4.8 and Sonnet 5: capability jumps, context window expansion (now 1M tokens), and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "opus-4.8", "sonnet-5"],
+    "updatedAt": "2026-07-05"
   },
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
-    "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
-    "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
-    "updatedAt": "2025-05-21"
+    "summary": "Claude's function calling API, the Model Context Protocol (MCP) including its 2026 stateless Tasks extension, and patterns for building reliable agentic systems.",
+    "tags": ["tool-use", "agents", "MCP", "api", "function-calling", "mcp-2026"],
+    "updatedAt": "2026-07-05"
   },
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and the 2026 feature timeline (auto mode, dynamic workflows, nested subagents).",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "auto-mode", "2026-updates"],
+    "updatedAt": "2026-07-05"
   }
 ]

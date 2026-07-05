@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-05",
+    "summary": "Caught up on over a year of developments: updated the model history page with Opus 4.7/4.8 and Sonnet 5 launches plus Fable 5's global restoration, updated the tool-use page with MCP's 2026 stateless Tasks extension and cross-vendor adoption, and updated the Claude Code overview with a 2026 feature timeline covering auto mode, dynamic workflows, and nested subagents.",
+    "pagesAdded": [],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://venturebeat.com/technology/anthropic-is-bringing-back-claude-fable-5-globally-after-us-lifts-export-control-order-where-can-enterprises-access-it",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]
