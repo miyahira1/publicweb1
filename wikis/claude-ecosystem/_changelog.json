@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-06",
+    "summary": "Added a page covering Anthropic's May-June 2026 release wave (Opus 4.8, Fable 5/Mythos 5 and their export-control suspension, Sonnet 5) and updated the model history and MCP pages, which had gone stale since the May 2025 seed.",
+    "pagesAdded": ["claude-5-family"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+    ]
   }
 ]
