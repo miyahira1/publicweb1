@@ -17,5 +17,18 @@
       "https://www.anthropic.com/news/fable-mythos-access",
       "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
     ]
+  },
+  {
+    "date": "2026-07-07",
+    "summary": "Added pages on Claude Code dynamic workflows and Claude Cowork, and updated the Claude Code overview with both plus a note on a discovered maintenance-automation bug (45 daily runs since May 2025 seed each branched fresh and never merged, so no updates ever reached main until this run manually rebased onto the latest prior branch).",
+    "pagesAdded": ["claude-code-dynamic-workflows", "claude-cowork"],
+    "pagesUpdated": ["claude-code-overview"],
+    "sources": [
+      "https://code.claude.com/docs/en/workflows",
+      "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+      "https://www.infoq.com/news/2026/06/dynamic-workflows-claude-code/",
+      "https://www.anthropic.com/product/claude-cowork",
+      "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+    ]
   }
 ]

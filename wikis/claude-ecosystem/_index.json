@@ -16,9 +16,9 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, dynamic workflows, and agentic coding — plus a note on Claude Cowork, the sibling product for desktop knowledge work.",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "dynamic-workflows"],
+    "updatedAt": "2026-07-07"
   },
   {
     "id": "claude-5-family",
@@ -26,5 +26,19 @@
     "summary": "Anthropic's May-June 2026 release wave: Opus 4.8, the new above-Opus Mythos-class tier (Fable 5, Mythos 5) and its 19-day export-control suspension, and the new default model Sonnet 5.",
     "tags": ["models", "anthropic", "sonnet-5", "opus-4.8", "fable-5", "mythos-5", "export-controls", "releases", "2026"],
     "updatedAt": "2026-07-06"
+  },
+  {
+    "id": "claude-code-dynamic-workflows",
+    "title": "Claude Code Dynamic Workflows",
+    "summary": "How Claude Code's dynamic workflows move subagent orchestration out of Claude's context and into a JavaScript runtime script, enabling fan-out to 10s-100s of agents with pipeline/parallel primitives and adversarial-verify quality patterns.",
+    "tags": ["claude-code", "workflows", "agents", "orchestration", "subagents", "2026"],
+    "updatedAt": "2026-07-07"
+  },
+  {
+    "id": "claude-cowork",
+    "title": "Claude Cowork",
+    "summary": "Anthropic's desktop product for agentic knowledge work outside a codebase — describe a goal, Claude executes a multi-step task against local files and apps, aimed at researchers, analysts, legal, and finance teams.",
+    "tags": ["claude-cowork", "products", "agents", "desktop", "knowledge-work", "2026"],
+    "updatedAt": "2026-07-07"
   }
 ]
