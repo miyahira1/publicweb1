@@ -2,16 +2,16 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-08"
   },
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
-    "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
+    "summary": "Claude's function calling API, the Model Context Protocol (MCP) including the 2026-07-28 stateless spec, and patterns for building reliable agentic systems.",
     "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-08"
   },
   {
     "id": "claude-code-overview",
@@ -19,5 +19,12 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-sonnet-5",
+    "title": "Claude Sonnet 5",
+    "summary": "Anthropic's June 2026 Sonnet release: 1M token context window, pricing, benchmarks that approach Opus 4.8 on agentic tasks, and why it became the new default model.",
+    "tags": ["models", "sonnet", "anthropic", "releases", "benchmarks", "pricing"],
+    "updatedAt": "2026-07-08"
   }
 ]

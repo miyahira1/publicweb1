@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-08",
+    "summary": "Added a Claude Sonnet 5 page covering its June 30, 2026 launch (1M-token context, default-model status, pricing) and updated the model history and MCP pages with the Claude 5 family and the MCP 2026-07-28 stateless/enterprise-auth spec.",
+    "pagesAdded": ["claude-sonnet-5"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5",
+      "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/"
+    ]
   }
 ]
