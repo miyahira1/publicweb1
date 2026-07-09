@@ -5,5 +5,20 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-09",
+    "summary": "Added the MCP 2026-07-28 spec page; updated model history with the Claude 5 family (Opus 4.8, Sonnet 5, Fable 5/Mythos 5, and the June 2026 export-control episode) and Claude Code overview with CLI 2026.6 features (nested sub-agents, fallback models, marketplace).",
+    "pagesAdded": ["mcp-2026-spec-update"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]

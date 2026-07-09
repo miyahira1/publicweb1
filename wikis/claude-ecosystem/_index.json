@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family (Opus 4.8, Sonnet 5, Fable 5, Mythos 5): capability jumps, context window expansion, and the June 2026 Fable 5 export-control episode.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5"],
+    "updatedAt": "2026-07-09"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, agentic workflows, and the June 2026 CLI 2026.6 features (nested sub-agents, fallback models, marketplace).",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "nested-sub-agents"],
+    "updatedAt": "2026-07-09"
+  },
+  {
+    "id": "mcp-2026-spec-update",
+    "title": "MCP 2026-07-28 Specification: Stateless Servers, Apps, and Tasks",
+    "summary": "What's new in MCP's next major spec: stateless server architecture, interactive MCP Apps, the Tasks extension for long-running calls, a feature lifecycle policy, and stable Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "spec", "governance", "enterprise"],
+    "updatedAt": "2026-07-09"
   }
 ]
