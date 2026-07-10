@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Mythos-class Fable 5/Mythos 5 and Claude Sonnet 5: capability jumps, context window expansion, and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "sonnet-5", "opus-4-8", "mythos"],
+    "updatedAt": "2026-07-10"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-cowork",
+    "title": "Claude Cowork",
+    "summary": "Anthropic's Claude Code-style agent for general knowledge work — now on desktop, web, and mobile with cross-device task handoff.",
+    "tags": ["cowork", "claude-code", "agentic", "knowledge-work", "product"],
+    "updatedAt": "2026-07-10"
+  },
+  {
+    "id": "mcp-2026-stateless-spec",
+    "title": "MCP Goes Stateless: The 2026-07-28 Specification",
+    "summary": "MCP's next spec removes protocol-level sessions for stateless HTTP deployment, and moves Tasks and MCP Apps into an extensions framework.",
+    "tags": ["MCP", "protocol", "tool-use", "spec", "agents"],
+    "updatedAt": "2026-07-10"
   }
 ]
