@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 line (Fable 5, Mythos 5, Sonnet 5) and Opus 4.8: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-11"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-enterprise-auth-2026",
+    "title": "MCP Enterprise-Managed Authorization & Ecosystem Growth (2026)",
+    "summary": "MCP servers formalized as OAuth Resource Servers, the stable Enterprise-Managed Authorization (EMA) extension for zero-touch enterprise SSO, and first-party MCP servers from Salesforce and X.",
+    "tags": ["MCP", "authorization", "oauth", "enterprise", "security", "ecosystem"],
+    "updatedAt": "2026-07-11"
+  },
+  {
+    "id": "claude-code-2026-agent-features",
+    "title": "Claude Code: Nested Sub-Agents, Marketplace & Artifacts (2026)",
+    "summary": "CLI 2026.6 brought 5-level nested sub-agents, fallback model chains, and a community tool marketplace; July 2026 added Artifacts in Claude Code, Trusted Devices, and mcp login/logout.",
+    "tags": ["claude-code", "sub-agents", "marketplace", "artifacts", "cli"],
+    "updatedAt": "2026-07-11"
   }
 ]
