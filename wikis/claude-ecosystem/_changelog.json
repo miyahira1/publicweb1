@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-12",
+    "summary": "Added pages on Claude Code's 2026 agentic features (auto mode, hierarchical subagents, dynamic workflows) and MCP's 2026 protocol evolution (stateless core, enterprise auth, ecosystem growth); updated model history with Claude Opus 4.8 and Sonnet 5 releases.",
+    "pagesAdded": ["claude-code-2026-agentic-features", "mcp-2026-protocol-evolution"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]

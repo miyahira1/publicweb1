@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 4.x family, Opus 4.8, and Sonnet 5: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-12"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-code-2026-agentic-features",
+    "title": "Claude Code: Auto Mode, Hierarchical Subagents & Dynamic Workflows (2026)",
+    "summary": "How Claude Code moved toward managed autonomy in 2026: auto mode's safety classifier, three-level-deep hierarchical subagents, and Opus 4.8's hundreds-of-parallel-subagents dynamic workflows.",
+    "tags": ["claude-code", "auto-mode", "subagents", "agentic", "2026"],
+    "updatedAt": "2026-07-12"
+  },
+  {
+    "id": "mcp-2026-protocol-evolution",
+    "title": "MCP in 2026: Stateless Core, Enterprise Auth & Ecosystem Growth",
+    "summary": "The 2026-07-28 MCP release candidate's stateless core, MCP Apps and Tasks extensions, stable Enterprise-Managed Authorization, and the server ecosystem's growth from ~100 to 19,831+ servers.",
+    "tags": ["MCP", "protocol", "2026", "enterprise", "ecosystem"],
+    "updatedAt": "2026-07-12"
   }
 ]
