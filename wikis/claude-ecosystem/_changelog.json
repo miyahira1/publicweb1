@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-13",
+    "summary": "Caught up on ~14 months of Claude/MCP news: added pages on Claude Code's 2026 H1 features (auto mode, background subagents, Sonnet 5 default) and the 2026-07-28 MCP spec revision (stateless core, MCP Apps, Tasks), and rewrote the model history page to cover Opus 4.7/4.8, Sonnet 5, and the new Mythos-class tier (Fable 5/Mythos 5).",
+    "pagesAdded": ["claude-code-2026-updates", "mcp-2026-spec-update"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/"
+    ]
   }
 ]
