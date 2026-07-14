@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-14",
+    "summary": "Added a page on Claude Fable 5 & Mythos 5 (Anthropic's new Mythos-class model and the June 2026 export-control episode), and updated the model history and Claude Code pages with Claude Sonnet 5's launch and mid-2026 agentic feature additions.",
+    "pagesAdded": ["claude-fable-5-mythos-5"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]
