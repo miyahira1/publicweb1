@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the mid-2026 lineup: capability jumps, context window expansion, and key milestones in each generation, including Sonnet 5, Opus 4.8, and the new Mythos-class tier.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "sonnet-5"],
+    "updatedAt": "2026-07-15"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-evolution",
+    "title": "MCP in 2026: Linux Foundation Governance and the Stateless Redesign",
+    "summary": "MCP's governance handoff to the Agentic AI Foundation (Linux Foundation), the 2026-07-28 stateless-core release candidate, and the newly-stable Enterprise-Managed Authorization extension.",
+    "tags": ["MCP", "protocol", "governance", "linux-foundation", "enterprise"],
+    "updatedAt": "2026-07-15"
+  },
+  {
+    "id": "cowork-and-claude-code-2026",
+    "title": "Cowork and Claude Code's 2026 Agentic Feature Push",
+    "summary": "Claude Cowork brings Claude Code's agentic architecture to knowledge work; Claude Code adds 5-level-deep hierarchical subagent spawning, configurable background execution, and more.",
+    "tags": ["claude-code", "cowork", "subagents", "agents", "orchestration"],
+    "updatedAt": "2026-07-15"
   }
 ]

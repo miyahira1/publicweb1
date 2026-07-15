@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-15",
+    "summary": "Added pages on MCP's 2026 governance/protocol overhaul and Cowork + Claude Code's multi-agent push; updated the model history page for the Sonnet 5 / Opus 4.8 / Mythos-class lineup that superseded the Claude 4 table.",
+    "pagesAdded": ["mcp-2026-evolution", "cowork-and-claude-code-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/"
+    ]
   }
 ]
