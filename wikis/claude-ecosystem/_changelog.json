@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-16",
+    "summary": "Added a page on Claude Code Artifacts and mid-2026 CLI updates; updated the model history page with the new Claude 5 family (Sonnet 5, Fable 5) and the tool-use page with the July 2026 MCP specification overhaul.",
+    "pagesAdded": ["claude-code-artifacts-2026"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://claude.com/blog/artifacts-in-claude-code"
+    ]
   }
 ]
