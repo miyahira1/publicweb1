@@ -1,0 +1,25 @@
+{
+  "id": "mcp-enterprise-auth-2026",
+  "title": "MCP in 2026: Enterprise Authorization and Ecosystem Growth",
+  "content": "## Overview\n\nThrough mid-2026, the Model Context Protocol (MCP) — introduced by Anthropic in November 2024 — consolidated its position as the default way AI agents connect to external tools and data. The last twelve months added two structural pieces the original spec lacked: a real enterprise authorization story, and a way for servers to ask clarifying questions mid-task. Alongside that, the roster of companies shipping official MCP servers grew from a handful of early adopters to a broad swath of SaaS.\n\n---\n\n## Enterprise-Managed Authorization (EMA) — stable as of June 18, 2026\n\nThe biggest gap in early MCP was authorization at scale: every user had to individually run OAuth against every MCP server they wanted to use, which doesn't scale inside a company with hundreds of employees and dozens of approved servers. The **Enterprise-Managed Authorization** extension closes that gap.\n\n**What it does:** an organization's IT/security team provisions MCP server access centrally through its existing identity provider (IdP — e.g., Okta). End users then get every approved MCP server connected automatically on first login — no per-app OAuth flow, nothing to configure themselves.\n\n**Adoption at launch:**\n- **Clients:** Anthropic (Claude, Claude Code, Cowork all share one MCP auth layer), Microsoft (Visual Studio Code), Okta\n- **Servers:** Asana, Atlassian, Canva, Figma, Granola, Linear, and Supabase support EMA at launch, with Slack and others in progress\n\nThis mirrors how SSO/SCIM standardized enterprise app provisioning in the 2010s — MCP servers are now a category IT can manage the same way.\n\n---\n\n## Protocol hardening: OAuth resource servers, resource indicators, elicitation\n\nA June 18, 2026 protocol update (independent of EMA) tightened MCP's security model:\n\n- **MCP servers formally classified as OAuth Resource Servers**, clarifying the token-issuance and validation responsibilities that were previously ambiguous in the spec.\n- **Resource indicators** (per RFC 8707) were added to prevent access-token reuse across servers — a token minted for one MCP server can no longer be replayed against another.\n- **Elicitation**: MCP servers can now ask the calling agent a follow-up question mid-request when a call is ambiguous or under-specified, instead of guessing or failing outright. This is analogous to a tool returning \"I need one more piece of information\" and getting it back in a structured way, rather than the agent having to infer intent from a vague error.\n\nAnthropic's official security best-practices guidance was updated alongside these changes.\n\n---\n\n## New official MCP servers (Q2–Q3 2026)\n\n- **X (formerly Twitter)** — a hosted MCP server (June 30, 2026) letting agents like Claude, Cursor, and Grok act against the X API under a user's own account permissions. X hosts and manages the server, so developers no longer need to build and host their own. Notably, it does **not** cover X's Write API — it cannot be used to post autonomously.\n- **Salesforce** — joined MCP on June 23, 2026, anchoring its Agentforce 3 platform around it. Shipped three distinct servers: Salesforce DX, Heroku Platform, and MuleSoft.\n- These join earlier official servers from **GitHub, Slack, Notion, and Stripe**, making MCP the common integration layer across dev tools, productivity software, and commerce platforms.\n\n---\n\n## Why it matters for Claude Code users\n\nThis playground's own MCP connectors (GitHub, Slack, Google Drive/Gmail/Calendar, Canva, Ahrefs) already work today by having the user connect each one individually — the pattern EMA is designed to replace at organizational scale. For a single developer or small team, the more immediately useful changes are **elicitation** (fewer failed tool calls from ambiguous inputs) and the growing list of first-party servers, which reduces how often you need to hand-roll a custom MCP server for a common SaaS integration.\n\nSee also: [Tool Use & Agents](tool-use-and-agents) for the original MCP architecture (server/client/transport) and agentic tool-use patterns this extends.\n",
+  "tags": [
+    "MCP",
+    "model-context-protocol",
+    "enterprise",
+    "oauth",
+    "security",
+    "2026-updates"
+  ],
+  "sources": [
+    "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/",
+    "https://modelcontextprotocol.io/extensions/auth/enterprise-managed-authorization",
+    "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/",
+    "https://www.techtimes.com/articles/318708/20260619/mcp-enterprise-authorization-goes-stable-zero-touch-sso-okta-anthropic-vs-code.htm"
+  ],
+  "createdAt": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "relatedPages": [
+    "tool-use-and-agents",
+    "claude-code-overview"
+  ]
+}

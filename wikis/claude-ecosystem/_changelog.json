@@ -2,8 +2,34 @@
   {
     "date": "2025-05-21",
     "summary": "Initial seed: 3 foundational pages covering Claude model history, tool use & agents, and Claude Code.",
-    "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
+    "pagesAdded": [
+      "claude-model-history",
+      "tool-use-and-agents",
+      "claude-code-overview"
+    ],
     "pagesUpdated": [],
-    "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+    "sources": [
+      "https://www.anthropic.com/news",
+      "https://docs.anthropic.com"
+    ]
+  },
+  {
+    "date": "2026-07-17",
+    "summary": "Added a new page on MCP's 2026 enterprise authorization (EMA) and ecosystem growth, and updated the model history and Claude Code pages to cover Opus 4.8, Fable 5/Mythos-class, Claude Sonnet 5, Cowork remote sessions, and the Workflow multi-agent tool.",
+    "pagesAdded": [
+      "mcp-enterprise-auth-2026"
+    ],
+    "pagesUpdated": [
+      "claude-model-history",
+      "claude-code-overview",
+      "tool-use-and-agents"
+    ],
+    "sources": [
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/",
+      "https://code.claude.com/docs/en/changelog"
+    ]
   }
 ]
