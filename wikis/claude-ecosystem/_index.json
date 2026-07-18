@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through Sonnet 5, Opus 4.8, and the new Mythos-class Fable 5: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-18"
   },
   {
     "id": "tool-use-and-agents",
@@ -18,6 +18,13 @@
     "title": "Claude Code Overview",
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-18"
+  },
+  {
+    "id": "mcp-2026-stateless-protocol",
+    "title": "MCP 2026-07-28: Stateless Protocol, MCP Apps & Tasks",
+    "summary": "The next MCP spec revision drops the stateful session handshake, adds sandboxed interactive MCP Apps, a Tasks extension for long-running calls, and stable Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "2026-updates", "stateless", "enterprise", "mcp-apps"],
+    "updatedAt": "2026-07-18"
   }
 ]
