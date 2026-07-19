@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation, including the mid-2026 Sonnet 5, Opus 4.8, and Fable 5 releases.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-19"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows, plus mid-2026 additions like hierarchical subagents, the built-in browser, and /doctor.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-19"
+  },
+  {
+    "id": "mcp-2026-spec-update",
+    "title": "MCP 2026-07-28 Spec: Stateless Core, Apps, and Enterprise Auth",
+    "summary": "The largest MCP spec revision since launch: a stateless protocol core, the Extensions framework (MCP Apps, Tasks), hardened OAuth-aligned authorization, and stable Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "spec", "enterprise", "authorization"],
+    "updatedAt": "2026-07-19"
   }
 ]

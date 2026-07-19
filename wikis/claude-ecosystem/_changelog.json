@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-19",
+    "summary": "Added a page on the MCP 2026-07-28 spec (stateless core, Apps, Tasks, Enterprise-Managed Auth) and updated the model history and Claude Code pages with mid-2026 developments: Sonnet 5, Opus 4.8, Fable 5/Mythos 5, and new Claude Code features (hierarchical subagents, built-in browser, /doctor).",
+    "pagesAdded": ["mcp-2026-spec-update"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]
