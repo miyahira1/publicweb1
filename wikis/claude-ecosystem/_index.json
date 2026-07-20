@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "tool-use-and-agents",
@@ -18,6 +18,13 @@
     "title": "Claude Code Overview",
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-20"
+  },
+  {
+    "id": "mcp-2026-protocol-update",
+    "title": "MCP 2026: Stateless Protocol, Enterprise Auth, and the July Release Candidate",
+    "summary": "The 2026-07-28 MCP release candidate makes the protocol stateless at the transport layer and adds MCP Apps, the Tasks extension, and stable Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "enterprise", "authorization", "2026", "infrastructure"],
+    "updatedAt": "2026-07-20"
   }
 ]

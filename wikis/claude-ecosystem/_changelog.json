@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-20",
+    "summary": "Added a page on the MCP 2026-07-28 release candidate (stateless protocol, EMA, MCP Apps, Tasks); updated the model history page for the Claude 5 family (Sonnet 5, Opus 4.8, the Fable 5 export-control episode) and the Claude Code overview for July 2026 features (live MCP artifacts, screen reader mode, background MCP calls).",
+    "pagesAdded": ["mcp-2026-protocol-update"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]
