@@ -2,22 +2,29 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, the Fable 5/Mythos 5 export-control episode, and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "export-controls", "claude-5"],
+    "updatedAt": "2026-07-21"
   },
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
     "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
     "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-21"
   },
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, the July 2026 /fork vs /subtask split, and agentic coding workflows.",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "background-sessions"],
+    "updatedAt": "2026-07-21"
+  },
+  {
+    "id": "mcp-2026-protocol-revision",
+    "title": "MCP 2026 Protocol Revision: Going Stateless",
+    "summary": "The July 2026 MCP spec revision: a stateless core, new Streamable HTTP routing headers, cache-control hints, MCP Apps, Tasks, and stable Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "infrastructure", "authorization", "2026-revision"],
+    "updatedAt": "2026-07-21"
   }
 ]

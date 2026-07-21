@@ -9,6 +9,6 @@
     "https://modelcontextprotocol.io"
   ],
   "createdAt": "2025-05-21",
-  "updatedAt": "2025-05-21",
-  "relatedPages": ["claude-model-history", "claude-code-overview"]
+  "updatedAt": "2026-07-21",
+  "relatedPages": ["claude-model-history", "claude-code-overview", "mcp-2026-protocol-revision"]
 }

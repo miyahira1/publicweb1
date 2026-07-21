@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-21",
+    "summary": "Added a page on the July 2026 MCP stateless protocol revision; updated the model history page with the Claude 5 family and the Fable 5/Mythos 5 export-control episode, and the Claude Code overview with the /fork-vs-/subtask split, screen reader mode, and the EndConversation tool.",
+    "pagesAdded": ["mcp-2026-protocol-revision"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://www.gradually.ai/en/changelogs/claude-code/"
+    ]
   }
 ]
