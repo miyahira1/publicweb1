@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, the Fable 5 export-control suspension, and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5"],
+    "updatedAt": "2026-07-22"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-protocol-revision",
+    "title": "MCP 2026-07-28: The Protocol's Biggest Revision Since Launch",
+    "summary": "The stateless-core rework, MCP Apps, the Tasks extension, and stable Enterprise-Managed Authorization — plus MCP's move to Linux Foundation governance.",
+    "tags": ["mcp", "protocol", "governance", "linux-foundation", "authorization"],
+    "updatedAt": "2026-07-22"
+  },
+  {
+    "id": "claude-code-2026-agentic-features",
+    "title": "Claude Code's 2026 Feature Wave: Auto Mode, Agent View, Artifacts, and More",
+    "summary": "Auto mode, Agent View, live Artifacts with MCP connectors, computer use, /ultrareview, and the /fork vs /subtask split — the major Claude Code capabilities added through 2026.",
+    "tags": ["claude-code", "auto-mode", "agent-view", "artifacts", "computer-use"],
+    "updatedAt": "2026-07-22"
   }
 ]

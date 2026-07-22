@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-22",
+    "summary": "Added pages on the July 2026 MCP protocol overhaul and Claude Code's 2026 agentic feature wave; updated the model history page with Opus 4.8, the Fable 5 export-control suspension, and Claude Sonnet 5, correcting a speculative 'Sonnet 4.6' entry from the original seed.",
+    "pagesAdded": ["mcp-2026-protocol-revision", "claude-code-2026-agentic-features"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://code.claude.com/docs/en/whats-new",
+      "https://blog.modelcontextprotocol.io/",
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.forbes.com/sites/anishasircar/2026/06/16/anthropic-disabled-fable-5-and-mythos-5-after-a-us-export-control-order-heres-what-happened/",
+      "https://openrouter.ai/anthropic/claude-sonnet-5"
+    ]
   }
 ]
