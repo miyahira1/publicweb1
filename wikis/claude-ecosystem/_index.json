@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 generation (Sonnet 5, Fable 5, Mythos 5) and Opus 4.8: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-23"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows, including July 2026 updates like /fork, /subtask, and /workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-23"
+  },
+  {
+    "id": "mcp-2026-stateless-spec",
+    "title": "MCP 2026-07-28: The Stateless Specification",
+    "summary": "MCP's biggest spec revision yet: a stateless protocol core, the new Tasks and MCP Apps extensions, and enterprise authorization hardening, shipping July 28, 2026.",
+    "tags": ["MCP", "protocol", "spec", "authorization", "extensions"],
+    "updatedAt": "2026-07-23"
   }
 ]

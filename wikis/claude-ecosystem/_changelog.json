@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-23",
+    "summary": "Added a page on the MCP 2026-07-28 stateless spec revision, and updated the model history and Claude Code overview pages with the Claude 5 generation (Sonnet 5, Fable 5, Mythos 5) and Opus 4.8, plus July 2026 Claude Code features (/fork, /subtask, /workflows).",
+    "pagesAdded": ["mcp-2026-stateless-spec"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]
