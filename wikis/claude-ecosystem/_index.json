@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the 2026 Claude 5 / Mythos era: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-24"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, agentic coding workflows, and recent changelog highlights.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-24"
+  },
+  {
+    "id": "claude-sonnet-5",
+    "title": "Claude Sonnet 5",
+    "summary": "Anthropic's most agentic Sonnet yet: 1M-token default context window, June 2026 launch, and the biggest generational jump on SWE-bench and Terminal-bench to date.",
+    "tags": ["models", "sonnet", "anthropic", "releases", "benchmarks", "agentic"],
+    "updatedAt": "2026-07-24"
   }
 ]

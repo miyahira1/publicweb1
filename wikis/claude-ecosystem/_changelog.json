@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-24",
+    "summary": "Added a page on the June 2026 Claude Sonnet 5 launch, and updated Claude Model History and Claude Code Overview to cover the Claude 5 / Mythos era (Opus 4.8, Fable 5, Sonnet 5) and July 2026 Claude Code changelog highlights (/fork vs /subtask, spawn limits, background MCP calls).",
+    "pagesAdded": ["claude-sonnet-5"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5",
+      "https://www.scriptbyai.com/anthropic-claude-timeline/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://code.claude.com/docs/en/changelog"
+    ]
   }
 ]
