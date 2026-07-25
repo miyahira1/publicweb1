@@ -5,5 +5,16 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-25",
+    "summary": "Caught up on 14 months of drift: added the Claude 5 era (Fable 5, Sonnet 5, Mythos 5, Opus 5) to model history, added a page on the MCP 2026-07-28 stateless-protocol spec, and updated Claude Code overview with agent teams, nested sub-agents, and effort controls.",
+    "pagesAdded": ["mcp-2026-spec-update"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://www.anthropic.com/news/claude-opus-4-6",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+    ]
   }
 ]
