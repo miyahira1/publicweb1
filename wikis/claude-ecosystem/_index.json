@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 era: capability jumps, context window expansion, and key milestones in each generation, including the July 2026 Opus 5 release.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5", "opus-5"],
+    "updatedAt": "2026-07-26"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows. Updated with July 2026 features: nested subagents, mid-conversation tool changes, accessibility.",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "subagents"],
+    "updatedAt": "2026-07-26"
+  },
+  {
+    "id": "mcp-2026-stateless-spec-update",
+    "title": "MCP 2026-07-28 Spec: Stateless Core, MCP Apps & Tasks",
+    "summary": "The largest MCP rewrite since launch: a stateless protocol core, MCP Apps (sandboxed HTML UIs), Tasks for long-running work, and stable Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "spec-update", "authorization", "stateless"],
+    "updatedAt": "2026-07-26"
   }
 ]
