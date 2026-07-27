@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-27",
+    "summary": "Added a page on Claude Cowork's mobile/web expansion, and updated the model history and tool-use pages to cover the new Claude 5 family (Fable 5, Sonnet 5, Opus 5) and the MCP 2026-07-28 stateless spec revision.",
+    "pagesAdded": ["claude-cowork"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/"
+    ]
   }
 ]
