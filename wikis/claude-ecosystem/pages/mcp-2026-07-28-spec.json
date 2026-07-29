@@ -1,0 +1,24 @@
+{
+  "id": "mcp-2026-07-28-spec",
+  "title": "MCP 2026-07-28 Spec: Stateless Core & Extensions",
+  "content": "## Overview\n\nOn July 28, 2026, the Model Context Protocol steering committee shipped the **2026-07-28 specification** — the most significant revision to MCP since Anthropic open-sourced the protocol in November 2024. The headline change: MCP moves from a stateful, session-oriented protocol to a **stateless core**, with new functionality split out into a versioned extensions framework instead of being crammed into the base spec.\n\nClaude (via Claude Code, Claude Desktop, and the Claude Developer Platform) began rolling out support for the new spec the same week, alongside Microsoft, Okta, and a growing list of MCP server vendors.\n\n---\n\n## Why Statelessness\n\nThe original MCP transport assumed a persistent bidirectional session between client and server (originally stdio, later HTTP+SSE). In production this caused real problems:\n\n- **Load balancer routing** required parsing JSON-RPC bodies just to route a request, since there was no stateless request/response boundary.\n- **Sticky sessions** were required to keep a client pinned to the server instance holding its session state, which blocked autoscaling.\n- **Server restarts** silently killed every in-flight session, with no resumption path.\n\nThe 2026-07-28 core switches MCP to a request/response model: each call carries what the server needs to handle it, so servers can run on serverless and edge infrastructure without sticky routing.\n\n---\n\n## Extensions Framework\n\nRather than one monolithic spec, MCP now has a small stateless core plus a formal **extensions framework** with its own versioning and deprecation policy. The first two official extensions:\n\n- **MCP Apps** — a standard for servers to expose interactive UI (not just text/JSON) back to the client, e.g. a form or a rendered chart inside the conversation.\n- **Tasks** — long-running work. A server can respond to `tools/call` with a task handle instead of a final result; the client then drives progress with `tasks/get`, `tasks/update`, and `tasks/cancel` calls. Tasks previously existed as an experimental *core* feature, but production usage required enough redesign (cancellation semantics, polling backoff, handle expiry) that it was moved out to an extension.\n\nThis mirrors how Claude Code itself now separates its stable core from opt-in features — see `claude-code-july-2026-updates` for the client-side counterpart.\n\n---\n\n## Authorization Hardening\n\nThe spec formalizes **Enterprise-Managed Authorization**, letting an organization centrally provision MCP server access through its identity provider so a user's first login already has every approved server connected — no per-app OAuth consent screen. Anthropic, Microsoft, and Okta are adopting it, and it's being picked up by a growing set of MCP server implementations.\n\nOther authorization changes: tool schemas move to the full **JSON Schema 2020-12** standard (previously a restricted subset), and older capabilities — Roots, Sampling, and Logging — enter a formal deprecation cycle rather than being silently dropped.\n\n---\n\n## Practical Impact for Server Authors\n\n- **Deploy anywhere:** stateless servers can run behind standard HTTP load balancers, on Lambda/Cloud Functions, or at the edge — no sticky sessions needed.\n- **Long-running tools need the Tasks extension:** any tool call that previously blocked for minutes (large file processing, multi-step data pulls) should adopt the Tasks handle pattern instead of holding a connection open.\n- **Zero-touch onboarding:** servers that support Enterprise-Managed Authorization can be rolled out org-wide without every user clicking through an OAuth consent flow individually.\n- **Schema validation:** tool input schemas should be re-checked against full JSON Schema 2020-12 — the older restricted subset is no longer the baseline.\n\n---\n\n## Relation to Earlier MCP Coverage\n\nThis builds directly on the MCP fundamentals covered in `tool-use-and-agents` (server/client/transport architecture, why MCP exists). That page's description of stdio/HTTP+SSE transport and session-based servers describes the *previous* generation of the protocol — this page documents what changed under the 2026-07-28 spec.",
+  "tags": [
+    "MCP",
+    "protocol",
+    "api",
+    "extensions",
+    "authorization"
+  ],
+  "sources": [
+    "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+    "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+    "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+    "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/"
+  ],
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "relatedPages": [
+    "tool-use-and-agents",
+    "claude-code-july-2026-updates"
+  ]
+}

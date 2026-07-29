@@ -1,0 +1,27 @@
+{
+  "id": "claude-code-july-2026-updates",
+  "title": "Claude Code: July 2026 Updates",
+  "content": "## Overview\n\nJuly 2026 was a dense release month for Claude Code, culminating in v2.1.220 (July 24). Alongside the Claude Opus 5 / Sonnet 5 model launch (see `claude-model-history`), Anthropic shipped several changes to how Claude Code runs subagents, reviews code, and where sessions live.\n\n---\n\n## Nested Subagents to Depth 3\n\nPreviously, a subagent spawned by the Agent tool could not itself spawn further subagents (depth limit of 1). Claude Code now allows nesting up to **depth 3 by default** — a coordinator can delegate to a subagent, which can delegate to its own subagent, one level further than before. This mainly benefits multi-stage workflows (e.g. a review coordinator whose per-dimension reviewer subagents each spawn a verifier) without requiring the top-level session to manage every layer directly.\n\n## Subagent Text Streaming\n\nSubagent output now streams incrementally instead of arriving only when the subagent finishes. In practice this means long-running background agents show progress as they work rather than going silent until completion — relevant for the same background-agent patterns described in `claude-code-overview`.\n\n## `/code-review` Runs as a Background Subagent\n\n`/code-review` was changed to run as a background subagent rather than inline in the main conversation. Review output no longer fills the calling session's context window, and stacked slash commands are preserved as the review's actual target (so `/code-review` chained after other commands reviews the right diff rather than the whole conversation).\n\n## Model Picker and Fast Mode\n\nThe `/model` picker now surfaces only the newest model's name by default, reducing clutter from older/legacy IDs. Claude Code's **Fast mode** — Opus running with faster output — now runs on Opus 5, at roughly 2.5x the speed of standard mode for about 2x the base token cost.\n\n---\n\n## Cowork: Web and Mobile Expansion\n\nCowork (Anthropic's collaborative agent session product) expanded beyond desktop to **web and mobile** in July 2026. Sessions can now run remotely in beta, with files and session state saved to the user's Claude account and synced across devices — so a Cowork session started on desktop can be picked up from a phone.\n\n## Reflect Dashboard\n\nAnthropic introduced **Reflect**, a built-in usage-analytics dashboard reachable from Settings. It surfaces a monthly recap of how someone uses Claude: topics spent time on, most active day, peak usage hour, and qualitative observations about working patterns. This is a Claude.ai-level feature (not specific to Claude Code) but is relevant to anyone running scheduled or frequent agent sessions, since it aggregates usage across surfaces.\n\n---\n\n## Other Notable Fixes\n\n- Improved background-agent reliability (fewer silent failures on long-running background tasks).\n- Bug fixes across permissions prompts, file uploads, session handling, the Chrome extension, and Windows-specific issues.\n- Accessibility: screen-reader announcements for deleted text (word/line deletions) in `--ax-screen-reader` mode.\n\n---\n\n## Why This Matters for Agentic Workflows\n\nThe nested-subagent depth increase and background `/code-review` change both point the same direction: Claude Code is pushing more orchestration work off the main conversation thread and onto background/nested agents, keeping the primary session's context focused on decisions rather than execution detail. This is the same pattern described more generally in `tool-use-and-agents` under \"Subagent Orchestration,\" now with an extra layer of nesting available by default.",
+  "tags": [
+    "claude-code",
+    "cli",
+    "agentic",
+    "subagents",
+    "cowork",
+    "release-notes"
+  ],
+  "sources": [
+    "https://releasebot.io/updates/anthropic/claude-code",
+    "https://www.havoptic.com/tools/claude-code",
+    "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/",
+    "https://www.gradually.ai/en/changelogs/claude-code/"
+  ],
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "relatedPages": [
+    "claude-code-overview",
+    "tool-use-and-agents",
+    "claude-model-history",
+    "mcp-2026-07-28-spec"
+  ]
+}

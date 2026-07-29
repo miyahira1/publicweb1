@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-29",
+    "summary": "Added coverage of the Claude 5 model family (Opus 5, Sonnet 5, Fable 5) and the MCP 2026-07-28 stateless spec; updated Claude Model History with July 2026 pricing/benchmarks and added a page on Claude Code's July 2026 release wave (nested subagents, Cowork web/mobile, Reflect dashboard).",
+    "pagesAdded": ["mcp-2026-07-28-spec", "claude-code-july-2026-updates"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+      "https://releasebot.io/updates/anthropic/claude-code",
+      "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/"
+    ]
   }
 ]

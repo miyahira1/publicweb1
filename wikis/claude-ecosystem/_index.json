@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, pricing, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-29"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-07-28-spec",
+    "title": "MCP 2026-07-28 Spec: Stateless Core & Extensions",
+    "summary": "How the July 2026 MCP specification moved the protocol to a stateless core, split Tasks and Apps into a versioned extensions framework, and hardened authorization.",
+    "tags": ["MCP", "protocol", "api", "extensions", "authorization"],
+    "updatedAt": "2026-07-29"
+  },
+  {
+    "id": "claude-code-july-2026-updates",
+    "title": "Claude Code: July 2026 Updates",
+    "summary": "Nested subagents to depth 3, background /code-review, Cowork's web/mobile expansion, the Reflect usage dashboard, and other v2.1.220 changes.",
+    "tags": ["claude-code", "cli", "agentic", "subagents", "cowork", "release-notes"],
+    "updatedAt": "2026-07-29"
   }
 ]
