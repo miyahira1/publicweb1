@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-30",
+    "summary": "Caught up all 3 pages after a 14-month gap: added Claude Opus 4.5-4.8, the Mythos-class Fable 5/Mythos 5 tier, and Claude Opus 5 (July 24, 2026) to model history; added the MCP 2026-07-28 stateless spec and Enterprise-Managed Authorization to tool use & agents; added July 2026 Claude Code updates (live Artifact MCP data, auto mode expansion, screen reader mode) to the Claude Code overview.",
+    "pagesAdded": [],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]
