@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation, including the Fable 5 / Sonnet 5 / Opus 5 releases of June–July 2026.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-31"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, agentic coding workflows, and recent 2.1.x updates like multi-chat sessions.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-07-31"
+  },
+  {
+    "id": "mcp-2026-07-28-spec",
+    "title": "MCP 2026-07-28: The Stateless Spec Update",
+    "summary": "The July 2026 breaking revision to the Model Context Protocol: a stateless core, stronger OAuth/OIDC auth, Tasks moved to an extension, and new enterprise connector features.",
+    "tags": ["MCP", "protocol", "api", "enterprise", "agents"],
+    "updatedAt": "2026-07-31"
   }
 ]

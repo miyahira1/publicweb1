@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-07-31",
+    "summary": "Added a page on the MCP 2026-07-28 stateless spec revision; updated Claude Model History with the new Fable 5 / Sonnet 5 / Opus 5 generation (and Fable 5's export-control suspension); updated Claude Code Overview with recent 2.1.x features like multi-chat sessions.",
+    "pagesAdded": ["mcp-2026-07-28-spec"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://www.theregister.com/devops/2026/07/23/model-context-protocol-prepares-to-break-with-its-stateful-past/5276722",
+      "https://www.havoptic.com/tools/claude-code"
+    ]
   }
 ]
