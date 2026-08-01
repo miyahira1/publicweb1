@@ -5,5 +5,21 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-01",
+    "summary": "Added a page on the MCP 2026-07-28 spec rewrite (stateless core, breaking changes) and updated the model-history and Claude Code overview pages to cover the Claude 5 family (Fable 5, Sonnet 5, Opus 5) and July 2026 Claude Code features.",
+    "pagesAdded": ["mcp-2026-07-28-spec-update"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview", "tool-use-and-agents"],
+    "sources": [
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5",
+      "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://www.theregister.com/devops/2026/07/23/model_context_protocol_prepares_to_break_with_its_stateful_past/",
+      "https://venturebeat.com/infrastructure/mcp-just-got-its-biggest-update-ever-heres-what-changes-for-ai-agents",
+      "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/"
+    ]
   }
 ]
