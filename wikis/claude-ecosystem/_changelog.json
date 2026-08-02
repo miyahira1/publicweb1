@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-02",
+    "summary": "Added a new page on MCP's stateless 2026-07-28 spec rewrite; updated the model history page with the Claude 5 family (Sonnet 5, Fable 5/Mythos 5, Opus 5) and the Claude Code page with multi-chat sessions and nested subagents.",
+    "pagesAdded": ["mcp-2026-07-28-spec"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.cnbc.com/2026/07/24/anthropic-claude-opus-5-ai-fable-5-cost.html",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://code.claude.com/docs/en/whats-new/2026-w27"
+    ]
   }
 ]
