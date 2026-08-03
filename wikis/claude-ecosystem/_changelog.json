@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-03",
+    "summary": "Caught up the wiki to the Claude 5 era: added a page on the new stateless MCP 2026-07-28 spec, and updated the model-history and Claude Code pages with Fable 5, Opus 5, Cowork, agent teams, and context compaction.",
+    "pagesAdded": ["mcp-2026-07-spec"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]

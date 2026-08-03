@@ -1,0 +1,27 @@
+{
+  "id": "mcp-2026-07-spec",
+  "title": "MCP 2026-07-28 Spec: Stateless Core & Enterprise Auth",
+  "content": "## Overview\n\nOn July 28, 2026, the Model Context Protocol steering group released the **MCP 2026-07-28 specification** — the most disruptive revision since MCP launched in November 2024. The headline change is that the protocol's core is now **stateless**: the same request can be answered by any server instance behind ordinary load-balanced HTTP infrastructure, instead of being pinned to the instance that started the session.\n\nBy this release, MCP's Tier 1 SDKs (TypeScript and Python) had each crossed 1 billion total downloads, with close to half a billion downloads a month combined — a sign of how central the protocol has become to agentic tooling since the [Tool Use & Agents](tool-use-and-agents) page was first written.\n\n---\n\n## Stateless Protocol Core\n\nPrevious MCP revisions treated a client-server connection as a stateful session, tracked via an `Mcp-Session-Id` header. The 2026-07-28 spec removes protocol-level sessions entirely. Every request now carries the context it needs to be answered independently, which means:\n\n- Any server replica can answer any request — no sticky routing required\n- Servers scale horizontally behind plain HTTP load balancers, the same way a REST API would\n- Long-lived stateful behavior (e.g. long-running operations) moves out of the core protocol and into an explicit **extension** (see Tasks, below)\n\nAlongside statelessness, the spec adds **Multi Round-Trip Requests** and **header-based routing**, and makes list results (tools, resources, prompts) cacheable — reducing the chattiness that stateful MCP sessions used to require.\n\n---\n\n## Authorization Hardening\n\n**Dynamic Client Registration (DCR)** is now formally deprecated in favor of **CIMD** (Client ID Metadata Documents), a lighter-weight way for clients to declare their identity without a registration round-trip.\n\nThe **Enterprise-Managed Authorization (EMA)** extension was promoted to stable status. EMA lets organizations gate access to MCP servers through their existing identity provider (OAuth/OIDC), replacing the old pattern of a consent prompt per server with a zero-touch flow — a Claude Cowork or Claude Code user at an enterprise no longer approves each individual MCP connector by hand.\n\n---\n\n## Tasks Moves to an Extension\n\nMCP's **Tasks** feature — used for tracking long-running operations that outlive a single request/response — has been pulled out of the protocol core and repackaged as a **versioned extension**, consistent with the new stateless design. Servers that need long-running-operation support opt into the Tasks extension explicitly rather than relying on core protocol behavior.\n\nA companion **Apps** extension covers embedded UI — connectors that render interactive interface elements (not just text/JSON) inside a host like Claude Code or Claude.ai.\n\n---\n\n## Breaking Changes and Migration\n\nThe 2026-07-28 revision is **not backward compatible**. A server built against the 2026-07-28 spec may not work with an older client, and an old server won't understand the new stateless request shape. Teams running MCP servers in production need to:\n\n1. Confirm which spec version each server and client declares\n2. Migrate off `Mcp-Session-Id`-based session assumptions before adopting the new core\n3. Move any long-running-operation logic onto the Tasks extension explicitly\n4. Replace DCR-based client registration with CIMD where used\n\nClaude Code and Claude Cowork have already been updated for 2026-07-28, including support for EMA's enterprise auth flow, connector observability, and private network tunnels for internal-only MCP servers.\n\n---\n\n## Why It Matters\n\nThe original MCP pitch was \"build one server, use it from any client.\" Statelessness extends that pitch to infrastructure: an MCP server can now be deployed and scaled exactly like a normal stateless web service, rather than needing session-aware routing. Combined with EMA's centralized auth, this is aimed squarely at enterprise adoption — the friction points (scaling, per-server consent) that made large MCP deployments awkward are the ones this revision targets directly.",
+  "tags": [
+    "MCP",
+    "protocol",
+    "authorization",
+    "enterprise",
+    "2026",
+    "spec-update"
+  ],
+  "sources": [
+    "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+    "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+    "https://www.theregister.com/devops/2026/07/23/model-context-protocol-prepares-to-break-with-its-stateful-past/5276722",
+    "https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/",
+    "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/"
+  ],
+  "createdAt": "2026-08-03",
+  "updatedAt": "2026-08-03",
+  "relatedPages": [
+    "tool-use-and-agents",
+    "claude-code-overview",
+    "claude-model-history"
+  ]
+}

@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-03"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, agentic coding workflows, and 2026 additions like Cowork and agent teams.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-03"
+  },
+  {
+    "id": "mcp-2026-07-spec",
+    "title": "MCP 2026-07-28 Spec: Stateless Core & Enterprise Auth",
+    "summary": "The July 2026 MCP revision makes the protocol core stateless, deprecates Dynamic Client Registration in favor of CIMD, moves Tasks into an extension, and stabilizes Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "authorization", "enterprise", "2026"],
+    "updatedAt": "2026-08-03"
   }
 ]
