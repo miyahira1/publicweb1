@@ -2,16 +2,16 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the current Claude 5 family (Sonnet 5, Opus 5, Fable 5, Haiku 4.5): capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-04"
   },
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
-    "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
+    "summary": "Claude's function calling API, the Model Context Protocol (MCP) including the 2026-07-28 stateless spec, and patterns for building reliable agentic systems.",
     "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-04"
   },
   {
     "id": "claude-code-overview",
@@ -19,5 +19,12 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "agent-skills",
+    "title": "Agent Skills: A Standard for Packaged Capabilities",
+    "summary": "Anthropic's open standard for packaging reusable agent capabilities, the resulting marketplace ecosystem, and how it complements MCP.",
+    "tags": ["skills", "agent-skills", "marketplace", "claude-code", "tool-use"],
+    "updatedAt": "2026-08-04"
   }
 ]

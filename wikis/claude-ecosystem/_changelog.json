@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-04",
+    "summary": "Added a new page on Agent Skills, and updated the model history and MCP sections to cover over a year of developments: the Claude 5 family (Sonnet 5, Opus 5) and its effort-dial controls, and the MCP 2026-07-28 stateless spec.",
+    "pagesAdded": ["agent-skills"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills"
+    ]
   }
 ]
