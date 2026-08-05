@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-05",
+    "summary": "Added pages on the MCP 2026-07-28 stateless spec rewrite and Claude Code's Agent Teams/effort controls; corrected the model history page, which still listed Sonnet 4.6/Opus 4.7 as current, with the June-July 2026 Claude 5 family (Fable 5, Sonnet 5, Opus 5).",
+    "pagesAdded": ["mcp-2026-stateless-spec", "claude-code-agent-teams"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]
