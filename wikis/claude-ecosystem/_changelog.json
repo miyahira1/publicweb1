@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-06",
+    "summary": "Caught up on over a year of Claude ecosystem news: added the Claude 5 family (Fable 5, Mythos 5, Sonnet 5, Opus 5) to the model history page, and added new pages on MCP's stateless 2026-07-28 specification and Claude Code's plugin/marketplace ecosystem with its nested-subagent architecture and marketplace security risks.",
+    "pagesAdded": ["mcp-2026-stateless-spec", "claude-code-plugins-and-marketplace"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/",
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://code.claude.com/docs/en/features-overview",
+      "https://www.promptarmor.com/resources/hijacking-claude-code-via-injected-marketplace-plugins"
+    ]
   }
 ]

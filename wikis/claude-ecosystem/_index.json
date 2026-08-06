@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation, including Fable 5, Mythos 5, Sonnet 5, and Opus 5.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-06"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-stateless-spec",
+    "title": "MCP Goes Stateless: The 2026-07-28 Specification",
+    "summary": "The July 2026 MCP spec makes the protocol core stateless, adds Multi Round-Trip Requests and header-based routing, and ships a stable Enterprise-Managed Authorization extension.",
+    "tags": ["mcp", "protocol", "specification", "2026", "enterprise"],
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "id": "claude-code-plugins-and-marketplace",
+    "title": "Claude Code Plugins, Marketplaces & Nested Subagents",
+    "summary": "How plugins, marketplaces, and three-level-deep nested subagents work in Claude Code, plus the prompt-injection risk researchers found in unvetted marketplace plugins.",
+    "tags": ["claude-code", "plugins", "marketplace", "subagents", "security"],
+    "updatedAt": "2026-08-06"
   }
 ]
