@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-07",
+    "summary": "Added a new page on Claude Cowork and corrected the model history page, which was over a year stale and still described the Claude 4 family as current; also documented MCP's December 2025 handoff to the Linux Foundation's Agentic AI Foundation and its 2026-07-28 spec release.",
+    "pagesAdded": ["claude-cowork"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/"
+    ]
   }
 ]
