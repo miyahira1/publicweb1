@@ -2,22 +2,29 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion (now 1M tokens with Opus 5), and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5", "opus-5"],
+    "updatedAt": "2026-08-08"
   },
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
-    "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
+    "summary": "Claude's function calling API, the Model Context Protocol (MCP) including its 2026-07-28 stateless spec update, and patterns for building reliable agentic systems.",
     "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-08"
   },
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, nested subagents, autonomous background agents, and enterprise inference hooks for DLP.",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "subagents", "dlp"],
+    "updatedAt": "2026-08-08"
+  },
+  {
+    "id": "mcp-2026-spec",
+    "title": "MCP 2026-07-28 Specification: Stateless Core & Auth Hardening",
+    "summary": "The July 2026 MCP spec rewrite: a stateless transport, cacheable tool lists, six authorization-hardening SEPs, and the now-stable Enterprise-Managed Authorization extension.",
+    "tags": ["MCP", "protocol", "spec", "authorization", "oauth", "2026"],
+    "updatedAt": "2026-08-08"
   }
 ]

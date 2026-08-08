@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-08",
+    "summary": "Caught up on over a year of developments: added a new page on the MCP 2026-07-28 stateless spec, and updated the model-history and Claude Code pages with the Claude 5 family (Opus 5) and 2026 agentic/enterprise features.",
+    "pagesAdded": ["mcp-2026-spec"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://www.digitalapplied.com/blog/claude-enterprise-inference-hooks-dlp-guide"
+    ]
   }
 ]
