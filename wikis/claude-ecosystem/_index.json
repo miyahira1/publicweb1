@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-09"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-07-28-spec",
+    "title": "MCP 2026-07-28 Specification",
+    "summary": "MCP's biggest spec revision since launch: a stateless protocol core, OAuth/OIDC authorization hardening, and a stable Enterprise-Managed Authorization extension.",
+    "tags": ["MCP", "protocol", "authorization", "oauth", "spec-update", "enterprise"],
+    "updatedAt": "2026-08-09"
+  },
+  {
+    "id": "cowork-remote-sessions",
+    "title": "Claude Cowork: Web, Mobile, and Remote Sessions",
+    "summary": "Cowork expands to web and mobile, with server-side remote sessions (beta) that keep working after you close your laptop and notify you when input is needed.",
+    "tags": ["cowork", "agents", "remote-sessions", "mobile", "product-update"],
+    "updatedAt": "2026-08-09"
   }
 ]

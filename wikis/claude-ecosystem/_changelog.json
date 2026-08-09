@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-09",
+    "summary": "Added coverage of the MCP 2026-07-28 stateless spec and Cowork's web/mobile/remote-session expansion; updated Claude Model History with the Claude 5 family (Sonnet 5, Opus 5, Fable 5/Mythos 5).",
+    "pagesAdded": ["mcp-2026-07-28-spec", "cowork-remote-sessions"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+      "https://winbuzzer.com/2026/07/08/anthropic-opens-claude-cowork-beta-to-mobile-and-web-xcxwbn/",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://coursiv.io/blog/claude-opus-5"
+    ]
   }
 ]
