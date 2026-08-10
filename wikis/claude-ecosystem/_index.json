@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-10"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-opus-5",
+    "title": "Claude Opus 5",
+    "summary": "Anthropic's July 2026 flagship-tier release: frontier-class agentic coding and computer use at unchanged Opus pricing, half the cost of Fable 5.",
+    "tags": ["models", "claude-opus-5", "anthropic", "benchmarks", "pricing", "releases"],
+    "updatedAt": "2026-08-10"
+  },
+  {
+    "id": "mcp-stateless-protocol-2026",
+    "title": "MCP 2026-07-28 Spec: The Stateless Rewrite",
+    "summary": "MCP's most significant revision since launch: the protocol drops session state entirely, reworks the Tasks API, and adds a formal deprecation lifecycle.",
+    "tags": ["MCP", "protocol", "breaking-changes", "spec", "anthropic", "enterprise"],
+    "updatedAt": "2026-08-10"
   }
 ]
