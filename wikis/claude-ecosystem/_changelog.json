@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-11",
+    "summary": "Added a new page on the MCP 2026-07-28 stateless spec rewrite, and updated the model history and Claude Code pages with the Claude 5 family (Fable 5, Sonnet 5, Opus 5) and Claude Code v2.1.222-2.1.226 features (self-hosted runners, cross-session messaging, Focus view, security hardening).",
+    "pagesAdded": ["mcp-2026-07-28-spec"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview", "tool-use-and-agents"],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://dev.classmethod.jp/en/articles/20260807-cc-updates-v2-1-224/",
+      "https://dev.classmethod.jp/en/articles/20260808-cc-updates-v2-1-226/"
+    ]
   }
 ]
