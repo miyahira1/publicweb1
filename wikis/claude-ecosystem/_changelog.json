@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-12",
+    "summary": "Caught up after a 14-month gap: added a page on Claude Code's 2026 agentic features (plugins, Auto Mode, nested subagents, Routines), updated the model history page with the Claude 5 family (Fable 5, Sonnet 5, Mythos 5, Opus 5) and the Fable 5 export-control suspension, and updated the tool-use page with the MCP 2026-07-28 stateless spec.",
+    "pagesAdded": ["claude-code-agentic-features-2026"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://github.com/anthropics/claude-code/blob/main/plugins/README.md"
+    ]
   }
 ]
