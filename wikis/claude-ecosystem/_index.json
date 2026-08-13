@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation, including Fable 5, Sonnet 5, and Opus 5.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-13"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-07-28-spec-update",
+    "title": "MCP Spec Update: 2026-07-28 (Stateless Core)",
+    "summary": "MCP's biggest spec rewrite yet: a stateless protocol core, a formal Extensions framework, MCP Apps, Tasks, hardened OAuth/OIDC, and the first deprecation policy.",
+    "tags": ["MCP", "protocol", "api", "2026", "spec-update", "authorization"],
+    "updatedAt": "2026-08-13"
+  },
+  {
+    "id": "claude-code-auto-mode-and-workflows",
+    "title": "Claude Code: Auto Mode, Workflows & Session Orchestration (2026)",
+    "summary": "How auto mode replaced manual permission prompts, plus dynamic workflows, cross-session messaging, self-hosted environments, and Agent view.",
+    "tags": ["claude-code", "auto-mode", "workflows", "agents", "orchestration", "2026"],
+    "updatedAt": "2026-08-13"
   }
 ]
