@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-14",
+    "summary": "Added pages on the Claude 5 family (Fable 5, Sonnet 5, Opus 5) and the MCP 2026-07-28 stateless spec/ecosystem growth; updated Claude Model History with a Claude 5 section and corrected model-ID references.",
+    "pagesAdded": ["claude-5-family", "mcp-2026-spec-and-ecosystem"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/"
+    ]
   }
 ]
