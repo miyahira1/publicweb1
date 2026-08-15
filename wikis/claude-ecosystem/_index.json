@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family (Opus 5, Fable 5, Sonnet 5): capability jumps, context window expansion, and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "releases"],
+    "updatedAt": "2026-08-15"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, self-hosted environments, cross-session messaging, and agentic coding workflows.",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "self-hosted", "auto-mode"],
+    "updatedAt": "2026-08-15"
+  },
+  {
+    "id": "mcp-2026-07-28-spec-update",
+    "title": "MCP 2026-07-28 Spec: Stateless Core, Apps & Tasks",
+    "summary": "The July 2026 MCP specification revision: stateless transport, versioned Apps and Tasks extensions, hardened OAuth/OIDC, and a formal deprecation policy.",
+    "tags": ["MCP", "protocol", "spec", "oauth", "extensions", "2026"],
+    "updatedAt": "2026-08-15"
   }
 ]

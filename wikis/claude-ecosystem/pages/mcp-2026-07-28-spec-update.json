@@ -1,0 +1,24 @@
+{
+  "id": "mcp-2026-07-28-spec-update",
+  "title": "MCP 2026-07-28 Spec: Stateless Core, Apps & Tasks",
+  "content": "## Overview\n\nOn July 28, 2026, the Model Context Protocol project finalized the **2026-07-28 specification**, the most significant revision to MCP since its November 2024 launch. It followed a ten-week release-candidate window and lands four major changes: a stateless core transport, a versioned extensions framework (starting with MCP Apps and Tasks), hardened OAuth/OIDC authorization, and a formal deprecation policy for older mechanisms. Claude and Claude Code have expanded support for the new spec.\n\n---\n\n## Stateless Core\n\nPrevious MCP versions required an `initialize`/`initialized` handshake and tracked session state via an `Mcp-Session-Id` header, meaning a client and server had to maintain a stateful connection across the interaction. The 2026-07-28 spec removes both:\n\n- No more handshake — a client can issue a request against a server without first negotiating a session\n- Routing moves to headers instead of an established session\n- `list` and resource-read results are now explicitly **cacheable**, since there's no session state that could make a cached result stale\n\nThis matters for scale: stateless servers are far easier to run behind standard HTTP load balancers and horizontally scale, since any request can be routed to any server instance.\n\n---\n\n## Versioned Extensions: Apps and Tasks\n\nRather than keep growing the core protocol, new capabilities now ship as **versioned extensions** with their own release cadence:\n\n### MCP Apps\nServer-rendered, interactive HTML interfaces that run inside sandboxed iframes. Tools declare their UI templates up front, which lets clients **prefetch** the UI and run a security review on it before ever invoking the tool — closing a gap where a tool's rendered output couldn't be vetted ahead of time.\n\n### Tasks\nA redesigned model for long-running work, replacing ad hoc polling patterns with three defined operations:\n- `tasks/get` — poll-based status check\n- `tasks/update` — push a progress update\n- `tasks/cancel` — cooperative cancellation (the task can decline or need time to wind down, rather than being killed outright)\n\n---\n\n## OAuth/OIDC Authorization Hardening\n\nSix Specification Enhancement Proposals (SEPs) landed in this release, each closing a specific gap in MCP's existing OAuth 2.1 authorization flow as it met real deployed practice — for example around token audience restriction and client registration edge cases. The goal is to bring MCP's auth story in line with how OAuth/OIDC is actually run in production identity systems, rather than a simplified subset.\n\n---\n\n## Deprecation Policy\n\nThe spec formalizes a deprecation lifecycle for the first time:\n\n- **Roots, Sampling, Logging, and Dynamic Client Registration (DCR):** minimum 12-month deprecation window before removal\n- **HTTP+SSE transport:** follows its own separately published removal schedule, distinct from the 12-month default\n\nThis gives server and client authors a predictable timeline instead of features disappearing without notice.\n\n---\n\n## Why It Matters\n\nBefore this release, every MCP deployment had to carry the complexity of session lifecycle management even for simple, stateless tool calls — one of the friction points that made MCP servers harder to deploy at scale than a plain REST API. Combined with the versioned extensions model, the 2026-07-28 spec lets the core protocol stay small and stable while Apps, Tasks, and future capabilities evolve independently. See the [Tool Use & Agents](tool-use-and-agents) page for how MCP fits into Claude's broader agentic tool-use model.",
+  "tags": [
+    "MCP",
+    "protocol",
+    "spec",
+    "oauth",
+    "extensions",
+    "2026"
+  ],
+  "sources": [
+    "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+    "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+    "https://www.truefoundry.com/blog/mcp-2026-07-28-spec-apps-tasks-governance-revisited"
+  ],
+  "createdAt": "2026-08-15",
+  "updatedAt": "2026-08-15",
+  "relatedPages": [
+    "tool-use-and-agents",
+    "claude-code-overview"
+  ]
+}
