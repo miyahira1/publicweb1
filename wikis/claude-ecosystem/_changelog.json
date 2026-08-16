@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-16",
+    "summary": "Added a new page on the MCP 2026-07-28 stateless spec rewrite, and updated the model history and Claude Code pages with the July 2026 Claude 5 family launch (Fable 5, Opus 5, Sonnet 5) and August 2026 Claude Code changes (auto mode default, self-hosted environments, Compliance API).",
+    "pagesAdded": ["mcp-2026-spec-update"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://omidsaffari.com/blog/claude-code-auto-mode-default-august-2026"
+    ]
   }
 ]
