@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5.x family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-18"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-5-family",
+    "title": "The Claude 5 Family",
+    "summary": "What changed with Claude Sonnet 5 and Opus 5: adaptive thinking by default, the new effort parameter, a 30%-larger-token tokenizer, and breaking API changes to migrate around.",
+    "tags": ["models", "anthropic", "claude-5", "sonnet-5", "opus-5", "releases", "pricing"],
+    "updatedAt": "2026-08-18"
+  },
+  {
+    "id": "mcp-2026-protocol-update",
+    "title": "MCP 2026-07-28: The Stateless Rewrite",
+    "summary": "MCP's biggest spec change since launch: a stateless transport core, hardened OAuth/OIDC authorization, first-class extensions (Apps, Tasks), and deprecation of Roots, Sampling, and Logging.",
+    "tags": ["MCP", "protocol", "specification", "2026", "authorization", "extensions"],
+    "updatedAt": "2026-08-18"
   }
 ]

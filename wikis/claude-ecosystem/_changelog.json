@@ -5,5 +5,16 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-18",
+    "summary": "Added pages on the Claude 5 family (Sonnet 5, Opus 5 breaking changes and pricing) and the MCP 2026-07-28 stateless spec rewrite; updated Claude Model History to correct the stale Claude-4-as-current framing.",
+    "pagesAdded": ["claude-5-family", "mcp-2026-protocol-update"],
+    "pagesUpdated": ["claude-model-history", "tool-use-and-agents"],
+    "sources": [
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5",
+      "https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+    ]
   }
 ]
