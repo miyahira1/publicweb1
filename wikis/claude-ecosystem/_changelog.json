@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-19",
+    "summary": "Added a new page on the MCP 2026-07-28 specification (stateless core, Enterprise-Managed Authorization, extensions); updated the model history page for the Claude 5 family and the Opus 5 launch, and the Claude Code page for Focus view, sandbox credential masking, and recent releases.",
+    "pagesAdded": ["mcp-2026-spec-update"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/",
+      "https://finance.biggo.com/news/deea98ad-6486-49aa-96c7-a4f9317955b1",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://www.gradually.ai/en/changelogs/claude-code/",
+      "https://fixit.co.jp/tips/claude-code-focus-view-credential-masking/"
+    ]
   }
 ]

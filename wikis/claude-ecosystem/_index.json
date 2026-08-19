@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family (Fable, Opus, Sonnet, Haiku): capability jumps, context window expansion, and key milestones in each generation, including the July 2026 Claude Opus 5 launch.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5", "opus-5"],
+    "updatedAt": "2026-08-19"
   },
   {
     "id": "tool-use-and-agents",
@@ -16,8 +16,15 @@
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
-    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
-    "updatedAt": "2025-05-21"
+    "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, Focus view, sandbox credential masking, and agentic coding workflows.",
+    "tags": ["claude-code", "cli", "agentic", "remote", "hooks", "focus-view", "sandbox"],
+    "updatedAt": "2026-08-19"
+  },
+  {
+    "id": "mcp-2026-spec-update",
+    "title": "MCP 2026-07-28 Specification",
+    "summary": "The largest MCP revision since launch: a stateless protocol core, Multi Round-Trip Requests, Enterprise-Managed Authorization, and a formal extensions framework (MCP Apps, Tasks).",
+    "tags": ["MCP", "model-context-protocol", "spec", "protocol", "enterprise", "authorization"],
+    "updatedAt": "2026-08-19"
   }
 ]
