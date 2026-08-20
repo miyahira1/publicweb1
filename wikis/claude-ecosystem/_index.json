@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, and key milestones in each generation.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-20"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-spec-update",
+    "title": "MCP 2026-07-28 Specification",
+    "summary": "MCP's biggest revision since launch: a stateless protocol core, versioned extensions (Apps, Tasks), and OAuth/OIDC-aligned authorization hardening.",
+    "tags": ["MCP", "protocol", "spec", "authorization", "agents"],
+    "updatedAt": "2026-08-20"
+  },
+  {
+    "id": "claude-output-watermarking",
+    "title": "Claude Output Watermarking & the EU AI Act",
+    "summary": "Anthropic now embeds machine-readable watermarks in Claude's text and image output worldwide, in response to EU AI Act Article 50 transparency rules.",
+    "tags": ["watermarking", "eu-ai-act", "compliance", "policy", "provenance"],
+    "updatedAt": "2026-08-20"
   }
 ]
