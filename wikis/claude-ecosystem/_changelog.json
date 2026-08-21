@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-21",
+    "summary": "Caught the wiki up after a 15-month gap: added pages on the MCP 2026-07-28 stateless spec and Claude Code's 2026 layered architecture (nested subagents, plugin marketplace), and corrected Claude Model History with the Claude 5 family (Fable 5, Sonnet 5, Opus 5) and mandatory EU AI Act watermarking.",
+    "pagesAdded": ["mcp-2026-stateless-spec", "claude-code-agent-architecture-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://mlq.ai/news/anthropic-launches-claude-opus-5-tops-ai-benchmark-index-at-half-the-cost-of-fable-5/",
+      "https://www.euronews.com/next/2026/08/11/eu-compliance-delivered-globally-anthropic-to-watermark-claudes-output-worldwide",
+      "https://www.sitepoint.com/claude-code-june-2026-10-new-features-devs-need-to-know/",
+      "https://releasebot.io/updates/anthropic/claude-code"
+    ]
   }
 ]

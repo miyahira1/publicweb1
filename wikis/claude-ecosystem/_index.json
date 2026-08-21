@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family (Fable 5, Sonnet 5, Opus 5): capability jumps, context window expansion, and mandatory EU AI Act watermarking as of August 2026.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5", "watermarking"],
+    "updatedAt": "2026-08-21"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-stateless-spec",
+    "title": "MCP Goes Stateless: The 2026-07-28 Specification",
+    "summary": "MCP's July 2026 spec removes the initialize handshake and session ID header, promotes Tasks to a stable extension, and ships Enterprise-Managed Authorization.",
+    "tags": ["MCP", "protocol", "specification", "stateless", "authorization", "tasks"],
+    "updatedAt": "2026-08-21"
+  },
+  {
+    "id": "claude-code-agent-architecture-2026",
+    "title": "Claude Code's 2026 Architecture: Layers, Nested Subagents & Marketplace",
+    "summary": "Claude Code's six-layer model (memory, output styles, skills, commands, hooks, subagents/plugins, MCP), 5-level nested subagents, the plugin marketplace, fallback model chains, and per-agent cost attribution.",
+    "tags": ["claude-code", "subagents", "plugins", "marketplace", "architecture", "cost-attribution"],
+    "updatedAt": "2026-08-21"
   }
 ]
