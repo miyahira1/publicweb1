@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-22",
+    "summary": "Added coverage of the MCP 2026-07-28 spec and the new Agent Skills/Files API/Managed Agents platform capabilities; updated Claude Model History with the Claude 5 family (Sonnet 5, Opus 5, Fable) and current pricing.",
+    "pagesAdded": ["mcp-2026-specification", "agent-skills-files-api-managed-agents"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://claude.com/blog/computer-use-skills-api-files-api"
+    ]
   }
 ]

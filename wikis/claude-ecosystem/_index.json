@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family: capability jumps, context window expansion, the new Fable tier, and Sonnet 5/Opus 5 pricing.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5", "pricing"],
+    "updatedAt": "2026-08-22"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-specification",
+    "title": "MCP 2026-07-28 Specification & Ecosystem Growth",
+    "summary": "MCP's biggest revision since launch: a stateless protocol core, Tasks and MCP Apps extensions, stable Enterprise-Managed Authorization, and ecosystem growth past 1 billion SDK downloads.",
+    "tags": ["MCP", "protocol", "specification", "ecosystem", "agents"],
+    "updatedAt": "2026-08-22"
+  },
+  {
+    "id": "agent-skills-files-api-managed-agents",
+    "title": "Agent Skills, Files API & Managed Agents",
+    "summary": "Computer use, the Skills API, and the Files API reach GA, plus new Managed Agents controls for web access, sandbox memory, and observability.",
+    "tags": ["agent-skills", "files-api", "managed-agents", "computer-use", "developer-platform"],
+    "updatedAt": "2026-08-22"
   }
 ]
