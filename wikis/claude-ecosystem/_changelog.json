@@ -5,5 +5,17 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-23",
+    "summary": "Added a new page on MCP's 2026-07-28 stateless specification, and updated the model history and Claude Code pages with the Claude 5 family launch and August 2026 platform changes (watermarking, ANTHROPIC_DEFAULT_MODEL, Skills API GA).",
+    "pagesAdded": ["mcp-2026-stateless-spec"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview"],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://officechai.com/ai/claude-opus-5-benchmarks/",
+      "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+      "https://releasebot.io/updates/anthropic/claude-code"
+    ]
   }
 ]
