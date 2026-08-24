@@ -1,0 +1,24 @@
+{
+  "id": "claude-code-design-and-cowork",
+  "title": "Claude Code: /design and Cowork",
+  "content": "## Overview\n\nTwo things changed in Claude Code's surface area during August 2026: the **`/design` command** landed as a research preview, and **Cowork** expanded beyond desktop to web and mobile. Both point the same direction \u2014 Claude Code moving from a terminal-only tool toward something that spans design, implementation, and multiple devices.\n\n---\n\n## The `/design` Command\n\nReleased **2026-08-17** as a research preview, `/design` brings Claude Design's **artboard workflow** into the Claude Code CLI and Desktop app. It is built on Artifacts.\n\n### How it works\n\n```\n/design a few options for the settings panel\n```\n\nClaude reads your codebase to match its existing UI style, then produces several editable artboards laid out on a single pan/zoom canvas, published as an Artifact. You pick one, tweak it directly (click-to-select elements, a properties panel, inline text editing, undo/redo), and then have Claude implement the version you settled on.\n\n### Why it matters\n\nThe previous workflow meant leaving the terminal for `claude.ai/design`, producing a mock there, and pasting code back. `/design` closes that loop \u2014 the design step happens where the code already is, and the resulting artboard is a shareable Artifact rather than a screenshot.\n\n### Availability\n\n- Plans: Pro, Max, Team, Enterprise\n- CLI: version **2.1.183** or later\n- Desktop: **1.13576.0** or later\n\nArtifacts support is the gating requirement, since artboards are published as Artifacts.\n\n---\n\n## Cowork on Web and Mobile\n\nAs of August 2026, **Cowork runs on web and mobile** in addition to the desktop app. Sessions can run **remotely in beta**, with files and session state saved to your Claude account and synced across devices.\n\nThe practical effect: a session started on a laptop can be picked up on a phone, because the working state lives in the account rather than only in the local process.\n\n---\n\n## Other August 2026 Claude Code Changes\n\nSelected releases from the month:\n\n| Version | Date | Change |\n|---|---|---|\n| 2.1.232 | Aug 13 | `@` mentions to collaborate across multiple sessions |\n| 2.1.233 | Aug 14 | GitLab merge requests in the worktree view; memory limits on runaway build commands |\n| 2.1.234 | Aug 17 | Auto-continue sessions when usage limits reset; stronger protections against credential leakage |\n| 2.1.239 | Aug 21 | `/claude-api upgrade` migrates Python projects from `anthropic` 0.x to 1.x; better plugin syncing in cloud sessions |\n| 2.1.241 | Aug 23 | Bug-fix and reliability release, no new features |\n\nA **Concise output style** also shipped, making Claude lead with the result and skip preamble.\n\n---\n\n## Developer Platform Alongside\n\nThe Claude Developer Platform added governance controls for **Claude Managed Agents** in the same window: session budgets, advisor models, inference geo pinning (for data residency), and **GitHub-hosted skills**.\n\n---\n\n## Reading the Trend\n\nThe month's changes cluster into three themes:\n\n1. **Design moves into the coding loop** \u2014 `/design` treats UI mockups as a step before implementation rather than a separate tool.\n2. **Sessions become portable** \u2014 Cowork sync, cross-session `@` mentions, and auto-continue all reduce the cost of a session being interrupted.\n3. **Guardrails for teams** \u2014 memory limits, credential-leak protections, session budgets, and geo pinning are all operational controls rather than capability additions.",
+  "tags": [
+    "claude-code",
+    "design",
+    "cowork",
+    "artifacts",
+    "releases"
+  ],
+  "sources": [
+    "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "https://www.explainx.ai/blog/claude-code-design-command-artboards-research-preview-2026",
+    "https://releasebot.io/updates/anthropic/claude-code",
+    "https://code.claude.com/docs/en/whats-new"
+  ],
+  "createdAt": "2026-08-24",
+  "updatedAt": "2026-08-24",
+  "relatedPages": [
+    "claude-code-overview",
+    "claude-model-history"
+  ]
+}

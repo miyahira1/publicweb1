@@ -3,21 +3,64 @@
     "id": "claude-model-history",
     "title": "Claude Model History",
     "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "tags": [
+      "models",
+      "anthropic",
+      "history",
+      "benchmarks"
+    ],
+    "updatedAt": "2026-08-24"
   },
   {
     "id": "tool-use-and-agents",
     "title": "Tool Use & Agents",
     "summary": "Claude's function calling API, the Model Context Protocol (MCP), and patterns for building reliable agentic systems.",
-    "tags": ["tool-use", "agents", "MCP", "api", "function-calling"],
+    "tags": [
+      "tool-use",
+      "agents",
+      "MCP",
+      "api",
+      "function-calling"
+    ],
     "updatedAt": "2025-05-21"
   },
   {
     "id": "claude-code-overview",
     "title": "Claude Code Overview",
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
-    "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
+    "tags": [
+      "claude-code",
+      "cli",
+      "agentic",
+      "remote",
+      "hooks"
+    ],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-stateless-spec-2026",
+    "title": "MCP 2026-07-28: The Stateless Spec",
+    "summary": "The July 2026 MCP specification revision: a stateless protocol core, multi round-trip requests, header-based routing, cacheable list results, and the August roadmap.",
+    "tags": [
+      "MCP",
+      "spec",
+      "protocol",
+      "stateless",
+      "scalability"
+    ],
+    "updatedAt": "2026-08-24"
+  },
+  {
+    "id": "claude-code-design-and-cowork",
+    "title": "Claude Code: /design and Cowork",
+    "summary": "The /design artboard command (research preview, Aug 2026), Cowork on web and mobile, and the month's notable Claude Code releases.",
+    "tags": [
+      "claude-code",
+      "design",
+      "cowork",
+      "artifacts",
+      "releases"
+    ],
+    "updatedAt": "2026-08-24"
   }
 ]

@@ -2,8 +2,33 @@
   {
     "date": "2025-05-21",
     "summary": "Initial seed: 3 foundational pages covering Claude model history, tool use & agents, and Claude Code.",
-    "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
+    "pagesAdded": [
+      "claude-model-history",
+      "tool-use-and-agents",
+      "claude-code-overview"
+    ],
     "pagesUpdated": [],
-    "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+    "sources": [
+      "https://www.anthropic.com/news",
+      "https://docs.anthropic.com"
+    ]
+  },
+  {
+    "date": "2026-08-24",
+    "summary": "Added pages on the 2026-07-28 stateless MCP specification and on Claude Code's /design command plus Cowork's web/mobile expansion; brought the model history page forward to the Claude 5 family (Sonnet 5, Opus 5, Fable 5) and the finalized Sonnet 5 pricing.",
+    "pagesAdded": [
+      "mcp-stateless-spec-2026",
+      "claude-code-design-and-cowork"
+    ],
+    "pagesUpdated": [
+      "claude-model-history"
+    ],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "https://code.claude.com/docs/en/whats-new"
+    ]
   }
 ]

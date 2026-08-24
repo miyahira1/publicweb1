@@ -2,9 +2,16 @@
   "id": "claude-ecosystem",
   "title": "Claude & Community",
   "description": "New Claude model releases, features, API updates, and how the community is building with them",
-  "icon": "🧠",
-  "topics": ["Claude model releases", "Claude API", "Claude Code", "MCP", "community projects", "prompting techniques"],
+  "icon": "\ud83e\udde0",
+  "topics": [
+    "Claude model releases",
+    "Claude API",
+    "Claude Code",
+    "MCP",
+    "community projects",
+    "prompting techniques"
+  ],
   "createdAt": "2025-05-21",
-  "lastUpdated": "2025-05-21",
-  "pageCount": 3
+  "lastUpdated": "2026-08-24",
+  "pageCount": 5
 }

@@ -1,0 +1,24 @@
+{
+  "id": "mcp-stateless-spec-2026",
+  "title": "MCP 2026-07-28: The Stateless Spec",
+  "content": "## Overview\n\nOn **2026-07-28** the Model Context Protocol shipped its largest specification revision since the protocol launched in November 2024. The headline change is a **stateless protocol core**: an MCP server no longer has to keep per-session state in memory between requests, which is what previously made horizontal scaling awkward. A follow-up roadmap published **2026-08-22** by the Core Maintainers set the direction for the next release.\n\nThis page covers what changed in the 2026-07-28 spec, why it matters for anyone running MCP servers in production, and where the protocol is heading.\n\n---\n\n## What Shipped in 2026-07-28\n\n### Stateless protocol core\n\nEarlier MCP revisions assumed a long-lived session between client and server. That works fine for a stdio server running on a laptop, but it forces sticky sessions on any HTTP deployment \u2014 every request from a client had to land on the same server process.\n\nThe stateless core removes that requirement. Requests carry the context they need, so any instance behind a load balancer can serve any request. For operators this means ordinary autoscaling instead of session-affinity routing.\n\n### Multi Round-Trip Requests\n\nA single logical operation can now span multiple round trips within one request lifecycle, rather than being modeled as a sequence of independent calls. This is the mechanism that lets a stateless server still handle interactions such as elicitation or sampling that inherently need more than one exchange.\n\n### Header-based routing\n\nRouting metadata moved into transport headers, so proxies and gateways can dispatch MCP traffic without parsing the JSON-RPC body. This is what makes MCP practical to put behind standard API-gateway infrastructure.\n\n### Cacheable list results\n\n`tools/list`, `resources/list`, and `prompts/list` results are now explicitly cacheable. Clients that reconnect frequently \u2014 which stateless servers encourage \u2014 no longer re-fetch an unchanged tool catalog on every connection.\n\n### Authorization hardening\n\nThe authorization sections of the spec were tightened, closing ambiguities that had produced inconsistent implementations across servers. Enterprise deployment concerns drove much of this work.\n\n### Formal extensions framework\n\nVendors can now define extensions against a defined mechanism rather than bolting proprietary fields onto core messages. This keeps the core spec small while allowing experimentation.\n\n---\n\n## Adoption\n\nThe Tier 1 SDKs see close to **half a billion downloads per month** combined. Both the TypeScript and Python SDKs have crossed **1 billion cumulative downloads**. All Tier 1 SDKs were updated alongside the spec release.\n\n---\n\n## Governance\n\nThe maintainer group expanded in 2026: **Clare Liguori** joined the Core Maintainer group, and **Den Delimarsky** joined as a Lead Maintainer. Governance maturation is one of four explicit priority areas in the roadmap.\n\n---\n\n## Roadmap Priorities\n\nThe 2026-08-22 roadmap organizes upcoming work into four areas:\n\n1. **Transport evolution and scalability** \u2014 continuing the direction the stateless core opened up.\n2. **Agent communication** \u2014 protocol support for agents talking to agents, not only to tools.\n3. **Governance maturation** \u2014 formalizing how spec decisions get made as the contributor base grows.\n4. **Enterprise readiness** \u2014 authorization, auditability, and deployment concerns.\n\n---\n\n## Practical Implications\n\nIf you maintain an MCP server:\n\n- **Stateless is opt-in-shaped, not automatic.** Existing stateful servers keep working; the benefit comes from restructuring to drop per-session memory.\n- **Check your list endpoints.** Advertising cacheability on a catalog that actually changes at runtime will serve clients stale tools.\n- **Re-read the authorization section.** The hardening pass changed what was previously underspecified, so a \"working\" implementation may now be non-conformant.\n\nIf you consume MCP servers (via Claude Code, Claude Desktop, or a custom client), most of this is invisible \u2014 the payoff is servers that stay up under load and reconnect cheaply.",
+  "tags": [
+    "MCP",
+    "spec",
+    "protocol",
+    "stateless",
+    "scalability",
+    "governance"
+  ],
+  "sources": [
+    "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+    "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+    "https://modelcontextprotocol.io/development/roadmap"
+  ],
+  "createdAt": "2026-08-24",
+  "updatedAt": "2026-08-24",
+  "relatedPages": [
+    "tool-use-and-agents",
+    "claude-code-overview"
+  ]
+}
