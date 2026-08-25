@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
-    "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "summary": "From Claude 1 through the Claude 5 family (Sonnet 5, Opus 5): capability jumps, context window expansion to 1M tokens, and key milestones in each generation.",
+    "tags": ["models", "anthropic", "history", "benchmarks", "claude-5"],
+    "updatedAt": "2026-08-25"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "mcp-2026-spec-update",
+    "title": "MCP 2026-07-28 Specification & Ecosystem Growth",
+    "summary": "MCP's stateless-core rewrite, authorization hardening, and extensions framework, plus adoption and governance growth as of August 2026.",
+    "tags": ["MCP", "protocol", "spec-update", "connectors", "governance", "scalability"],
+    "updatedAt": "2026-08-25"
+  },
+  {
+    "id": "claude-code-auto-mode-2026",
+    "title": "Claude Code: Auto Mode, Concise Style & the August 2026 Update",
+    "summary": "Auto mode became Claude Code's default permission mode on August 14, 2026, plus the new Concise output style, /design skill, and other workflow improvements.",
+    "tags": ["claude-code", "auto-mode", "permissions", "output-styles", "2026-update"],
+    "updatedAt": "2026-08-25"
   }
 ]

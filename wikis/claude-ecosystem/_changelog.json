@@ -5,5 +5,19 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-25",
+    "summary": "Added pages on the MCP 2026-07-28 spec (stateless core, auth hardening) and Claude Code's August 2026 update (auto mode, Concise style); updated Claude Model History with the Claude 5 family (Sonnet 5, Opus 5).",
+    "pagesAdded": ["mcp-2026-spec-update", "claude-code-auto-mode-2026"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+      "https://origami.sa/en/blog/claude-code-august-2026/",
+      "https://dev.to/akashdas/claude-code-auto-mode-goes-default-august-14-8f2",
+      "https://releasebot.io/updates/anthropic",
+      "https://www.vellum.ai/blog/claude-sonnet-5-benchmarks-explained"
+    ]
   }
 ]
