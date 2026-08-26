@@ -2,9 +2,9 @@
   {
     "id": "claude-model-history",
     "title": "Claude Model History",
-    "summary": "From Claude 1 through the Claude 4.x family: capability jumps, context window expansion, and key milestones in each generation.",
+    "summary": "From Claude 1 through the Fable 5 / Opus 5 / Sonnet 5 generation: capability jumps, context window expansion, and key milestones in each release.",
     "tags": ["models", "anthropic", "history", "benchmarks"],
-    "updatedAt": "2025-05-21"
+    "updatedAt": "2026-08-26"
   },
   {
     "id": "tool-use-and-agents",
@@ -19,5 +19,19 @@
     "summary": "What Claude Code is, how remote sessions run in cloud containers, hooks, slash commands, and agentic coding workflows.",
     "tags": ["claude-code", "cli", "agentic", "remote", "hooks"],
     "updatedAt": "2025-05-21"
+  },
+  {
+    "id": "claude-cowork-and-agents",
+    "title": "Claude Cowork & Autonomous Desktop Agents",
+    "summary": "Anthropic's autonomous desktop agent for non-technical office work: sandboxed VM architecture, computer use, scheduled tasks, and the related Claude Code Security vulnerability scanner.",
+    "tags": ["claude-cowork", "agents", "computer-use", "claude-code-security", "enterprise", "mcp"],
+    "updatedAt": "2026-08-26"
+  },
+  {
+    "id": "mcp-2026-spec-update",
+    "title": "MCP 2026-07-28: The Stateless Specification",
+    "summary": "How the July 2026 Model Context Protocol revision replaced sticky sessions with a stateless core, plus the governance changes accompanying it.",
+    "tags": ["MCP", "protocol", "infrastructure", "api", "tool-use"],
+    "updatedAt": "2026-08-26"
   }
 ]

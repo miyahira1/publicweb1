@@ -5,5 +5,20 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-26",
+    "summary": "Caught up on ~15 months of Claude releases: updated Claude Model History with the Opus 4.7/4.8, Fable 5, Mythos 5, Sonnet 5, and Opus 5 releases (plus the June 2026 export-control episode), and added new pages on Claude Cowork/Claude Code Security and the MCP 2026-07-28 stateless specification.",
+    "pagesAdded": ["claude-cowork-and-agents", "mcp-2026-spec-update"],
+    "pagesUpdated": ["claude-model-history"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
+      "https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "https://aragonresearch.com/anthropic-claude-cowork/",
+      "https://thehackernews.com/2026/02/anthropic-launches-claude-code-security.html"
+    ]
   }
 ]
