@@ -5,5 +5,18 @@
     "pagesAdded": ["claude-model-history", "tool-use-and-agents", "claude-code-overview"],
     "pagesUpdated": [],
     "sources": ["https://www.anthropic.com/news", "https://docs.anthropic.com"]
+  },
+  {
+    "date": "2026-08-27",
+    "summary": "Caught the wiki up on ~15 months of developments: added a page on MCP's July 2026 stateless spec overhaul, and updated the model history and Claude Code pages with the 2026 Claude 5 / Mythos-class (Fable 5) family and new Claude Code features.",
+    "pagesAdded": ["mcp-2026-specification"],
+    "pagesUpdated": ["claude-model-history", "claude-code-overview", "tool-use-and-agents"],
+    "sources": [
+      "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "https://www.datacamp.com/blog/claude-sonnet-5",
+      "https://code.claude.com/docs/en/whats-new",
+      "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "https://enterprisedna.co/resources/news/anthropic-claude-watermark-text-images-eu-ai-act-august-2026/"
+    ]
   }
 ]
